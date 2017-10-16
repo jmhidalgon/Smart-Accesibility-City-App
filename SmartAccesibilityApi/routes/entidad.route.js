@@ -26,6 +26,5 @@ api.post('/upload-imagen-entidad/:id', [middlewareAuten.ensureAut, middlewareUpl
 // PUT
 api.put('/actualizar-entidad/:id', middlewareAuten.ensureAut, EntidadControlador.actualizarEntidad);
 
-
 // Exportamos api para poder usarlo fuera de este fichero
 module.exports = api;
