@@ -1,0 +1,57 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="sacapp.android.jmhidalgo.smartaccesibilitycityapp.fragment.MenubarFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:paddingBottom="5dp"
+        android:paddingTop="3dp"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/buttonUserSlide"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:background="@android:drawable/ic_menu_sort_by_size"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/buttonUserSlide">
+
+            <Button
+                android:id="@+id/buttonExplorer"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:text="Explorar"
+                android:textSize="12sp"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <Button
+                android:id="@+id/buttonSites"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:text="Sitios"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <Button
+                android:id="@+id/buttonRatings"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:text="Valorar"
+                app:layout_constraintRight_toRightOf="parent" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
+        "source": "/home/juanma/.android/build-cache/c2454a20d936ca7bc7571274cc69befdd0d388f8/output/res/anim/abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "/home/juanma/.android/build-cache/c2454a20d936ca7bc7571274cc69befdd0d388f8/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/home/juanma/.android/build-cache/c2454a20d936ca7bc7571274cc69befdd0d388f8/output/res/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
+        "source": "/home/juanma/.android/build-cache/c2454a20d936ca7bc7571274cc69befdd0d388f8/output/res/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
+        "source": "/home/juanma/.android/build-cache/c2454a20d936ca7bc7571274cc69befdd0d388f8/output/res/anim/abc_slide_out_top.xml"
+    },
+    {
+        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/anim/design_snackbar_in.xml",
+        "source": "/home/juanma/.android/build-cache/32a8ae0e0c30a1a76d5ddaac850fea640255f450/output/res/anim/design_snackbar_in.xml"
+    },
+    {
+        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
+        "source": "/home/juanma/.android/build-cache/c2454a20d936ca7bc7571274cc69befdd0d388f8/output/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
+        "source": "/home/juanma/.android/build-cache/c2454a20d936ca7bc7571274cc69befdd0d388f8/output/res/anim/abc_popup_enter.xml"
+    },
+    {
+        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
+        "source": "/home/juanma/.android/build-cache/c2454a20d936ca7bc7571274cc69befdd0d388f8/output/res/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/anim/design_snackbar_out.xml",
+        "source": "/home/juanma/.android/build-cache/32a8ae0e0c30a1a76d5ddaac850fea640255f450/output/res/anim/design_snackbar_out.xml"
+    },
+    {
+        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
+        "source": "/home/juanma/.android/build-cache/c2454a20d936ca7bc7571274cc69befdd0d388f8/output/res/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
+        "source": "/home/juanma/.android/build-cache/c2454a20d936ca7bc7571274cc69befdd0d388f8/output/res/anim/abc_popup_exit.xml"
+    }
+]

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2132b0878710f8bcb79d0708622729c17383e715">
+        <dex dex="/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ea9fa56b54f8f94870c46262b10d39605186202e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/juanma/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.0/c4ba5371a29ac9b2ad6129b1d39ea38750043eff/gson-2.8.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="c4ba5371a29ac9b2ad6129b1d39ea38750043eff">
+        <dex dex="/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.8.0_f6e479e6514f759dcc2cd59024434860f5d9602e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/juanma/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.8.0/5a11f020cce2d11eb71ba916700600e18c4547e7/okhttp-3.8.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="5a11f020cce2d11eb71ba916700600e18c4547e7">
+        <dex dex="/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.8.0_bab3152a36132484493ac8931d3f2857dfc18279/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_285ea86cca49721369700721cb2b45285232d18e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/juanma/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.3.0/bcacde6a8ccedcc56c127403d26b76072fe6214d/retrofit-2.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="bcacde6a8ccedcc56c127403d26b76072fe6214d">
+        <dex dex="/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/transforms/dex/debug/folders/1000/10/retrofit-2.3.0_64cc6341d427f150016ff94284ee282b14aff3a4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/juanma/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.13.0_a6b1f8a8d741e7310ca12abe0a167d83b671b071/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/juanma/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.3.0/9e09011e9767bb76b5e27c9b8223476b93b14631/converter-gson-2.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9e09011e9767bb76b5e27c9b8223476b93b14631">
+        <dex dex="/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-gson-2.3.0_c7c3d81b38e790684866f56c7c01a71637a94941/classes.dex" />
+    </item>
+
+</items>

@@ -1,0 +1,26 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=B4:14:C3:4C:AA:D9:4F:F5:C3:25:BC:E0:BA:6D:82:C1:A3:75:F2:5C%3Bsacapp.android.jmhidalgo.smartaccesibilitycityapp
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    B4:14:C3:4C:AA:D9:4F:F5:C3:25:BC:E0:BA:6D:82:C1:A3:75:F2:5C
+
+    SHA-1 certificate fingerprint:
+    B4:14:C3:4C:AA:D9:4F:F5:C3:25:BC:E0:BA:6D:82:C1:A3:75:F2:5C
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
+        AIzaSyDkMRF-NijLhroGKFz1-2ATayDTJJ9J0zg
+    </string>
+</resources>
