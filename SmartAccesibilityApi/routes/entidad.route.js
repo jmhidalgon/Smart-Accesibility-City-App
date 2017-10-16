@@ -22,6 +22,9 @@ api.get('/probando-entidad', middlewareAuten.ensureAut, EntidadControlador.prueb
 api.get('/loginEntidad', EntidadControlador.loginEntidad);
 // POST
 api.post('/registro-entidad', EntidadControlador.guardarEntidad);
+api.post('/upload-imagen-entidad/:id', [middlewareAuten.ensureAut, middlewareUpload], EntidadControlador.uploadImagen);
+// PUT
+api.put('/actualizar-entidad/:id', middlewareAuten.ensureAut, EntidadControlador.actualizarEntidad);
 
 
 // Exportamos api para poder usarlo fuera de este fichero

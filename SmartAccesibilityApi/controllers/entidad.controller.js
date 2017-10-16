@@ -119,10 +119,69 @@ function loginEntidad(req, res){
 	});
 }
 
+// Método para actualizart el entidad
+function actualizarEntidad(req, res){
+	var entidadId = req.params.id;
+	var update = req.body;
+	console.log(entidadId);
+
+	if(req.body.pass){
+		res.status(HttpStatus.METHOD_NOT_ALLOWED).send({message : 'No esta permitido cambiar la contraseña'});
+	}
+
+	Entidad.findByIdAndUpdate(entidadId, update, (err, entidadActualizado) => {
+		if(err){ // No existe el entidad
+			res.status(HttpStatus.INTERNAL_SERVER_ERROR).send({message : 'Error al actualizar el entidad'});
+		} else {
+			if(!entidadActualizado){ // No se ha actualizado
+				res.status(HttpStatus.NOT_FOUND).send({message : 'No se ha podido actualizar el entidad'});
+			} else {
+				res.status(HttpStatus.OK).send(entidadActualizado);
+			}
+		}
+
+	});
+}
+
+
+// Funcion para subir avatar
+function uploadImagen(req, res){
+	var idEntidad = req.params.id;
+	var nombreFichero = 'No subido...';
+
+	console.log(req.files);
+
+	if(req.files){
+		var pathFichero = req.files.imagen.path;
+		var splitFichero = pathFichero.split('/');
+		var nombreFichero = splitFichero[2];
+		var splitExtension = nombreFichero.split('.');
+		var extension = splitExtension[1]; 
+
+		if(extension == 'png' || extension == 'jpg' || extension == 'gif'){
+
+			Entidad.findByIdAndUpdate(idEntidad, {imagen: nombreFichero}, (err, entidadActualizado) => {
+				if(!entidadActualizado){ // No se ha actualizado
+					res.status(HttpStatus.NOT_FOUND).send({message : 'No se ha podido actualizar el Entidad'});
+				} else {
+					res.status(HttpStatus.OK).send({ imagen: nombreFichero, entidad: entidadActualizado});
+				}
+			});
+
+		} else {
+			res.status(HttpStatus.OK).send({message : 'Extension del archivo no valida'});
+		}
+	} else {
+		res.status(HttpStatus.OK).send({message : 'No has subido ninguna imagen...'});
+	}
+}
+
 
 // Exportamos
 module.exports = {
 	pruebas,
 	guardarEntidad,
-	loginEntidad
+	loginEntidad,
+	actualizarEntidad,
+	uploadImagen
 };
