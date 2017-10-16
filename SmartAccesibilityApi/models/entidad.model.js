@@ -6,7 +6,6 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var bcrypt = require('bcrypt-nodejs');
 
-
 // Definimos el esquema o modelo de datos
 var EntidadSchema = Schema({
 	email: String,
