@@ -4,12 +4,12 @@
 var express = require('express');
 // Cargamos el modulo de multiparty
 var multipart = require('connect-multiparty');
-// Cargamos el controlador de usuario
+// Cargamos el controlador de entidad
 var EntidadControlador = require('../controllers/entidad.controller');
 // Cargamos nuestro middleware de autenticación
 var middlewareAuten = require('../middlewares/autenticado');
 // Cargamos nuestro middleware de avatar
-var middlewareUpload = multipart({uploadDir: './uploads/usuarios'});
+var middlewareUpload = multipart({uploadDir: './uploads/entidad'});
 
 // Cargamos las rutas de nuestro módulo express
 var api = express.Router();
