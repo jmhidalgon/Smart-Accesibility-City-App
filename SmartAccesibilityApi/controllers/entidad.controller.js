@@ -176,7 +176,6 @@ function uploadImagen(req, res){
 	}
 }
 
-
 // Exportamos
 module.exports = {
 	pruebas,
