@@ -13,5 +13,5 @@ public interface EntityService {
     Call<Entity> login(@Header("email") String email, @Header("pass") String pass);
 
     @POST("registro-entidad")
-    Call<Entity> register(@Body User user);
+    Call<Entity> register(@Body Entity entity);
 }

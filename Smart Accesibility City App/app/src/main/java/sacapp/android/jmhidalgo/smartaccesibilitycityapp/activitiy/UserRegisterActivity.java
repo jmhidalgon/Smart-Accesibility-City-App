@@ -16,7 +16,7 @@ import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.API;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.UserService;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.User;
 
-public class RegisterActivity extends AppCompatActivity {
+public class UserRegisterActivity extends AppCompatActivity {
 
     private EditText editTextName;
     private EditText editTextSurname;
@@ -28,7 +28,7 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_user_register);
 
         editTextName = (EditText) findViewById(R.id.editTextName);
         editTextSurname = (EditText) findViewById(R.id.editTextSurname);
@@ -48,7 +48,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String email = editTextEmail.getText().toString();
 
                 if(!pass1.equals(pass2)){
-                    Toast.makeText(RegisterActivity.this, "Las contraseñas no coinciden", Toast.LENGTH_LONG).show();
+                    Toast.makeText(UserRegisterActivity.this, "Las contraseñas no coinciden", Toast.LENGTH_LONG).show();
                     editTextPass.requestFocus();
                     return ;
                 }
@@ -63,10 +63,10 @@ public class RegisterActivity extends AppCompatActivity {
                     public void onResponse(Call<User> call, Response<User> response) {
 
                         if(API.METHOD_NOT_ALLOWED == response.code()){
-                            Toast.makeText(RegisterActivity.this, response.message() + ": Email ya registrado en la aplicación", Toast.LENGTH_LONG).show();
+                            Toast.makeText(UserRegisterActivity.this, response.message() + ": Email ya registrado en la aplicación", Toast.LENGTH_LONG).show();
                         } else {
-                            Toast.makeText(RegisterActivity.this, "Usuario registrado", Toast.LENGTH_LONG).show();
-                            Intent intentBackLogin = new Intent(RegisterActivity.this, LoginActivity.class);
+                            Toast.makeText(UserRegisterActivity.this, "Usuario registrado", Toast.LENGTH_LONG).show();
+                            Intent intentBackLogin = new Intent(UserRegisterActivity.this, LoginActivity.class);
                             intentBackLogin.putExtra("email", editTextEmail.getText().toString());
                             intentBackLogin.putExtra("pass", editTextPass.getText().toString());
                             startActivity(intentBackLogin);
@@ -75,7 +75,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                     @Override
                     public void onFailure(Call<User> call, Throwable t) {
-                        Toast.makeText(RegisterActivity.this, "Error al registrar usuario.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(UserRegisterActivity.this, "Error al registrar usuario.", Toast.LENGTH_LONG).show();
                     }
                 });
             }

@@ -3,6 +3,7 @@ package sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -29,6 +30,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private Button buttonAccess;
     private Button buttonNewUser;
+    private Button buttonNewEntity;
 
     private CheckBox checkBoxRememberme;
 
@@ -49,8 +51,9 @@ public class LoginActivity extends AppCompatActivity {
         editTextName.setText("juanma@admin.com");
 
         buttonNewUser = (Button) findViewById(R.id.buttonNewUser);
+        buttonNewEntity = (Button) findViewById(R.id.buttonNewEntity);
 
-        Intent intent = getIntent();
+        final Intent intent = getIntent();
         if(intent.getStringExtra("email") != null || intent.getStringExtra("pass") != null) {
             editTextName.setText(intent.getStringExtra("email"));
             editTextPass.setText(intent.getStringExtra("pass"));
@@ -114,8 +117,16 @@ public class LoginActivity extends AppCompatActivity {
         buttonNewUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentNewUser = new Intent(LoginActivity.this, RegisterActivity.class);
+                Intent intentNewUser = new Intent(LoginActivity.this, UserRegisterActivity.class);
                 startActivity(intentNewUser);
+            }
+        });
+
+        buttonNewEntity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentNewEntity = new Intent(LoginActivity.this, EntityRegisterActivity.class);
+                startActivity(intentNewEntity);
             }
         });
     }

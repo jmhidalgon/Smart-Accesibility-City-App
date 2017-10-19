@@ -19,14 +19,14 @@ public class Entity {
     @SerializedName("direccion")
     private String adress;
     @SerializedName("longitud")
-    private float longitud;
+    private double longitud;
     @SerializedName("latitud")
-    private float latitud;
+    private double latitud;
     @SerializedName("website")
     private String website;
     private boolean gethash;
 
-    public Entity(String id, String entityname, String email, String pass, String rol, String image, String adress, float longitud, float latitud, String website) {
+    public Entity(String id, String entityname, String email, String pass, String rol, String image, String adress, double longitud, double latitud, String website) {
         this.id = id;
         this.entityname = entityname;
         this.email = email;
@@ -95,19 +95,19 @@ public class Entity {
         this.adress = adress;
     }
 
-    public float getLongitud() {
+    public double getLongitud() {
         return longitud;
     }
 
-    public void setLongitud(float longitud) {
+    public void setLongitud(double longitud) {
         this.longitud = longitud;
     }
 
-    public float getLatitud() {
+    public double getLatitud() {
         return latitud;
     }
 
-    public void setLatitud(float latitud) {
+    public void setLatitud(double latitud) {
         this.latitud = latitud;
     }
 
