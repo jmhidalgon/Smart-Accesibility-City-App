@@ -49,6 +49,8 @@
             android:label="@string/title_activity_explorer"/>
         <activity android:name=".activitiy.EntityRegisterActivity">
         </activity>
+        <activity android:name=".activitiy.AccessibilityActivity">
+        </activity>
     </application>
 
 </manifest>

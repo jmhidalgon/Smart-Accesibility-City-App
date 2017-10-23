@@ -138,7 +138,7 @@ public class EntityRegisterActivity extends AppCompatActivity implements Locatio
                             Toast.makeText(EntityRegisterActivity.this, response.message() + ": Email ya registrado en la aplicación", Toast.LENGTH_LONG).show();
                         } else {
                             Toast.makeText(EntityRegisterActivity.this, "Entidad registrada", Toast.LENGTH_LONG).show();
-                            Intent intentBackLogin = new Intent(EntityRegisterActivity.this, LoginActivity.class);
+                            Intent intentBackLogin = new Intent(EntityRegisterActivity.this, AccessibilityActivity.class);
                             intentBackLogin.putExtra("email", editTextEmail.getText().toString());
                             intentBackLogin.putExtra("pass", editTextPass.getText().toString());
                             startActivity(intentBackLogin);
