@@ -51,6 +51,8 @@
         </activity>
         <activity android:name=".activitiy.AccessibilityActivity">
         </activity>
+        <activity android:name=".activitiy.MainActivity">
+        </activity>
     </application>
 
 </manifest>

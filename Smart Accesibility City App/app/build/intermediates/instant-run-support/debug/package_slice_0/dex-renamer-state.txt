@@ -1,4 +1,4 @@
-#Tue Oct 24 15:38:35 CEST 2017
+#Sat Oct 28 17:48:12 CEST 2017
 base.0=/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0
 renamed.0=classes.dex
 file.0=/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex

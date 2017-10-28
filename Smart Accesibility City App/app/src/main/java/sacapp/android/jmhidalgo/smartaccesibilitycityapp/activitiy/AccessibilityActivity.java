@@ -1,5 +1,6 @@
 package sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy;
 
+import android.app.Activity;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

@@ -1,8 +1,10 @@
 package sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -24,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private final String _NOMBRE = "Nombre de Usuario";
     private final boolean _GETHASH = true;
+    private Toolbar toolbar;
 
     private EditText editTextName;
     private EditText editTextPass;
@@ -41,6 +44,10 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        // Load the toolbar
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         editTextName = (EditText) findViewById(R.id.editTextName);
         editTextPass = (EditText) findViewById(R.id.editTextPass);
@@ -180,7 +187,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void startMainActivity(){
-        Intent intentMainActivity = new Intent(LoginActivity.this, ExplorerActivity.class);
+        Intent intentMainActivity = new Intent(LoginActivity.this, MainActivity.class);
         intentMainActivity.putExtra("token", token);
         startActivity(intentMainActivity);
     }
