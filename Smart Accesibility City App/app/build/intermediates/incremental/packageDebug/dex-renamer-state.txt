@@ -1,4 +1,4 @@
-#Wed Nov 08 00:05:23 CET 2017
+#Mon Nov 13 20:10:01 CET 2017
 base.0=/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ea9fa56b54f8f94870c46262b10d39605186202e
 renamed.1=classes2.dex
 renamed.0=classes.dex

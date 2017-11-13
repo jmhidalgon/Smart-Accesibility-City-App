@@ -1,11 +1,12 @@
 package sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy;
 
-import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -16,6 +17,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.R;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.Util.Util;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.API;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.TokenService;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.UserService;
@@ -23,6 +25,8 @@ import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Token;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.User;
 
 public class LoginActivity extends AppCompatActivity {
+
+    private SharedPreferences prefs;
 
     private final String _NOMBRE = "Nombre de Usuario";
     private final boolean _GETHASH = true;
@@ -56,6 +60,10 @@ public class LoginActivity extends AppCompatActivity {
 
         editTextPass.setText("juanmaadmin");
         editTextName.setText("juanma@admin.com");
+
+        prefs = getSharedPreferences("Preferences", Context.MODE_PRIVATE);
+        setCredentialsIfExist();
+
 
         buttonNewUser = (Button) findViewById(R.id.buttonNewUser);
         buttonNewEntity = (Button) findViewById(R.id.buttonNewEntity);
@@ -98,6 +106,7 @@ public class LoginActivity extends AppCompatActivity {
                                 if(user != null) {
                                     LoginActivity.this.user = user;
                                     if(getUserToken(user)) {
+                                        saveOnPreferences(editTextName.getText().toString(), editTextPass.getText().toString());
                                         Toast.makeText(LoginActivity.this, "Bienvenido " + LoginActivity.this.user.getName(), Toast.LENGTH_LONG).show();
                                     }
                                 } else {
@@ -136,6 +145,24 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intentNewEntity);
             }
         });
+    }
+
+    private void setCredentialsIfExist(){
+        String email = Util.getUserMailPrefs(prefs);
+        String password = Util.getUserPassPrefs(prefs);
+        if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
+            editTextName.setText(email);
+            editTextPass.setText(password);
+        }
+    }
+
+    private void saveOnPreferences(String email, String password) {
+        if (checkBoxRememberme.isChecked()) {
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putString("email", email);
+            editor.putString("pass", password);
+            editor.apply();
+        }
     }
 
     public Boolean getUserToken(User user){
@@ -189,6 +216,7 @@ public class LoginActivity extends AppCompatActivity {
     public void startMainActivity(){
         Intent intentMainActivity = new Intent(LoginActivity.this, MainActivity.class);
         intentMainActivity.putExtra("token", token);
+        intentMainActivity.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intentMainActivity);
     }
 }

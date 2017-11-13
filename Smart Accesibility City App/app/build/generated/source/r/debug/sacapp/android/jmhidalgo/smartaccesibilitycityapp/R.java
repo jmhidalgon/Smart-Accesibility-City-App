@@ -3467,15 +3467,16 @@ containing a value of this type.
         public static final int basic=0x7f0d0016;
         public static final int beginning=0x7f0d0040;
         public static final int bottom=0x7f0d002f;
-        public static final int button2=0x7f0d008a;
         public static final int buttonAccept=0x7f0d0090;
         public static final int buttonAccess=0x7f0d0097;
         public static final int buttonAcept=0x7f0d0086;
+        public static final int buttonAdd=0x7f0d0089;
         public static final int buttonExplorer=0x7f0d00af;
         public static final int buttonNewEntity=0x7f0d009b;
         public static final int buttonNewUser=0x7f0d009a;
         public static final int buttonPanel=0x7f0d005d;
         public static final int buttonRatings=0x7f0d00b1;
+        public static final int buttonRemove=0x7f0d0088;
         public static final int buttonSites=0x7f0d00b0;
         public static final int buttonUserSlide=0x7f0d00ae;
         public static final int cancel_action=0x7f0d00b9;
@@ -3502,9 +3503,8 @@ containing a value of this type.
         public static final int design_menu_item_text=0x7f0d00a8;
         public static final int design_navigation_view=0x7f0d00a7;
         public static final int disableHome=0x7f0d001c;
-        public static final int editTextDescripction=0x7f0d0088;
         public static final int editTextEmail=0x7f0d008c;
-        public static final int editTextName=0x7f0d0089;
+        public static final int editTextName=0x7f0d008b;
         public static final int editTextPass=0x7f0d008d;
         public static final int editTextPassConfirmed=0x7f0d008e;
         public static final int editTextSurname=0x7f0d009e;
@@ -3618,7 +3618,7 @@ containing a value of this type.
         public static final int textView=0x7f0d0085;
         public static final int textView4=0x7f0d0098;
         public static final int textViewAddress=0x7f0d0091;
-        public static final int textViewBienvenida=0x7f0d008b;
+        public static final int textViewBienvenida=0x7f0d008a;
         public static final int textViewName=0x7f0d0095;
         public static final int textViewPass=0x7f0d0096;
         public static final int text_input_password_toggle=0x7f0d00ab;

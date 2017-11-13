@@ -831,15 +831,16 @@ int id auto 0x7f0d002e
 int id basic 0x7f0d0016
 int id beginning 0x7f0d0040
 int id bottom 0x7f0d002f
-int id button2 0x7f0d008a
 int id buttonAccept 0x7f0d0090
 int id buttonAccess 0x7f0d0097
 int id buttonAcept 0x7f0d0086
+int id buttonAdd 0x7f0d0089
 int id buttonExplorer 0x7f0d00af
 int id buttonNewEntity 0x7f0d009b
 int id buttonNewUser 0x7f0d009a
 int id buttonPanel 0x7f0d005d
 int id buttonRatings 0x7f0d00b1
+int id buttonRemove 0x7f0d0088
 int id buttonSites 0x7f0d00b0
 int id buttonUserSlide 0x7f0d00ae
 int id cancel_action 0x7f0d00b9
@@ -866,9 +867,8 @@ int id design_menu_item_action_area_stub 0x7f0d00a9
 int id design_menu_item_text 0x7f0d00a8
 int id design_navigation_view 0x7f0d00a7
 int id disableHome 0x7f0d001c
-int id editTextDescripction 0x7f0d0088
 int id editTextEmail 0x7f0d008c
-int id editTextName 0x7f0d0089
+int id editTextName 0x7f0d008b
 int id editTextPass 0x7f0d008d
 int id editTextPassConfirmed 0x7f0d008e
 int id editTextSurname 0x7f0d009e
@@ -982,7 +982,7 @@ int id textSpacerNoTitle 0x7f0d0063
 int id textView 0x7f0d0085
 int id textView4 0x7f0d0098
 int id textViewAddress 0x7f0d0091
-int id textViewBienvenida 0x7f0d008b
+int id textViewBienvenida 0x7f0d008a
 int id textViewName 0x7f0d0095
 int id textViewPass 0x7f0d0096
 int id text_input_password_toggle 0x7f0d00ab
