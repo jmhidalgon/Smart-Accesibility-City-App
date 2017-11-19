@@ -106,7 +106,6 @@ public class LoginActivity extends AppCompatActivity {
                                 if(user != null) {
                                     LoginActivity.this.user = user;
                                     if(getUserToken(user)) {
-                                        saveOnPreferences(editTextName.getText().toString(), editTextPass.getText().toString());
                                         Toast.makeText(LoginActivity.this, "Bienvenido " + LoginActivity.this.user.getName(), Toast.LENGTH_LONG).show();
                                     }
                                 } else {
@@ -153,6 +152,7 @@ public class LoginActivity extends AppCompatActivity {
         if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
             editTextName.setText(email);
             editTextPass.setText(password);
+            checkBoxRememberme.setChecked(true);
         }
     }
 
@@ -214,6 +214,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void startMainActivity(){
+        saveOnPreferences(editTextName.getText().toString(), editTextPass.getText().toString());
         Intent intentMainActivity = new Intent(LoginActivity.this, MainActivity.class);
         intentMainActivity.putExtra("token", token);
         intentMainActivity.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);

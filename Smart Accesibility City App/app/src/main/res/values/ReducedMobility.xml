@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="reduced_movility">
+        <item>Muletas</item>
+        <item>Bastón</item>
+        <item>Silla de ruedas</item>
+        <item>Silla de ruedas eléctrica</item>
+        <item>Andador</item>
+        <item>Protesis en un miembro inferior</item>
+    </string-array>
+</resources>

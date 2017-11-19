@@ -13,7 +13,7 @@ var UsuarioSchema = Schema({
 	apellidos: String,
 	email: String,
 	pass: String,
-	nombreUsuario: String,
+	tipoMovilidadReducida: String,
 	rol: String,
 	imagen: String
 });

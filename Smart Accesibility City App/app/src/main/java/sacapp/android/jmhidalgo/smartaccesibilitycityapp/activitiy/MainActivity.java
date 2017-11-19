@@ -24,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
-        tabLayout.addTab(tabLayout.newTab().setText("Tab 1"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tab 2"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tab 3"));
+        tabLayout.addTab(tabLayout.newTab().setText("Explorar"));
+        tabLayout.addTab(tabLayout.newTab().setText("Historial"));
+        tabLayout.addTab(tabLayout.newTab().setText("Configuración"));
 
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);

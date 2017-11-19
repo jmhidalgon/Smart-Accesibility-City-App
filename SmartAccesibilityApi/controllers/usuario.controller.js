@@ -28,7 +28,7 @@ function pruebas(req, res){
 	usuario.nombre = parametros.nombre;
 	usuario.apellidos = parametros.nombre;
 	usuario.email = parametros.email;
-	usuario.nombreUsuario = parametros.nombreUsuario;
+	usuario.nombreUsuariotipoMovilidadReducida = parametros.nombreUsuario;
 	usuario.rol = 'ROLE_USER';
 	usuario.imagen = 'null';
 	usuario.pass = parametros.pass;
@@ -87,7 +87,7 @@ function guardarUsuario(req, res){
 	usuario.nombre = parametros.nombre;
 	usuario.apellidos = parametros.nombre;
 	usuario.email = parametros.email;
-	usuario.nombreUsuario = parametros.nombreUsuario;
+	usuario.tipoMovilidadReducida = parametros.tipoMovilidadReducida;
 	usuario.rol = 'ROLE_USER';
 	usuario.imagen = 'null';
 	usuario.pass = parametros.pass;
@@ -104,7 +104,7 @@ function guardarUsuario(req, res){
 				console.log("Vamos a guardarlo si tiene todos los datos");
 
 
-				if(usuario.nombre != null && usuario.apellidos != null && usuario.nombreUsuario != null && usuario.email != null){ // comprobamos que tenga datos
+				if(usuario.nombre != null && usuario.apellidos != null && usuario.tipoMovilidadReducida != null && usuario.email != null){ // comprobamos que tenga datos
 					// guardamos usuario
 					usuario.save((err, usuarioStored) => {
 						if(err){ // Error al guardar

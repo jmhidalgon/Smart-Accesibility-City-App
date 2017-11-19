@@ -5,8 +5,10 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import retrofit2.Call;
@@ -25,6 +27,7 @@ public class UserRegisterActivity extends AppCompatActivity {
     private EditText editTextPassConfirmed;
     private EditText editTextEmail;
     private Button buttonAccept;
+    private Spinner spinnerReason;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +40,14 @@ public class UserRegisterActivity extends AppCompatActivity {
         editTextPassConfirmed = (EditText) findViewById(R.id.editTextPassConfirmed);
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         buttonAccept = (Button) findViewById(R.id.buttonAccept);
+        spinnerReason = (Spinner) findViewById(R.id.spinnerReason);
 
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.reduced_movility, android.R.layout.simple_spinner_item);
+        // Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        spinnerReason.setAdapter(adapter);
 
         buttonAccept.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,6 +57,7 @@ public class UserRegisterActivity extends AppCompatActivity {
                 String pass1 = editTextPass.getText().toString();
                 String pass2 = editTextPassConfirmed.getText().toString();
                 String email = editTextEmail.getText().toString();
+                String reducedMovility = spinnerReason.getSelectedItem().toString();
 
                 if(!pass1.equals(pass2)){
                     Toast.makeText(UserRegisterActivity.this, "Las contraseñas no coinciden", Toast.LENGTH_LONG).show();
@@ -54,7 +65,7 @@ public class UserRegisterActivity extends AppCompatActivity {
                     return ;
                 }
 
-                User user = new User("", name, surname, name, email, pass1, "ROLE_USER", "");
+                User user = new User("", name, surname, reducedMovility, email, pass1, "ROLE_USER", "");
 
                 UserService userService = API.getApi().create(UserService.class);
                 Call<User> userCall = userService.register(user);

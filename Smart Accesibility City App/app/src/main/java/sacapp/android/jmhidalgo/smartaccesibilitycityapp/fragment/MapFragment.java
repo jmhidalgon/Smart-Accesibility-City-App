@@ -117,6 +117,12 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
         locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 10000, 10, this);
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 10000, 10, this);
 
+        Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+        if (location == null) {
+            location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+        }
+        zoomToLocation(location);
+
         /* MAPS LISTENER */
         // Click on the map
         gMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
@@ -153,7 +159,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
     private void showInfoAlert() {
         new AlertDialog.Builder(getContext())
                 .setTitle("GPS Signal")
-                .setMessage("You don't have GPS signal enabled. Would you like to enable the GPS signal now?")
+                .setMessage("No tiene activada su localizacion GPS. ¿Desearía activarla ahora?")
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -161,7 +167,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
                         startActivity(intent);
                     }
                 })
-                .setNegativeButton("CANCEL", null)
+                .setNegativeButton("CANCELAR", null)
                 .show();
     }
 

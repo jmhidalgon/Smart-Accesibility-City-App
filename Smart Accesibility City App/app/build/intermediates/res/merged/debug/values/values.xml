@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
+    <string-array name="reduced_movility">
+        <item>Muletas</item>
+        <item>Bastón</item>
+        <item>Silla de ruedas</item>
+        <item>Silla de ruedas eléctrica</item>
+        <item>Andador</item>
+        <item>Protesis en un miembro inferior</item>
+    </string-array>
     <attr format="reference" name="constraintSet"/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>

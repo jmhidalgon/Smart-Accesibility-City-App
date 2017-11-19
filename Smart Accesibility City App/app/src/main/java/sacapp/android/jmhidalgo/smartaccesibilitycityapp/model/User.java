@@ -2,8 +2,6 @@ package sacapp.android.jmhidalgo.smartaccesibilitycityapp.model;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.Date;
-
 public class User {
     @SerializedName("_id")
     private String id;
@@ -11,8 +9,8 @@ public class User {
     private String name;
     @SerializedName("apellidos")
     private String surname;
-    @SerializedName("nombreUsuario")
-    private String username;
+    @SerializedName("tipoMovilidadReducida")
+    private String reduceMovility;
     @SerializedName("email")
     private String email;
     @SerializedName("pass")
@@ -23,11 +21,11 @@ public class User {
     private String image;
     private boolean gethash;
 
-    public User(String id, String name, String surname, String username, String email, String pass, String rol, String image) {
+    public User(String id, String name, String surname, String reduceMovility, String email, String pass, String rol, String image) {
         this.id = id;
         this.name = name;
         this.surname = surname;
-        this.username = username;
+        this.reduceMovility = reduceMovility;
         this.email = email;
         this.pass = pass;
         this.rol = rol;
@@ -43,8 +41,8 @@ public class User {
         return surname;
     }
 
-    public String getUsername() {
-        return username;
+    public String getReduceMovility() {
+        return reduceMovility;
     }
 
     public String getEmail() {
@@ -87,8 +85,8 @@ public class User {
         this.gethash = gethash;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setReduceMovility(String reduceMovility) {
+        this.reduceMovility = reduceMovility;
     }
 
     public void setEmail(String email) {
