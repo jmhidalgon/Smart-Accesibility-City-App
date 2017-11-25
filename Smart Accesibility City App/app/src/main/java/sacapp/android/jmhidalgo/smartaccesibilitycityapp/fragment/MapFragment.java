@@ -224,8 +224,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
 
     @Override
     public void onLocationChanged(Location location) {
-        Toast.makeText(getContext(), "Changed! -> " + location.getProvider(), Toast.LENGTH_LONG).show();
-        createOrUpdateMarkerByLocation(location);
+        /*Toast.makeText(getContext(), "Changed! -> " + location.getProvider(), Toast.LENGTH_LONG).show();
+        createOrUpdateMarkerByLocation(location);*/
     }
 
     @Override

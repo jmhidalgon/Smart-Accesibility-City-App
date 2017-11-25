@@ -20,6 +20,7 @@ var api = express.Router();
 //api.get('/probando-controlador', middlewareAuten.ensureAut, EntidadControlador.pruebas);
 api.get('/probando-entidad', middlewareAuten.ensureAut, EntidadControlador.pruebas);
 api.get('/loginEntidad', EntidadControlador.loginEntidad);
+api.get('/get-entitidades', middlewareAuten.ensureAut, EntidadControlador.getEntidades);
 // POST
 api.post('/registro-entidad', EntidadControlador.guardarEntidad);
 api.post('/upload-imagen-entidad/:id', [middlewareAuten.ensureAut, middlewareUpload], EntidadControlador.uploadImagen);

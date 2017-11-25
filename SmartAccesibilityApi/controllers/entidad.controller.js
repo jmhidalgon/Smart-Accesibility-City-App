@@ -74,8 +74,7 @@ function guardarEntidad(req, res){
 		if(entidad == null) {
 			res.status(HttpStatus.OK).send({message : 'Introduce la contraseña'});
 		}
-	}
-	);
+	});
 }
 
 // Metodo para el login del entidad
@@ -176,11 +175,27 @@ function uploadImagen(req, res){
 	}
 }
 
+// Funcion para obtener las entidades y representarlas
+function getEntidades(req, res){
+	Entidad.find({}, function(err, entidades) {
+		var entidadesMap = {};
+		var numeroEntidad = 0;
+
+		entidades.forEach(function(entidad){
+			entidadesMap[numeroEntidad] = entidad;
+			++numeroEntidad;
+		res.status(HttpStatus.OK).send(entidadesMap);
+		});
+	});
+}
+
+
 // Exportamos
 module.exports = {
 	pruebas,
 	guardarEntidad,
 	loginEntidad,
 	actualizarEntidad,
-	uploadImagen
+	uploadImagen,
+	getEntidades
 };

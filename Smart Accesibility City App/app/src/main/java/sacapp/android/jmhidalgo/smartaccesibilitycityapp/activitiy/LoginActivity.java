@@ -58,8 +58,8 @@ public class LoginActivity extends AppCompatActivity {
         buttonAccess = (Button) findViewById(R.id.buttonAccess);
         checkBoxRememberme = (CheckBox) findViewById(R.id.checkBoxRemenberme);
 
-        editTextPass.setText("juanmaadmin");
-        editTextName.setText("juanma@admin.com");
+        /*editTextPass.setText("juanmaadmin");
+        editTextName.setText("juanma@admin.com");*/
 
         prefs = getSharedPreferences("Preferences", Context.MODE_PRIVATE);
         setCredentialsIfExist();

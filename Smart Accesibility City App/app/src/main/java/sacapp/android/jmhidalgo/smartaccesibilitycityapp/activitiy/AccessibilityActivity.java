@@ -7,6 +7,7 @@ import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,7 +29,10 @@ public class AccessibilityActivity extends AppCompatActivity {
     private Button buttonAdd;
     private Button buttonRemove;
 
-    private String item;
+    private int numberItems;
+    private boolean answerRemove;
+    private int selectedItem;
+    private static String item;
     private List<String> items;
 
     @Override
@@ -39,10 +43,16 @@ public class AccessibilityActivity extends AppCompatActivity {
         buttonAdd = (Button) findViewById(R.id.buttonAdd);
         buttonRemove = (Button) findViewById(R.id.buttonRemove);
 
-        listViewAccess = (ListView) findViewById(R.id.listView);
+        items = new ArrayList<String>();
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_activated_1, items);
+        listViewAccess = (ListView) findViewById(R.id.listView);
+        numberItems = 0;
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(AccessibilityActivity.this, android.R.layout.simple_list_item_activated_1, items);
         listViewAccess.setAdapter(adapter);
+
+        addButtonListener();
+        addListViewListener();
     }
 
 
@@ -65,9 +75,10 @@ public class AccessibilityActivity extends AppCompatActivity {
                             .setPositiveButton("Acceptar", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
                                     item = input.getText().toString();
-                                    if (item.compareTo("") == 0) {
-                                        Toast.makeText(getApplicationContext(), "Añadido", Toast.LENGTH_SHORT).show();
+                                    if (!item.equals(new String(""))) {
+                                        //Toast.makeText(getApplicationContext(), "Añadido", Toast.LENGTH_SHORT).show();
                                         items.add(item);
+                                        numberItems++;
                                     }
                                 }
                             })
@@ -77,5 +88,33 @@ public class AccessibilityActivity extends AppCompatActivity {
             });
 
         }
+    }
+
+    void addListViewListener(){
+
+        listViewAccess.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                if(i < 0 || i >= numberItems){
+                    return ;
+                } else {
+                    selectedItem = i;
+                    answerRemove = false;
+                    AlertDialog.Builder builder = new AlertDialog.Builder(AccessibilityActivity.this);
+                    builder.setTitle("¿Desea eliminar la entrada seleccionada?");
+                    builder.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            items.remove(selectedItem);
+                        }
+                    });
+                    builder.setNegativeButton(android.R.string.cancel, null);
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+
+                }
+            }
+        });
+
     }
 }
