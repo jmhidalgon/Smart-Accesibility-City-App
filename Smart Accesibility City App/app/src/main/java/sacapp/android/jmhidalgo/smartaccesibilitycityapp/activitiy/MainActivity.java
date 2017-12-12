@@ -1,5 +1,6 @@
 package sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +15,12 @@ import sacapp.android.jmhidalgo.smartaccesibilitycityapp.adapter.PageAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
+    private String token;
+
+    public String getToken() {
+        return token;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,12 +29,15 @@ public class MainActivity extends AppCompatActivity {
         Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(myToolbar);
 
-
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         tabLayout.addTab(tabLayout.newTab().setText("Explorar"));
         tabLayout.addTab(tabLayout.newTab().setText("Historial"));
         tabLayout.addTab(tabLayout.newTab().setText("Configuración"));
 
+        final Intent intent = getIntent();
+        if(intent.getStringExtra("token") != null ) {
+            token = intent.getStringExtra("token");
+        }
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);
         PageAdapter adapter = new PageAdapter(getSupportFragmentManager(), tabLayout.getTabCount());

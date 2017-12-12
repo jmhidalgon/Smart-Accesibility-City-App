@@ -15,7 +15,7 @@ exports.ensureAut = function(req, res, next){
 
 	// Recogemos el token de usuario
 	var token = req.headers.autorizacion.replace(/['"]+/g, '');
-		
+	console.log("TOKEN auth: " + token);
 	try{ 
 		// Decodificamos el token
 		var payload = jwt.decode(token, secret);

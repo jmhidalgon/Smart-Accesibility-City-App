@@ -11,7 +11,8 @@ var jwt = require('../services/jwt.service');
 var fs = require('fs');
 var path = require('path');
 var HttpStatus = require('http-status-codes');
-
+// Modulo paginate de moogose
+var mongoosePaginate = require('mongoose-pagination');
 
 
 function pruebas(req, res){
@@ -177,16 +178,29 @@ function uploadImagen(req, res){
 
 // Funcion para obtener las entidades y representarlas
 function getEntidades(req, res){
-	Entidad.find({}, function(err, entidades) {
-		var entidadesMap = {};
-		var numeroEntidad = 0;
-
-		entidades.forEach(function(entidad){
-			entidadesMap[numeroEntidad] = entidad;
-			++numeroEntidad;
-		res.status(HttpStatus.OK).send(entidadesMap);
-		});
+	var pag = 25;
+	console.log("Consulta de entidades");
+	Entidad.find().paginate(1, pag, function(err, entidades, total){
+		console.log("Consulta Entidades");
+		if(err){
+			res.status(HttpStatus.INTERNAL_SERVER_ERROR).send("Se produjo un error al consultar las entidades");			
+		} else {
+			console.log("Ningun error. Token:");
+			if(!entidades){
+				res.status(HttpStatus.NOT_FOUND).send("No encontrado");			
+			} else {				
+				/*var response;
+				for(var i=1; i<total; i++){
+					response = {entidad:entidades[i]};
+					
+				}
+				return res.status(HttpStatus.OK).send({entidades : response});*/
+				
+				return res.status(HttpStatus.OK).send({total : total, entidads : entidades});
+			}
+		}
 	});
+
 }
 
 

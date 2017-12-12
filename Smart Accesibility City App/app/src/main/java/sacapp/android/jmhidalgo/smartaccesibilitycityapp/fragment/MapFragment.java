@@ -28,8 +28,21 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.R;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.API;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.EntityService;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.TokenService;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.ExplorerActivity;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.LoginActivity;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.MainActivity;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Entities;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Entity;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Token;
 
 import static android.content.Context.LOCATION_SERVICE;
 
@@ -48,6 +61,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
 
     private Marker marker;
     private CameraPosition camera;
+
+    private List<Entity> entities;
 
     public MapFragment() {
 
@@ -139,6 +154,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
 
             }
         });
+
+        getEntities();
     }
 
     private boolean isGPSEnabled() {
@@ -208,6 +225,15 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
         } else {
             marker.setPosition(new LatLng(location.getLatitude(), location.getLongitude()));
         }
+    }
+
+    private void createOrUpdateMarkerByLocation(double lon, double lat) {
+        /*if (marker == null) {
+            marker = gMap.addMarker(new MarkerOptions().position(new LatLng(lat, lon)).draggable(true));
+        } else {
+            marker.setPosition(new LatLng(lat, lon));
+        }*/
+        gMap.addMarker(new MarkerOptions().position(new LatLng(lat, lon)).draggable(true));
 
     }
 
@@ -242,4 +268,53 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
     public void onProviderDisabled(String s) {
 
     }
+
+    public void getEntities()
+    {
+        String token = ((MainActivity)getActivity()).getToken();
+        if(token != ""){
+
+            EntityService entityService = API.getApi().create(EntityService.class);
+            Call<Entities> entitySCall = entityService.getEntities(token);
+
+            entitySCall.enqueue(new Callback<Entities>() {
+
+                @Override
+                public void onResponse(Call<Entities> call, Response<Entities> response) {
+                    int httpCode = response.code();
+
+                    switch(httpCode) {
+                        case API.INTERNAL_SERVER_ERROR:
+                            Toast.makeText(getActivity(), response.message() + ": Error en el servidor de datos", Toast.LENGTH_LONG).show();
+                            break;
+                        case API.NOT_FOUND:
+                            Toast.makeText(getActivity(), response.message() + ": No encontrado", Toast.LENGTH_LONG).show();
+                            break;
+                        case API.OK:
+                            Entities entitiesResponse = response.body();
+                            entities = entitiesResponse.getEntities();
+                            break;
+                    }
+
+                    if(entities == null){
+                        Toast.makeText(getActivity(), "No se ha encontrado ninguna entidad", Toast.LENGTH_LONG).show();
+                    } else {
+                        for(int i=0; i<entities.size(); ++i){
+                            double lat = entities.get(i).getLatitud();
+                            double lon = entities.get(i).getLongitud();
+
+                            createOrUpdateMarkerByLocation(lon, lat);
+                        }
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<Entities> call, Throwable t) {
+                    Toast.makeText(getActivity(), "Error de conexion", Toast.LENGTH_LONG).show();
+                }
+            });
+        }
+    }
 }
+
+
