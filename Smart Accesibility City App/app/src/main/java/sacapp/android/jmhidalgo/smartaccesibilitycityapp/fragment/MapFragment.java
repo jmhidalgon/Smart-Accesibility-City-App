@@ -40,9 +40,11 @@ import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.TokenS
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.ExplorerActivity;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.LoginActivity;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.MainActivity;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.adapter.InfoWindowData;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Entities;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Entity;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Token;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.util.CustomInfoWindowGoogleMap;
 
 import static android.content.Context.LOCATION_SERVICE;
 
@@ -155,6 +157,26 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
             }
         });
 
+        gMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+            @Override
+            public boolean onMarkerClick(Marker marker) {
+                Entity entityMarker= (Entity)marker.getTag();
+
+                if(entityMarker == null){
+                    return false;
+                }
+
+                InfoWindowData info = new InfoWindowData();
+                info.setEmail(entityMarker.getEmail());
+                info.setWebsite(entityMarker.getWebsite());
+
+                marker.setTag(info);
+                marker.showInfoWindow();
+
+                return true;
+            }
+        });
+
         getEntities();
     }
 
@@ -221,20 +243,32 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
 
     private void createOrUpdateMarkerByLocation(Location location) {
         if (marker == null) {
-            marker = gMap.addMarker(new MarkerOptions().position(new LatLng(location.getLatitude(), location.getLongitude())).draggable(true));
+            marker = gMap.addMarker(new MarkerOptions().position(new LatLng(location.getLatitude(), location.getLongitude())).draggable(false));
         } else {
             marker.setPosition(new LatLng(location.getLatitude(), location.getLongitude()));
         }
     }
 
-    private void createOrUpdateMarkerByLocation(double lon, double lat) {
+    private void createOrUpdateMarkerByLocation(double lon, double lat, Entity entity) {
         /*if (marker == null) {
             marker = gMap.addMarker(new MarkerOptions().position(new LatLng(lat, lon)).draggable(true));
         } else {
             marker.setPosition(new LatLng(lat, lon));
         }*/
-        gMap.addMarker(new MarkerOptions().position(new LatLng(lat, lon)).draggable(true));
+        /*Marker entityMarker = gMap.addMarker(new MarkerOptions()
+                .position(new LatLng(lat, lon))
+                .title(entity.getEntityname())
+                .snippet(entity.getAdress()));*/
+        MarkerOptions markerOptions = new MarkerOptions();
+        markerOptions.position(new LatLng(lat, lon))
+                .title(entity.getEntityname())
+                .snippet(entity.getAdress());
 
+        CustomInfoWindowGoogleMap customInfoWindow = new CustomInfoWindowGoogleMap(getContext());
+        gMap.setInfoWindowAdapter(customInfoWindow);
+
+        Marker entityMarker = gMap.addMarker(markerOptions);
+        entityMarker.setTag(entity);
     }
 
     private void zoomToLocation(Location location) {
@@ -303,7 +337,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
                             double lat = entities.get(i).getLatitud();
                             double lon = entities.get(i).getLongitud();
 
-                            createOrUpdateMarkerByLocation(lon, lat);
+                            createOrUpdateMarkerByLocation(lon, lat, entities.get(i));
                         }
                     }
                 }

@@ -6,33 +6,26 @@
     density="xhdpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1513042871936"
+    timestamp="1514316214235"
     token="-4726133400699440656"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="366" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="69" />
+        duration="0" />
     <task
         name="verifier"
-        duration="10" />
-
-    <artifact
-        location="/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/outputs/apk/app-debug.apk"
-        type="SPLIT_MAIN" />
+        duration="0" />
 
     <build
         build-mode="FULL"
-        timestamp="1513042026830"
+        timestamp="1514314031464"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
@@ -73,15 +66,27 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1513042703555"
+        timestamp="1514315786977"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/outputs/apk/app-debug.apk"
-            type="SPLIT_MAIN" />
+            location="/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            type="SPLIT" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1513042871936"
+        timestamp="1514316152262"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
@@ -90,5 +95,9 @@
             location="/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/outputs/apk/app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
+    <build
+        build-mode="COLD"
+        timestamp="1514316214235"
+        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

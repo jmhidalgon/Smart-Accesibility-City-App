@@ -17,7 +17,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.R;
-import sacapp.android.jmhidalgo.smartaccesibilitycityapp.Util.Util;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.util.Util;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.API;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.TokenService;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.UserService;
