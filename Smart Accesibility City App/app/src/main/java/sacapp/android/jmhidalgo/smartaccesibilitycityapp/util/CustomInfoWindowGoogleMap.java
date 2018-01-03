@@ -2,7 +2,9 @@ package sacapp.android.jmhidalgo.smartaccesibilitycityapp.util;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -10,6 +12,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.Marker;
 
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.R;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.DetailsActivity;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.adapter.InfoWindowData;
 
 public class CustomInfoWindowGoogleMap implements GoogleMap.InfoWindowAdapter {
@@ -51,4 +54,6 @@ public class CustomInfoWindowGoogleMap implements GoogleMap.InfoWindowAdapter {
 
         return view;
     }
+
+
 }

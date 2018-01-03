@@ -2,8 +2,10 @@ package sacapp.android.jmhidalgo.smartaccesibilitycityapp.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 
-public class Entity {
+
+public class Entity implements Serializable{
     @SerializedName("_id")
     private String id;
     @SerializedName("nombreEntidad")

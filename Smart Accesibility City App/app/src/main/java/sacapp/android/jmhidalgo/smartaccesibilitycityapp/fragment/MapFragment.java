@@ -1,6 +1,7 @@
 package sacapp.android.jmhidalgo.smartaccesibilitycityapp.fragment;
 
 import android.Manifest;
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -37,6 +38,7 @@ import sacapp.android.jmhidalgo.smartaccesibilitycityapp.R;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.API;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.EntityService;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.TokenService;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.DetailsActivity;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.ExplorerActivity;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.LoginActivity;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.MainActivity;
@@ -142,7 +144,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
 
         /* MAPS LISTENER */
         // Click on the map
-        gMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+        /*gMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
             @Override
             public void onMapClick(LatLng latLng) {
 
@@ -155,7 +157,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
             public void onMapLongClick(LatLng latLng) {
 
             }
-        });
+        });*/
 
         gMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
@@ -169,6 +171,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
                 InfoWindowData info = new InfoWindowData();
                 info.setEmail(entityMarker.getEmail());
                 info.setWebsite(entityMarker.getWebsite());
+                info.setEntity(entityMarker);
 
                 marker.setTag(info);
                 marker.showInfoWindow();
@@ -266,6 +269,15 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
 
         CustomInfoWindowGoogleMap customInfoWindow = new CustomInfoWindowGoogleMap(getContext());
         gMap.setInfoWindowAdapter(customInfoWindow);
+
+        gMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+            @Override
+            public void onInfoWindowClick(Marker marker) {
+                Intent intent = new Intent(getContext(), DetailsActivity.class);
+                intent.putExtra("Entity", (Entity)marker.getTag());
+                getContext().startActivity(intent);
+            }
+        });
 
         Marker entityMarker = gMap.addMarker(markerOptions);
         entityMarker.setTag(entity);

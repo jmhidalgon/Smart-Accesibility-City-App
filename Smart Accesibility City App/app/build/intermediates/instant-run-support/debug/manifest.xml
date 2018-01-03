@@ -67,6 +67,8 @@
         </activity>
         <activity android:name="sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.MainActivity" >
         </activity>
+        <activity android:name="sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.DetailsActivity" >
+        </activity>
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"
