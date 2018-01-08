@@ -4617,14 +4617,7 @@
                     "endOffset": 72944
                 },
                 "from": {
-                    "file": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 112,
-                        "startColumn": 4,
-                        "startOffset": 7036,
-                        "endColumn": 66,
-                        "endOffset": 7098
-                    }
+                    "file": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/res/values/strings.xml"
                 }
             },
             {

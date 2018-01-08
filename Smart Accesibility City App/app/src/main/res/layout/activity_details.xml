@@ -5,9 +5,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:context="sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.MainActivity">
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/toolbar" />
+
 
     <RelativeLayout
         android:id="@+id/rlName"
@@ -84,20 +82,79 @@
         android:layout_height="match_parent"
         android:layout_toStartOf="@+id/rlName"
         android:layout_below="@+id/rlName"
-        android:layout_alignParentEnd="true">
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+        android:id="@+id/linearLayout">
+
+        <RelativeLayout
+            android:id="@+id/rlResourcelv"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            tools:context="sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.MainActivity"
+            android:layout_below="@+id/toolbar"
+            android:background="@color/colorPrimary">
+
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:text="Recursos"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textSize="18sp"/>
+
+        </RelativeLayout>
+
 
         <ListView
-            android:layout_height="match_parent"
+            android:id="@+id/listViewResource"
             android:layout_width="match_parent"
-            android:layout_weight="1"
+            android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/border_ui"
             android:textAllCaps="true"/>
 
+        <RelativeLayout
+            android:id="@+id/rlROpinionslv"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            tools:context="sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.MainActivity"
+            android:layout_below="@+id/toolbar"
+            android:background="@color/colorPrimary">
+
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:text="Opiniones"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textSize="18sp"/>
+
+        </RelativeLayout>
+
         <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
-            android:layout_weight="1"/>
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/border_ui"/>
 
     </LinearLayout>
 

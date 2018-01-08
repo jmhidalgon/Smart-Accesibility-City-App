@@ -188,7 +188,6 @@ public class AccessibilityActivity extends AppCompatActivity {
                     builder.setNegativeButton(android.R.string.cancel, null);
                     AlertDialog dialog = builder.create();
                     dialog.show();
-
                 }
             }
         });

@@ -7,11 +7,12 @@ import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.AccessResource;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.AccessResources;
 
 public interface AccessResourceService
 {
     @GET("get-recursos")
-    Call<AccessResource> getResource(@Header("idEntidad") String idEntidad);
+    Call<AccessResources> getResources(@Header("idEntidad") String idEntidad);
 
     @POST("registro-recurso")
     Call<AccessResource> register(@Body AccessResource accessResource);
