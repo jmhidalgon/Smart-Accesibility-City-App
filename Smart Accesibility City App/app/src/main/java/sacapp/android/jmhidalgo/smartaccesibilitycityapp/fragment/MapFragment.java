@@ -10,6 +10,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -67,6 +68,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
     private CameraPosition camera;
 
     private List<Entity> entities;
+    private Entity selectedEntity;
 
     public MapFragment() {
 
@@ -162,16 +164,16 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
         gMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
-                Entity entityMarker= (Entity)marker.getTag();
+                selectedEntity = (Entity)marker.getTag();
 
-                if(entityMarker == null){
+                if(selectedEntity == null){
                     return false;
                 }
 
                 InfoWindowData info = new InfoWindowData();
-                info.setEmail(entityMarker.getEmail());
-                info.setWebsite(entityMarker.getWebsite());
-                info.setEntity(entityMarker);
+                info.setEmail(selectedEntity.getEmail());
+                info.setWebsite(selectedEntity.getWebsite());
+                info.setEntity(selectedEntity);
 
                 marker.setTag(info);
                 marker.showInfoWindow();
@@ -274,7 +276,12 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
             @Override
             public void onInfoWindowClick(Marker marker) {
                 Intent intent = new Intent(getContext(), DetailsActivity.class);
-                intent.putExtra("Entity", (Entity)marker.getTag());
+
+                if(selectedEntity == null){
+                    return ;
+                }
+
+                intent.putExtra("Entity", (Parcelable) selectedEntity);
                 getContext().startActivity(intent);
             }
         });

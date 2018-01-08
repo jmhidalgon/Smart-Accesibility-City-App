@@ -11,6 +11,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
@@ -109,8 +110,14 @@ public class EntityRegisterActivity extends FragmentActivity implements OnMapRea
                         } else {
                             Toast.makeText(EntityRegisterActivity.this, "Entidad registrada", Toast.LENGTH_LONG).show();
                             Intent intentBackLogin = new Intent(EntityRegisterActivity.this, AccessibilityActivity.class);
-                            intentBackLogin.putExtra("email", editTextEmail.getText().toString());
-                            intentBackLogin.putExtra("pass", editTextPass.getText().toString());
+                            /*intentBackLogin.putExtra("email", editTextEmail.getText().toString());
+                            intentBackLogin.putExtra("pass", editTextPass.getText().toString());*/
+
+                            if(response.body() == null){
+                                return ;
+                            }
+
+                            intentBackLogin.putExtra("Entity", (Parcelable) response.body());
                             startActivity(intentBackLogin);
                         }
                     }

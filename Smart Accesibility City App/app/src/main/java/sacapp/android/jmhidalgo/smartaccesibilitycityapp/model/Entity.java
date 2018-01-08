@@ -1,11 +1,13 @@
 package sacapp.android.jmhidalgo.smartaccesibilitycityapp.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 
-
-public class Entity implements Serializable{
+public class Entity implements Parcelable {
     @SerializedName("_id")
     private String id;
     @SerializedName("nombreEntidad")
@@ -40,6 +42,32 @@ public class Entity implements Serializable{
         this.latitud = latitud;
         this.website = website;
     }
+
+    protected Entity(Parcel in) {
+        id = in.readString();
+        entityname = in.readString();
+        email = in.readString();
+        pass = in.readString();
+        rol = in.readString();
+        image = in.readString();
+        adress = in.readString();
+        longitud = in.readDouble();
+        latitud = in.readDouble();
+        website = in.readString();
+        gethash = in.readByte() != 0;
+    }
+
+    public static final Creator<Entity> CREATOR = new Creator<Entity>() {
+        @Override
+        public Entity createFromParcel(Parcel in) {
+            return new Entity(in);
+        }
+
+        @Override
+        public Entity[] newArray(int size) {
+            return new Entity[size];
+        }
+    };
 
     public String getId() {
         return id;
@@ -127,5 +155,25 @@ public class Entity implements Serializable{
 
     public void setGethash(boolean gethash) {
         this.gethash = gethash;
+    }
+
+    @Override
+    public int describeContents() {
+        return 10;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(id);
+        parcel.writeString(entityname);
+        parcel.writeString(email);
+        parcel.writeString(pass);
+        parcel.writeString(rol);
+        parcel.writeString(image);
+        parcel.writeString(adress);
+        parcel.writeDouble(longitud);
+        parcel.writeDouble(latitud);
+        parcel.writeString(website);
+
     }
 }

@@ -12,6 +12,7 @@ var app = express();
 // Cargamos rutas
 var usuarioRouter = require('./routes/usuario.route');
 var entidadRouter = require('./routes/entidad.route');
+var recursoRouter = require('./routes/recurso.route');
 
 // Configuramos el bodyparser
 app.use(bodyParser.urlencoded({extended:false}));
@@ -31,6 +32,7 @@ app.use((req, res, next) =>{
 // Cargas de rutas base
 app.use('/api', usuarioRouter); 
 app.use('/api', entidadRouter); 
+app.use('/api', recursoRouter); 
 
 // Exportamos el modulo
 module.exports = app;
