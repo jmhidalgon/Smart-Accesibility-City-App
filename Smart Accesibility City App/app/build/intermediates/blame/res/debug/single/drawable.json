@@ -24,10 +24,6 @@
         "source": "/home/juanma/.android/build-cache/c2454a20d936ca7bc7571274cc69befdd0d388f8/output/res/drawable/abc_ratingbar_small_material.xml"
     },
     {
-        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/drawable/ratingbar_drawable.xml",
-        "source": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/res/drawable/ratingbar_drawable.xml"
-    },
-    {
         "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/drawable/cast_ic_notification_forward30.xml",
         "source": "/home/juanma/.android/build-cache/631810a7685df88ecf1f986c2bdf91c41b507856/output/res/drawable/cast_ic_notification_forward30.xml"
     },
@@ -38,10 +34,6 @@
     {
         "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_tick_mark_material.xml",
         "source": "/home/juanma/.android/build-cache/c2454a20d936ca7bc7571274cc69befdd0d388f8/output/res/drawable/abc_seekbar_tick_mark_material.xml"
-    },
-    {
-        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/drawable/star_ratingbar_full_empty.xml",
-        "source": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/res/drawable/star_ratingbar_full_empty.xml"
     },
     {
         "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
@@ -326,10 +318,6 @@
     {
         "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/drawable/cast_ic_notification_skip_next.xml",
         "source": "/home/juanma/.android/build-cache/631810a7685df88ecf1f986c2bdf91c41b507856/output/res/drawable/cast_ic_notification_skip_next.xml"
-    },
-    {
-        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/drawable/star_ratingbar_full_filled.xml",
-        "source": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/res/drawable/star_ratingbar_full_filled.xml"
     },
     {
         "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/drawable/design_fab_background.xml",

@@ -2393,4 +2393,6 @@
         <item name="passwordToggleTint">@color/design_tint_password_toggle</item>
         <item name="passwordToggleContentDescription">@string/password_toggle_content_description</item>
     </style>
+    <style name="customRatingBar" parent="android:style/Widget.Material.RatingBar.Small">
+    </style>
 </resources>

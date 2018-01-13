@@ -9176,6 +9176,27 @@
                 "from": {
                     "file": "/home/juanma/.android/build-cache/32a8ae0e0c30a1a76d5ddaac850fea640255f450/output/res/values/values.xml"
                 }
+            },
+            {
+                "to": {
+                    "startLine": 2395,
+                    "startColumn": 4,
+                    "startOffset": 173689,
+                    "endLine": 2396,
+                    "endColumn": 12,
+                    "endOffset": 173787
+                },
+                "from": {
+                    "file": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/res/values/styles.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 694,
+                        "endLine": 21,
+                        "endColumn": 12,
+                        "endOffset": 803
+                    }
+                }
             }
         ]
     }

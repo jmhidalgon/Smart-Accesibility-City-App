@@ -18,7 +18,7 @@ var api = express.Router();
 
 // GET
 api.get('/probando-recurso', RecursoControlador.pruebas);
-api.get('/get-recursos', RecursoControlador.getRecursos);
+api.get('/get-recursos/:idEntidad', RecursoControlador.getRecursos);
 // POST
 api.post('/registro-recurso', RecursoControlador.guardarRecurso);
 

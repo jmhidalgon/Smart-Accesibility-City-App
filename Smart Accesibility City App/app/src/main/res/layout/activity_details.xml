@@ -84,7 +84,6 @@
         android:layout_below="@+id/rlName"
         android:layout_alignParentEnd="true"
         android:orientation="vertical"
-        android:background="@color/colorPrimary"
         android:id="@+id/linearLayout">
 
         <RelativeLayout
@@ -95,8 +94,7 @@
             android:layout_height="wrap_content"
             android:paddingBottom="20dp"
             tools:context="sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.MainActivity"
-            android:layout_below="@+id/toolbar"
-            android:background="@color/colorPrimary">
+            android:layout_below="@+id/toolbar">
 
 
             <TextView
@@ -106,7 +104,7 @@
                 android:layout_marginBottom="2dp"
                 android:layout_marginTop="2dp"
                 android:text="Recursos"
-                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textColor="?attr/actionMenuTextColor"
                 android:textSize="18sp"/>
 
         </RelativeLayout>
@@ -131,8 +129,7 @@
             android:layout_height="wrap_content"
             android:paddingBottom="20dp"
             tools:context="sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.MainActivity"
-            android:layout_below="@+id/toolbar"
-            android:background="@color/colorPrimary">
+            android:layout_below="@+id/toolbar">
 
 
             <TextView
@@ -142,19 +139,19 @@
                 android:layout_marginBottom="2dp"
                 android:layout_marginTop="2dp"
                 android:text="Opiniones"
-                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"/>
 
         </RelativeLayout>
 
         <ListView
+            android:id="@+id/listViewComments"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/border_ui"/>
+            android:layout_weight="1"/>
 
     </LinearLayout>
 

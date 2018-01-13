@@ -1,9 +1,5 @@
 package sacapp.android.jmhidalgo.smartaccesibilitycityapp.adapter;
 
-/**
- * Created by juanma on 23/10/17.
- */
-
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;

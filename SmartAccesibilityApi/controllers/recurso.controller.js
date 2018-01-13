@@ -59,14 +59,16 @@ function guardarRecurso(req, res){
 
 // Funcion para obtener las recursos y representarlas
 function getRecursos(req, res){
-	var recurso = new Recurso();
+/*
 	var parametros = req.headers;
+	console.log("Headers: " + parametros);
 	var idEntidad = parametros.idEntidad;
 	
 	console.log("Carga datos: " + idEntidad);
+	console.log("Carga datos: " + req.headers);
 
 	// Recurso.find({idEntidad: idEntidad}, (err, recursos) =>{
-	Recurso.find().paginate(1, 20, function(err, recursos, total){
+	Recurso.find({'idEntidad': idEntidad}).paginate(1, 20, function(err, recursos, total){
 		if(err){
 			console.log("Error");
 			res.status(HttpStatus.INTERNAL_SERVER_ERROR).send("Se produjo un error al consultar los recursos de la entidad");			
@@ -80,6 +82,26 @@ function getRecursos(req, res){
 			}
 		}
 
+	});
+
+}*/
+	var idEntidad = req.params.idEntidad;
+
+	if(!idEntidad){
+		console.log("Id entidad nulo");
+	} else {
+		var find = Recurso.find({idEntidad : idEntidad});
+	}
+
+	find.populate({path: 'idEntidad'}).exec((err, recursos) =>{
+		if(err){
+			res.status(500).send({message : 'Error en la peticion'});
+		} else if(!recursos) {
+			res.status(404).send({message : 'No hay recursos'});
+		} else {
+			console.log(recursos);
+			res.status(200).send({recursos : recursos});
+		}
 	});
 
 }
