@@ -176,7 +176,11 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
                 info.setEntity(selectedEntity);
 
                 marker.setTag(info);
+
+                gMap.animateCamera(CameraUpdateFactory.newLatLng(marker.getPosition()));
+
                 marker.showInfoWindow();
+                marker.setTag(selectedEntity);
 
                 return true;
             }

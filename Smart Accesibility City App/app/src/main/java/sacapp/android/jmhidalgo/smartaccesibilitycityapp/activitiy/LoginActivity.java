@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Parcelable;
+import android.support.design.internal.ParcelableSparseArray;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
@@ -17,6 +19,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.R;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.util.SACAPPControl;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.util.Util;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.API;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.TokenService;
@@ -214,6 +217,12 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void startMainActivity(){
+        if(user == null){
+            Toast.makeText(LoginActivity.this, "Ha habido un fallo de autenticación", Toast.LENGTH_LONG).show();
+            return ;
+        }
+        SACAPPControl.setUser(user);
+
         saveOnPreferences(editTextName.getText().toString(), editTextPass.getText().toString());
         Intent intentMainActivity = new Intent(LoginActivity.this, MainActivity.class);
         intentMainActivity.putExtra("token", token);

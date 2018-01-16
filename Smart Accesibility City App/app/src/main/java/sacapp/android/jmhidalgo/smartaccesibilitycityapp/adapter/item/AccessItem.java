@@ -1,54 +1,33 @@
 package sacapp.android.jmhidalgo.smartaccesibilitycityapp.adapter.item;
 
 
-import android.graphics.drawable.Drawable;
-
 public class AccessItem {
 
-    private String tittle;
-    private String categoryId;
-    private String description;
-    private Drawable imagen;
+    private String nombre;
+    private String idEntidad;
 
     public AccessItem() {
         super();
     }
 
-    public AccessItem(String categoryId, String title, String description, Drawable imagen) {
-        super();
-        this.tittle = title;
-        this.description = description;
-        this.imagen = imagen;
-        this.categoryId = categoryId;
+    public AccessItem(String nombre, String idEntidad) {
+        this.nombre = nombre;
+        this.idEntidad = idEntidad;
     }
 
-
-    public String getTittle() {
-        return tittle;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setTittle(String title) {
-        this.tittle = title;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getDescription() {
-        return description;
+    public String getIdEntidad() {
+        return idEntidad;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setIdEntidad(String idEntidad) {
+        this.idEntidad = idEntidad;
     }
-
-    public Drawable getImage() {
-        return imagen;
-    }
-
-    public void setImagen(Drawable imagen) {
-        this.imagen = imagen;
-    }
-
-    public String getCategoryId(){return categoryId;}
-
-    public void setCategoryId(String categoryId){this.categoryId = categoryId;}
-
 }

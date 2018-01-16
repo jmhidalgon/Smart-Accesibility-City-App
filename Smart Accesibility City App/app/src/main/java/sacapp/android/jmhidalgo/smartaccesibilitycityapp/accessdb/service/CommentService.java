@@ -13,6 +13,6 @@ public interface CommentService {
     @GET("get-comentarios/{idEntidad}")
     Call<Comments> getComments(@Path("idEntidad") String idEntidad);
 
-    @POST("registro-recurso")
+    @POST("registro-comentario")
     Call<Comment> register(@Body Comment comment);
 }

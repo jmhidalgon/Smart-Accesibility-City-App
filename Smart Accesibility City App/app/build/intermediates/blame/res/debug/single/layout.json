@@ -28,10 +28,6 @@
         "source": "/home/juanma/.android/build-cache/c2454a20d936ca7bc7571274cc69befdd0d388f8/output/res/layout/abc_alert_dialog_button_bar_material.xml"
     },
     {
-        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/place_autocomplete_progress.xml",
-        "source": "/home/juanma/.android/build-cache/950013331fe80ddc7b1a72f8cd045b209d968cf1/output/res/layout/place_autocomplete_progress.xml"
-    },
-    {
         "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
         "source": "/home/juanma/.android/build-cache/c2454a20d936ca7bc7571274cc69befdd0d388f8/output/res/layout/abc_action_menu_layout.xml"
     },
@@ -84,10 +80,6 @@
         "source": "/home/juanma/.android/build-cache/32a8ae0e0c30a1a76d5ddaac850fea640255f450/output/res/layout/design_navigation_menu_item.xml"
     },
     {
-        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/mr_media_route_chooser_dialog.xml",
-        "source": "/home/juanma/.android/build-cache/57963bac9b930ad67da181e1046cfa4d9a1da3ee/output/res/layout/mr_media_route_chooser_dialog.xml"
-    },
-    {
         "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/activity_user_register.xml",
         "source": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/res/layout/activity_user_register.xml"
     },
@@ -100,40 +92,20 @@
         "source": "/home/juanma/.android/build-cache/c2454a20d936ca7bc7571274cc69befdd0d388f8/output/res/layout/abc_list_menu_item_radio.xml"
     },
     {
-        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
-        "source": "/home/juanma/.android/build-cache/c2454a20d936ca7bc7571274cc69befdd0d388f8/output/res/layout/abc_search_view.xml"
-    },
-    {
         "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml",
         "source": "/home/juanma/.android/build-cache/32a8ae0e0c30a1a76d5ddaac850fea640255f450/output/res/layout/design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
+        "source": "/home/juanma/.android/build-cache/c2454a20d936ca7bc7571274cc69befdd0d388f8/output/res/layout/abc_search_view.xml"
     },
     {
         "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
         "source": "/home/juanma/.android/build-cache/c2454a20d936ca7bc7571274cc69befdd0d388f8/output/res/layout/abc_action_bar_view_list_nav_layout.xml"
     },
     {
-        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/cast_mini_controller.xml",
-        "source": "/home/juanma/.android/build-cache/631810a7685df88ecf1f986c2bdf91c41b507856/output/res/layout/cast_mini_controller.xml"
-    },
-    {
         "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml",
         "source": "/home/juanma/.android/build-cache/32a8ae0e0c30a1a76d5ddaac850fea640255f450/output/res/layout/design_navigation_item_subheader.xml"
-    },
-    {
-        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/cast_intro_overlay.xml",
-        "source": "/home/juanma/.android/build-cache/631810a7685df88ecf1f986c2bdf91c41b507856/output/res/layout/cast_intro_overlay.xml"
-    },
-    {
-        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/place_autocomplete_item_powered_by_google.xml",
-        "source": "/home/juanma/.android/build-cache/950013331fe80ddc7b1a72f8cd045b209d968cf1/output/res/layout/place_autocomplete_item_powered_by_google.xml"
-    },
-    {
-        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/mr_media_route_controller_material_dialog_b.xml",
-        "source": "/home/juanma/.android/build-cache/57963bac9b930ad67da181e1046cfa4d9a1da3ee/output/res/layout/mr_media_route_controller_material_dialog_b.xml"
-    },
-    {
-        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/cast_help_text.xml",
-        "source": "/home/juanma/.android/build-cache/631810a7685df88ecf1f986c2bdf91c41b507856/output/res/layout/cast_help_text.xml"
     },
     {
         "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/fragment_map.xml",
@@ -146,6 +118,10 @@
     {
         "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
         "source": "/home/juanma/.android/build-cache/c2454a20d936ca7bc7571274cc69befdd0d388f8/output/res/layout/abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/fragment_history.xml",
+        "source": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/res/layout/fragment_history.xml"
     },
     {
         "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
@@ -176,16 +152,16 @@
         "source": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/res/layout/activity_details.xml"
     },
     {
+        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/fragment_menubar.xml",
+        "source": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/res/layout/fragment_menubar.xml"
+    },
+    {
         "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
         "source": "/home/juanma/.android/build-cache/c2454a20d936ca7bc7571274cc69befdd0d388f8/output/res/layout/abc_list_menu_item_layout.xml"
     },
     {
         "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/design_text_input_password_icon.xml",
         "source": "/home/juanma/.android/build-cache/32a8ae0e0c30a1a76d5ddaac850fea640255f450/output/res/layout/design_text_input_password_icon.xml"
-    },
-    {
-        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/fragment_menubar.xml",
-        "source": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/res/layout/fragment_menubar.xml"
     },
     {
         "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
@@ -204,24 +180,16 @@
         "source": "/home/juanma/.android/build-cache/c2454a20d936ca7bc7571274cc69befdd0d388f8/output/res/layout/select_dialog_item_material.xml"
     },
     {
-        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/cast_expanded_controller_activity.xml",
-        "source": "/home/juanma/.android/build-cache/631810a7685df88ecf1f986c2bdf91c41b507856/output/res/layout/cast_expanded_controller_activity.xml"
-    },
-    {
-        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/place_autocomplete_item_prediction.xml",
-        "source": "/home/juanma/.android/build-cache/950013331fe80ddc7b1a72f8cd045b209d968cf1/output/res/layout/place_autocomplete_item_prediction.xml"
-    },
-    {
         "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/activity_login.xml",
         "source": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/res/layout/activity_login.xml"
     },
     {
-        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml",
-        "source": "/home/juanma/.android/build-cache/32a8ae0e0c30a1a76d5ddaac850fea640255f450/output/res/layout/design_layout_snackbar_include.xml"
-    },
-    {
         "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/fragment_logo.xml",
         "source": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/res/layout/fragment_logo.xml"
+    },
+    {
+        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml",
+        "source": "/home/juanma/.android/build-cache/32a8ae0e0c30a1a76d5ddaac850fea640255f450/output/res/layout/design_layout_snackbar_include.xml"
     },
     {
         "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/activity_entity_register.xml",
@@ -252,16 +220,16 @@
         "source": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/res/layout/comment_item.xml"
     },
     {
+        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/comment_entry.xml",
+        "source": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/res/layout/comment_entry.xml"
+    },
+    {
         "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
         "source": "/home/juanma/.android/build-cache/c2454a20d936ca7bc7571274cc69befdd0d388f8/output/res/layout/abc_screen_simple.xml"
     },
     {
         "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
         "source": "/home/juanma/.android/build-cache/c2454a20d936ca7bc7571274cc69befdd0d388f8/output/res/layout/abc_action_menu_item_layout.xml"
-    },
-    {
-        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/cast_tracks_chooser_dialog_layout.xml",
-        "source": "/home/juanma/.android/build-cache/631810a7685df88ecf1f986c2bdf91c41b507856/output/res/layout/cast_tracks_chooser_dialog_layout.xml"
     },
     {
         "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
@@ -276,16 +244,12 @@
         "source": "/home/juanma/.android/build-cache/c2454a20d936ca7bc7571274cc69befdd0d388f8/output/res/layout/abc_action_mode_bar.xml"
     },
     {
-        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/cast_tracks_chooser_dialog_row_layout.xml",
-        "source": "/home/juanma/.android/build-cache/631810a7685df88ecf1f986c2bdf91c41b507856/output/res/layout/cast_tracks_chooser_dialog_row_layout.xml"
+        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/activity_accesibility.xml",
+        "source": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/res/layout/activity_accesibility.xml"
     },
     {
         "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/activity_explorer.xml",
         "source": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/res/layout/activity_explorer.xml"
-    },
-    {
-        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/activity_accesibility.xml",
-        "source": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/res/layout/activity_accesibility.xml"
     },
     {
         "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",

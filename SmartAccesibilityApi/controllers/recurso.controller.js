@@ -99,7 +99,6 @@ function getRecursos(req, res){
 		} else if(!recursos) {
 			res.status(404).send({message : 'No hay recursos'});
 		} else {
-			console.log(recursos);
 			res.status(200).send({recursos : recursos});
 		}
 	});

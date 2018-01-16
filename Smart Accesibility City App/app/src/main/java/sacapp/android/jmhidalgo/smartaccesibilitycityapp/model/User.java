@@ -1,8 +1,11 @@
 package sacapp.android.jmhidalgo.smartaccesibilitycityapp.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.gson.annotations.SerializedName;
 
-public class User {
+public class User implements Parcelable {
     @SerializedName("_id")
     private String id;
     @SerializedName("nombre")
@@ -103,6 +106,24 @@ public class User {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    @Override
+    public int describeContents() {
+        return 9;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(id);
+        parcel.writeString(name);
+        parcel.writeString(surname);
+        parcel.writeString(reduceMovility);
+        parcel.writeString(email);
+        parcel.writeString(pass);
+        parcel.writeString(rol);
+        parcel.writeString(image);
+        parcel.writeInt(gethash ? 1 : 0);
     }
 };
 

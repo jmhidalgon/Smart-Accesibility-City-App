@@ -1,19 +1,29 @@
 package sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy;
 
+import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -22,13 +32,18 @@ import sacapp.android.jmhidalgo.smartaccesibilitycityapp.R;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.API;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.AccessResourceService;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.CommentService;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.VisitService;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.adapter.AdapterAccessItem;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.adapter.AdapterComment;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.adapter.item.AccessItem;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.adapter.item.CommentItem;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.AccessResource;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.AccessResources;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Comment;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Comments;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Entity;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Visit;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.util.SACAPPControl;
 
 public class DetailsActivity extends AppCompatActivity {
 
@@ -42,17 +57,22 @@ public class DetailsActivity extends AppCompatActivity {
     private FloatingActionButton googlemapButton;
     private FloatingActionButton emailButton;
     private FloatingActionButton gotoButton;
+    private FloatingActionButton commentButton;
 
     private ListView listViewAccessResource;
-    private List<String> accesResourceItems;
+    private ArrayList<AccessItem> accesResourceItems;
 
     private ArrayList<CommentItem> commentItems;
     private ListView listViewComment;
 
     private AdapterComment adapterComment;
-    private ArrayAdapter<String> adapterAccessResource;
+    // private ArrayAdapter<String> adapterAccessResource;
+    private AdapterAccessItem adapterAccessResource;
 
+    private RatingBar ratingBar;
 
+    private double globalRating = 0;
+    private double acumulateRating = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,8 +85,10 @@ public class DetailsActivity extends AppCompatActivity {
         }
 
         listViewAccessResource = (ListView) findViewById(R.id.listViewResource);
-        accesResourceItems = new ArrayList<String>();
-        adapterAccessResource = new ArrayAdapter<String>(DetailsActivity.this, android.R.layout.simple_list_item_activated_1, accesResourceItems);
+        accesResourceItems = new ArrayList();
+
+        // adapterAccessResource = new ArrayAdapter<String>(DetailsActivity.this, android.R.layout.simple_list_item_activated_1, accesResourceItems);
+        adapterAccessResource = new AdapterAccessItem(DetailsActivity.this, accesResourceItems);
         listViewAccessResource.setAdapter(adapterAccessResource);
 
         listViewComment = (ListView) findViewById(R.id.listViewComments);
@@ -82,6 +104,8 @@ public class DetailsActivity extends AppCompatActivity {
 
         nameTextView.setText(entity.getEntityname());
         addressTextView.setText(entity.getAdress());
+
+        ratingBar = (RatingBar) findViewById(R.id.ratingBarGlobal);
 
         googlemapButton = (FloatingActionButton) findViewById(R.id.fabGoogleMaps);
         googlemapButton.setOnClickListener(new View.OnClickListener() {
@@ -111,7 +135,6 @@ public class DetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String mailto = "mailto:" +entity.getEmail() +
-                        "?cc=" + "info@sacapp.com" +
                         "&subject=" + Uri.encode("Contacto mediante SACAPP") +
                         "&body=" + Uri.encode("Contacto mediante SACAPP");
 
@@ -131,7 +154,62 @@ public class DetailsActivity extends AppCompatActivity {
         gotoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // TODO
+                SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.getDefault());
+                Date date = new Date();
+
+                String dateToday = dateFormat.format(date);
+
+                if(entity != null && SACAPPControl.getUser() != null){
+                    visitRegister(new Visit(SACAPPControl.getUser().getId(), entity.getId(), dateToday));
+                }
+            }
+        });
+
+        commentButton = (FloatingActionButton) findViewById(R.id.fabComment);
+        commentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Context context = DetailsActivity.this;
+                LayoutInflater inf = (LayoutInflater) DetailsActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                final View v = inf.inflate(R.layout.comment_entry, null);
+
+                final EditText inputText = v.findViewById(R.id.editTextCommentEntry);
+                final RatingBar inputRating = v.findViewById(R.id.ratingBarEntry);
+
+                final String[] content = new String[1];
+                final int[] rating = new int[1];
+                final boolean[] success = new boolean[1];
+                final Comment[] newComment = new Comment[1];
+
+                new AlertDialog.Builder(DetailsActivity.this)
+                        .setTitle("Añadir Accesibilidad")
+                        .setMessage("Por favor, introduzca sus facilidades para evitar las barreras arquitectonicas")
+                        .setView(v)
+                        .setPositiveButton("Acceptar", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                content[0] = (String)inputText.getText().toString();
+                                rating[0] = (int)inputRating.getRating();
+
+                                if (!content[0].equals(new String("")) || rating[0] > 0) {
+
+                                    newComment[0] = new Comment(SACAPPControl.getUser().getId(), entity.getId(), rating[0], content[0]);
+                                    /*success[0] = Comment.registrerComment(newComment[0]);
+
+                                    if(success[0]){
+                                        commentItems.add(new CommentItem(newComment[0].getUserName(), newComment[0].getEntityId(),
+                                                newComment[0].getContent(), newComment[0].getRating()));
+                                        adapterComment.notifyDataSetChanged();
+                                        Toast.makeText(DetailsActivity.this, "Comentario registrado", Toast.LENGTH_LONG).show();
+                                    } else {
+                                        Toast.makeText(DetailsActivity.this, "Error: " + Comment.getResponseMessage(), Toast.LENGTH_LONG).show();
+                                    }*/
+                                    registrarComentario(newComment[0]);
+                                }
+                            }
+                        })
+                        .setNegativeButton("Cancelar", null)
+                        .show();
+
             }
         });
     }
@@ -175,7 +253,7 @@ public class DetailsActivity extends AppCompatActivity {
 
         if(accessResourcesEntity != null){
             for(int i=0; i<accessResourcesEntity.size(); ++i){
-                accesResourceItems.add(accessResourcesEntity.get(i).getResourceName());
+                accesResourceItems.add(new AccessItem(accessResourcesEntity.get(i).getResourceName(), accessResourcesEntity.get(i).getEntityId()));
             }
             adapterAccessResource.notifyDataSetChanged();
         }
@@ -221,12 +299,120 @@ public class DetailsActivity extends AppCompatActivity {
     private void fillListViewComments(){
 
         if(commentsEntity != null){
+            acumulateRating = 0;
             for(int i=0; i<commentsEntity.size(); ++i){
-                commentItems.add(new CommentItem(commentsEntity.get(i).getUserName(), commentsEntity.get(i).getEntityId(),
+                commentItems.add(new CommentItem(commentsEntity.get(i).getUserName(), entity.getId(),
                         commentsEntity.get(i).getContent(), commentsEntity.get(i).getRating()));
+                acumulateRating += commentsEntity.get(i).getRating();
             }
+            globalRating = acumulateRating / commentsEntity.size();
+            ratingBar.setRating((float)globalRating);
             adapterComment.notifyDataSetChanged();
         }
+    }
+
+    private void registrarComentario(final Comment comment){
+
+        final Comment newComment = comment;
+
+        CommentService commentService = API.getApi().create(CommentService.class);
+        Call<Comment> commentCall = commentService.register(comment);
+        final boolean[] success = new boolean[1];
+        final String[] message = new String[1];
+
+
+        commentCall.enqueue(new Callback<Comment>() {
+            @Override
+            public void onResponse(Call<Comment> call, Response<Comment> response) {
+                if (API.OK == response.code()) {
+                    newComment.setEntityId(entity.getId());
+                    commentItems.add(new CommentItem(SACAPPControl.getUser().getName(), newComment.getEntityId(),
+                            newComment.getContent(), newComment.getRating()));
+                    adapterComment.notifyDataSetChanged();
+                    Toast.makeText(DetailsActivity.this, "Comentario registrado", Toast.LENGTH_LONG).show();
+
+                    acumulateRating += newComment.getRating();
+                    globalRating = acumulateRating / commentItems.size();
+                    ratingBar.setRating((float) globalRating);
+
+                } else if (API.METHOD_NOT_ALLOWED== response.code()){
+                    Toast.makeText(DetailsActivity.this, "Useted ya ha comentado", Toast.LENGTH_LONG).show();
+                }else if(API.INTERNAL_SERVER_ERROR == response.code()){
+                    Toast.makeText(DetailsActivity.this, "Error: " + response.message(), Toast.LENGTH_LONG).show();
+                } else if(API.BAD_REQUEST == response.code()){
+                    Toast.makeText(DetailsActivity.this, "No ha podido registrarse el comentario: " + response.message(), Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(DetailsActivity.this, "Error desconocido: " + response.message(), Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Comment> call, Throwable t){
+                Toast.makeText(DetailsActivity.this, "Error al registrar comentario ", Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    private void visitRegister(Visit visit){
+
+        VisitService visitService = API.getApi().create(VisitService.class);
+        Call<Visit> visitServiceCall = visitService.register(visit);
+
+        visitServiceCall.enqueue(new Callback<Visit>() {
+            @Override
+            public void onResponse(Call<Visit> call, Response<Visit> response) {
+                int httpCode = response.code();
+
+                switch(httpCode) {
+                    case API.INTERNAL_SERVER_ERROR:
+                        Toast.makeText(DetailsActivity.this, response.message() + ": Error en el servidor de datos", Toast.LENGTH_LONG).show();
+                        break;
+                    case API.NOT_FOUND:
+                        Toast.makeText(DetailsActivity.this, response.message() + ": No encontrado", Toast.LENGTH_LONG).show();
+                        break;
+                    case API.METHOD_NOT_ALLOWED:
+                        Toast.makeText(DetailsActivity.this, response.message() + ": El usuario ya ha marcado para visitar dicha empresa hoy", Toast.LENGTH_LONG).show();
+                        break;
+                    case API.OK:
+                        Toast.makeText(DetailsActivity.this, "Solicitud de visita realizada con éxito", Toast.LENGTH_LONG).show();
+                        break;
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Visit> call, Throwable t) {
+                Toast.makeText(DetailsActivity.this, "Error al registrar visita", Toast.LENGTH_LONG).show();
+            }
+        });
+        /*AccessResourceService accessResourceService = API.getApi().create(AccessResourceService.class);
+            Call<AccessResources> accessResourcesCall = accessResourceService.getResources(entity.getId());
+
+            accessResourcesCall.enqueue(new Callback<AccessResources>() {
+                @Override
+                public void onResponse(Call<AccessResources> call, Response<AccessResources> response) {
+                    int httpCode = response.code();
+
+                    switch(httpCode) {
+                        case API.INTERNAL_SERVER_ERROR:
+                            Toast.makeText(DetailsActivity.this, response.message() + ": Error en el servidor de datos", Toast.LENGTH_LONG).show();
+                            break;
+                        case API.NOT_FOUND:
+                            Toast.makeText(DetailsActivity.this, response.message() + ": No encontrado", Toast.LENGTH_LONG).show();
+                            break;
+                        case API.OK:
+                            AccessResources accessResources = response.body();
+                            accessResourcesEntity = accessResources.getAccessResources();
+                            fillListViewAccessResource();
+                            break;
+                    }
+
+                }
+
+                @Override
+                public void onFailure(Call<AccessResources> call, Throwable t) {
+                    Toast.makeText(DetailsActivity.this, "Error de conexion Recursos", Toast.LENGTH_LONG).show();
+                }
+            });*/
     }
 }
 

@@ -24,18 +24,21 @@ function guardarComentario(req, res){
 	var comentario = new Comentario();
 	var parametros = req.body;
 
+	console.log("----------");
+
 	comentario.nombreUsuario = parametros.nombreUsuario;
 	comentario.idEntidad = parametros.idEntidad;
 	comentario.contenido = parametros.contenido;
 	comentario.rating = parametros.rating;
 
-	console.log(comentario.nombreUsuario + " \n" + comentario.idEntidad + " \n" + comentario.contenido + " \n" + comentario.rating + " \n");
+	console.log("----------" + comentario.nombreUsuario + " \n" + comentario.idEntidad + " \n" + comentario.contenido + " \n" + comentario.rating + " \n");
 
 	console.log("Registrar comentario");
 	Comentario.findOne({idEntidad: comentario.idEntidad, nombreUsuario: comentario.nombreUsuario}, (err, u) =>{
-		if(u != null){ 
+		/*if(u != null){ 
+			console.log("Usuario ya ha comentado esta entidad");
 			res.status(HttpStatus.METHOD_NOT_ALLOWED).send({message : 'El usuario ya ha comentado'});
-		} else {
+		} else*/ {
 			if(comentario.idEntidad != null && comentario.nombreUsuario != null && comentario.rating != null && comentario.contenido != null){ // comprobamos que tenga datos
 				// guardamos comentario
 				comentario.save((err, comentarioStored) => {

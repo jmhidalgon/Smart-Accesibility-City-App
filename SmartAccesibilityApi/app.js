@@ -14,6 +14,7 @@ var usuarioRouter = require('./routes/usuario.route');
 var entidadRouter = require('./routes/entidad.route');
 var recursoRouter = require('./routes/recurso.route');
 var comentarioRouter = require('./routes/comentario.route');
+var visitaRouter = require('./routes/visita.route');
 
 // Configuramos el bodyparser
 app.use(bodyParser.urlencoded({extended:false}));
@@ -35,6 +36,7 @@ app.use('/api', usuarioRouter);
 app.use('/api', entidadRouter); 
 app.use('/api', recursoRouter); 
 app.use('/api', comentarioRouter); 
+app.use('/api', visitaRouter); 
 
 // Exportamos el modulo
 module.exports = app;

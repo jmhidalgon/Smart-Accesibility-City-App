@@ -13,7 +13,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="20dp"
+        android:paddingBottom="10dp"
         tools:context="sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.MainActivity"
         android:layout_below="@+id/toolbar"
         android:background="@color/colorPrimary">
@@ -34,23 +34,22 @@
             android:id="@+id/tvAddress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/tvName"
-            android:layout_below="@+id/tvName"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="20dp"
             android:text="TextView"
-            android:textColor="@color/common_google_signin_btn_text_dark_default"/>
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:layout_below="@+id/tvName"
+            android:layout_alignStart="@+id/tvName"/>
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fabGoogleMaps"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="27dp"
-            android:layout_marginTop="10dp"
             android:clickable="true"
             app:fabSize="mini"
             app:srcCompat="@android:drawable/ic_menu_mapmode"
             android:layout_below="@+id/tvAddress"
-            android:layout_alignParentEnd="true"/>
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="17dp"/>
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fabGoTo"
@@ -59,7 +58,7 @@
             android:clickable="true"
             app:fabSize="mini"
             app:srcCompat="@android:drawable/ic_menu_myplaces"
-            android:layout_marginEnd="19dp"
+            android:layout_marginEnd="10dp"
             android:layout_alignTop="@+id/fabGoogleMaps"
             android:layout_toStartOf="@+id/fabGoogleMaps"/>
 
@@ -68,12 +67,26 @@
             android:id="@+id/fabEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="18dp"
             android:clickable="true"
             app:fabSize="mini"
             app:srcCompat="@android:drawable/sym_action_email"
+            android:layout_marginEnd="12dp"
             android:layout_alignTop="@+id/fabGoTo"
             android:layout_toStartOf="@+id/fabGoTo"/>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:fabSize="mini"
+            app:srcCompat="@android:drawable/sym_action_chat"
+            android:layout_alignTop="@+id/fabEmail"
+            android:layout_toStartOf="@+id/fabEmail"
+            android:layout_marginEnd="11dp"/>
+
+
 
     </RelativeLayout>
 
@@ -84,55 +97,31 @@
         android:layout_below="@+id/rlName"
         android:layout_alignParentEnd="true"
         android:orientation="vertical"
-        android:background="@color/colorPrimary"
         android:id="@+id/linearLayout">
-
-        <RelativeLayout
-            android:id="@+id/rlResourcelv"
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="20dp"
-            tools:context="sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.MainActivity"
-            android:layout_below="@+id/toolbar"
-            android:background="@color/colorPrimary">
-
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="bottom"
                 android:layout_marginBottom="2dp"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
                 android:text="Recursos"
-                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textColor="?attr/actionMenuTextColor"
                 android:textSize="18sp"/>
-
-        </RelativeLayout>
-
 
         <ListView
             android:id="@+id/listViewResource"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="350dp"
             android:layout_alignParentEnd="true"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:background="@drawable/border_ui"
-            android:textAllCaps="true"/>
-
-        <RelativeLayout
-            android:id="@+id/rlROpinionslv"
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="20dp"
-            tools:context="sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.MainActivity"
-            android:layout_below="@+id/toolbar"
-            android:background="@color/colorPrimary">
+            android:textAllCaps="true"
+            />
 
 
             <TextView
@@ -140,24 +129,35 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="20dp"
+                android:gravity="bottom"
                 android:text="Opiniones"
-                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginLeft="10dp"
                 android:textSize="18sp"/>
-
-        </RelativeLayout>
 
         <ListView
             android:id="@+id/listViewComments"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
+            android:background="@drawable/border_ui"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/border_ui"/>
+            android:layout_weight="1"/>
 
     </LinearLayout>
+
+    <RatingBar
+        android:id="@+id/ratingBarGlobal"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:layout_marginTop="13dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="11dp"/>
 
 
 </RelativeLayout>

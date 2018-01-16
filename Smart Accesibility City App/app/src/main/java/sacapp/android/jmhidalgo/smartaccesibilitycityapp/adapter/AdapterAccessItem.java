@@ -61,15 +61,8 @@ public class AdapterAccessItem extends BaseAdapter {
         }
 
         AccessItem dir = items.get(position);
-
-        TextView title = (TextView) v.findViewById(R.id.category);
-        title.setText(dir.getTittle());
-
         TextView description = (TextView) v.findViewById(R.id.texto);
-        description.setText(dir.getDescription());
-
-        ImageView imagen = (ImageView) v.findViewById(R.id.imageView4);
-        imagen.setImageDrawable(dir.getImage());
+        description.setText(dir.getNombre());
 
         return v;
     }
