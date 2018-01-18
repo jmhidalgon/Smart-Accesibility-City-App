@@ -63,6 +63,7 @@ public class EntityRegisterActivity extends FragmentActivity implements OnMapRea
     private Geocoder geocoder;
     private Marker entityMarker;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

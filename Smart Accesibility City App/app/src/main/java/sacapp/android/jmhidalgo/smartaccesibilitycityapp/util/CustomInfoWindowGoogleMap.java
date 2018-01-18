@@ -41,16 +41,13 @@ public class CustomInfoWindowGoogleMap implements GoogleMap.InfoWindowAdapter {
         TextView email_tv = view.findViewById(R.id.email);
 
         name_tv.setText(marker.getTitle());
-        address_tv.setText(marker.getSnippet());
+        address_tv.setText(marker.getSnippet() != null ? marker.getSnippet(): "");
 
         InfoWindowData infoWindowData = (InfoWindowData) marker.getTag();
 
-        //int imageId = context.getResources().getIdentifier(infoWindowData.getImage().toLowerCase(),
-        //       "drawable", context.getPackageName());
-        //img.setImageResource(imageId);
+        website_tv.setText(infoWindowData.getWebsite() != "" || infoWindowData.getWebsite() != null ? infoWindowData.getWebsite() : "Entidad Publica");
 
-        website_tv.setText(infoWindowData.getWebsite());
-        email_tv.setText(infoWindowData.getEmail());
+        email_tv.setText(infoWindowData.getEmail() != "" || infoWindowData.getEmail() != null ? infoWindowData.getEmail() : "" );
 
         return view;
     }

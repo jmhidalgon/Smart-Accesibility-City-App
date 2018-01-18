@@ -6,14 +6,25 @@ import java.util.List;
 
 public class AccessResource
 {
+    @SerializedName("_id")
+    private String id;
     @SerializedName("nombreRecurso")
     private String resourceName;
     @SerializedName("idEntidad")
     private String entityId;
 
-    public AccessResource(String resourceName, String entityId) {
+    public AccessResource(String id, String resourceName, String entityId) {
+        this.id = id;
         this.resourceName = resourceName;
         this.entityId = entityId;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getResourceName() {

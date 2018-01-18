@@ -119,7 +119,7 @@ public class AccessibilityActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     // TODO AccesSResource
                     for(int i=0; i<adapter.getCount(); ++i){
-                        AccessResource accessResource = new AccessResource(adapter.getItem(i).toString(), entity.getId());
+                        AccessResource accessResource = new AccessResource("", adapter.getItem(i).toString(), entity.getId());
 
                         AccessResourceService accessResourceService = API.getApi().create(AccessResourceService.class);
                         Call<AccessResource> accessResourceCall = accessResourceService.register(accessResource);
@@ -141,7 +141,17 @@ public class AccessibilityActivity extends AppCompatActivity {
                                         AccessResource accessResource = response.body();
                                         if(accessResource == null) {
                                             AccessibilityActivity.registrerFailure();
+                                        } else {
+                                            if(entity.getRol().equals("ROLE_ENTITY")){
+                                                Intent intentBackLogin = new Intent(AccessibilityActivity.this, LoginActivity.class);
+                                                intentBackLogin.putExtra("email", entity.getEmail());
+                                                intentBackLogin.putExtra("pass", entity.getPass());
+                                                startActivity(intentBackLogin);
+                                            } else {
+                                                AccessibilityActivity.this.finish();
+                                            }
                                         }
+
                                         break;
                                     }
                                     default: {

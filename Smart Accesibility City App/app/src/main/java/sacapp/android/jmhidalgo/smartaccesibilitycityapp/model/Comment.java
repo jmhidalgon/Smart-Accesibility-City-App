@@ -18,6 +18,8 @@ import sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.UserRegisterA
 
 public class Comment
 {
+    @SerializedName("_id")
+    private String id;
     @SerializedName("nombreUsuario")
     private String userName;
     @SerializedName("idEntidad")
@@ -29,7 +31,8 @@ public class Comment
     @Expose
     private static String responseMessage;
 
-    public Comment(String userName, String entityId, int rating, String content) {
+    public Comment(String id, String userName, String entityId, int rating, String content) {
+        this.id = id;
         this.userName = userName;
         this.entityId = entityId;
         this.rating = rating;

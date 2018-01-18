@@ -30,10 +30,10 @@ function guardarVisita(req, res){
 
 	console.log("Registrar visita");
 	Visita.findOne({idEntidad: visita.idEntidad, nombreUsuario: visita.nombreUsuario, fecha: visita.fecha}, (err, u) =>{
-		/*if(u != null){ 
-			console.log("Usuario ya ha comentado esta entidad");
-			res.status(HttpStatus.METHOD_NOT_ALLOWED).send({message : 'El usuario ya ha comentado'});
-		} else*/ {
+		if(u != null){ 
+			console.log("Usuario ya ha marcado para visitar esta empresa hoy");
+			res.status(HttpStatus.METHOD_NOT_ALLOWED).send({message : 'El usuario ya ha marcado para visitar esta empresa hoy'});
+		} else {
 			if(visita.idEntidad != null && visita.idUsuario != null && visita.fecha != null){ // comprobamos que tenga datos
 				// guardamos visita
 				visita.save((err, visitaStored) => {
@@ -59,9 +59,59 @@ function guardarVisita(req, res){
 	});
 }
 
+function getVisitasPorEntidad(req, res){
+	var idEntidad = req.params.idEntidad;
+	console.log(idEntidad);
+	if(!idEntidad){
+		console.log("Id entidad nulo");
+	} else {
+		var find = Visita.find({idEntidad : idEntidad});
+	}
+
+	find.populate({path: 'idEntidad'}).exec((err, visitas) =>{
+		if(err){
+			console.log("Error en la peticion");
+			res.status(500).send({message : 'Error en la peticion'});
+		} else if(!visitas) {
+			console.log("Nu hay");
+			res.status(404).send({message : 'No hay visitas'});
+		} else {
+			console.log(visitas);
+			res.status(200).send({visitas : visitas});
+		}
+	});
+
+}
+
+function getVisitasPorUsuario(req, res){
+	var idUsuario = req.params.idUsuario;
+	console.log(idUsuario);
+	console.log("Visitas de usuario " + idUsuario);
+	if(!idUsuario){
+		console.log("Id entidad nulo");
+	} else {
+		var find = Visita.find({idUsuario : idUsuario});
+	}
+
+	find.populate({path: 'idUsuario'}).exec((err, visitas) =>{
+		if(err){
+			console.log("Error en la peticion");
+			res.status(500).send({message : 'Error en la peticion'});
+		} else if(!visitas) {
+			console.log("Nu hay");
+			res.status(404).send({message : 'No hay visitas'});
+		} else {
+			console.log(visitas);
+			res.status(200).send({visitas : visitas});
+		}
+	});
+
+}
 
 // Exportamos
 module.exports = {
 	pruebas,
-	guardarVisita
+	guardarVisita,
+	getVisitasPorUsuario,
+	getVisitasPorEntidad
 };

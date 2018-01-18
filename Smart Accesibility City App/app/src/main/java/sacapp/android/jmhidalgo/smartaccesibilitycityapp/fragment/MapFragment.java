@@ -14,11 +14,13 @@ import android.os.Parcelable;
 import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.TextInputEditText;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -39,7 +41,9 @@ import sacapp.android.jmhidalgo.smartaccesibilitycityapp.R;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.API;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.EntityService;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.TokenService;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.AccessibilityActivity;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.DetailsActivity;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.EntityRegisterActivity;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.ExplorerActivity;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.LoginActivity;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.MainActivity;
@@ -151,15 +155,72 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
             public void onMapClick(LatLng latLng) {
 
             }
-        });
+        });*/
 
         // Long click on the map
         gMap.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
             @Override
-            public void onMapLongClick(LatLng latLng) {
+            public void onMapLongClick(final LatLng latLng) {
 
+                final EditText input = new EditText(getContext());
+
+                new AlertDialog.Builder(getContext())
+                        .setTitle("Añadir Entidad Publica")
+                        .setMessage("Indique el nombre del lugar público a registrar:")
+                        .setView(input)
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                if(!input.getText().toString().isEmpty()){
+                                    String publicEntityName = input.getText().toString();
+                                    Entity entity = new Entity("", publicEntityName, "", "", "ROLE_PUBLIC", "", "", latLng.longitude, latLng.latitude, "");
+
+                                    EntityService entityService = API.getApi().create(EntityService.class);
+                                    Call<Entity> entityCall = entityService.registerPublic(entity);
+                                    entityCall.enqueue(new Callback<Entity>() {
+                                        @Override
+                                        public void onResponse(Call<Entity> call, Response<Entity> response) {
+
+                                            int httpCode = response.code();
+                                            switch (httpCode) {
+                                                case API.INTERNAL_SERVER_ERROR: {
+                                                    Toast.makeText(getContext(), response.message() + ": Error interno del servidor", Toast.LENGTH_LONG).show();
+                                                    break;
+                                                }
+                                                case API.BAD_REQUEST: {
+                                                    Toast.makeText(getActivity(), response.message() + ": No se ha podido registrar", Toast.LENGTH_LONG).show();
+                                                    break;
+                                                }
+                                                case API.OK: {
+                                                    Entity entity = response.body();
+                                                    if(entity != null) {
+                                                        Intent intentAccessibility = new Intent(getContext(), AccessibilityActivity.class);
+                                                        intentAccessibility.putExtra("Entity", entity);
+                                                        startActivity(intentAccessibility);
+                                                        getEntities();
+                                                    } else {
+                                                        Toast.makeText(getActivity(), response.message() + ": No se ha podido registrar", Toast.LENGTH_LONG).show();
+                                                        break;
+                                                    }
+
+                                                    break;
+                                                }
+                                            }
+                                        }
+
+                                         @Override
+                                        public void onFailure(Call<Entity> call, Throwable t) {
+                                            Toast.makeText(getActivity(), "No se ha podido registrar la entidad publica", Toast.LENGTH_LONG).show();
+                                        }
+                                    });
+
+                                }
+                            }
+                        })
+                        .setNegativeButton("CANCELAR", null)
+                        .show();
             }
-        });*/
+        });
 
         gMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override

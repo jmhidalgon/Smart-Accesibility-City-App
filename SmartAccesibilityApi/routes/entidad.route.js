@@ -21,8 +21,10 @@ var api = express.Router();
 api.get('/probando-entidad', middlewareAuten.ensureAut, EntidadControlador.pruebas);
 api.get('/loginEntidad', EntidadControlador.loginEntidad);
 api.get('/get-entidades', EntidadControlador.getEntidades);
+api.get('/get-entidad-id/:idEntidad', EntidadControlador.getEntidadPorId);
 // POST
 api.post('/registro-entidad', EntidadControlador.guardarEntidad);
+api.post('/registro-entidad-publica', EntidadControlador.guardarEntidadPublica);
 api.post('/upload-imagen-entidad/:id', [middlewareAuten.ensureAut, middlewareUpload], EntidadControlador.uploadImagen);
 // PUT
 api.put('/actualizar-entidad/:id', middlewareAuten.ensureAut, EntidadControlador.actualizarEntidad);

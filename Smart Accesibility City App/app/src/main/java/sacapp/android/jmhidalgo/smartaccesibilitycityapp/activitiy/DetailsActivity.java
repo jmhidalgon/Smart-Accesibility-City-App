@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -136,6 +137,7 @@ public class DetailsActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String mailto = "mailto:" +entity.getEmail() +
                         "&subject=" + Uri.encode("Contacto mediante SACAPP") +
+                        "?cc=" + "sacapp@sacapp.com" +
                         "&body=" + Uri.encode("Contacto mediante SACAPP");
 
                 Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
@@ -160,7 +162,7 @@ public class DetailsActivity extends AppCompatActivity {
                 String dateToday = dateFormat.format(date);
 
                 if(entity != null && SACAPPControl.getUser() != null){
-                    visitRegister(new Visit(SACAPPControl.getUser().getId(), entity.getId(), dateToday));
+                    visitRegister(new Visit("", SACAPPControl.getUser().getId(), entity.getId(), dateToday));
                 }
             }
         });
@@ -192,7 +194,7 @@ public class DetailsActivity extends AppCompatActivity {
 
                                 if (!content[0].equals(new String("")) || rating[0] > 0) {
 
-                                    newComment[0] = new Comment(SACAPPControl.getUser().getId(), entity.getId(), rating[0], content[0]);
+                                    newComment[0] = new Comment("", SACAPPControl.getUser().getId(), entity.getId(), rating[0], content[0]);
                                     /*success[0] = Comment.registrerComment(newComment[0]);
 
                                     if(success[0]){
@@ -203,7 +205,7 @@ public class DetailsActivity extends AppCompatActivity {
                                     } else {
                                         Toast.makeText(DetailsActivity.this, "Error: " + Comment.getResponseMessage(), Toast.LENGTH_LONG).show();
                                     }*/
-                                    registrarComentario(newComment[0]);
+                                    registerComment(newComment[0]);
                                 }
                             }
                         })
@@ -212,6 +214,15 @@ public class DetailsActivity extends AppCompatActivity {
 
             }
         });
+
+
+        if(entity.getRol().equals("ROLE_PUBLIC")){
+            emailButton.setVisibility(Button.INVISIBLE);
+            gotoButton.setVisibility(Button.INVISIBLE);
+        } else {
+            emailButton.setVisibility(Button.VISIBLE);
+            gotoButton.setVisibility(Button.VISIBLE);
+        }
     }
 
     public void getAccessResources()
@@ -311,7 +322,7 @@ public class DetailsActivity extends AppCompatActivity {
         }
     }
 
-    private void registrarComentario(final Comment comment){
+    private void registerComment(final Comment comment){
 
         final Comment newComment = comment;
 
@@ -384,35 +395,6 @@ public class DetailsActivity extends AppCompatActivity {
                 Toast.makeText(DetailsActivity.this, "Error al registrar visita", Toast.LENGTH_LONG).show();
             }
         });
-        /*AccessResourceService accessResourceService = API.getApi().create(AccessResourceService.class);
-            Call<AccessResources> accessResourcesCall = accessResourceService.getResources(entity.getId());
-
-            accessResourcesCall.enqueue(new Callback<AccessResources>() {
-                @Override
-                public void onResponse(Call<AccessResources> call, Response<AccessResources> response) {
-                    int httpCode = response.code();
-
-                    switch(httpCode) {
-                        case API.INTERNAL_SERVER_ERROR:
-                            Toast.makeText(DetailsActivity.this, response.message() + ": Error en el servidor de datos", Toast.LENGTH_LONG).show();
-                            break;
-                        case API.NOT_FOUND:
-                            Toast.makeText(DetailsActivity.this, response.message() + ": No encontrado", Toast.LENGTH_LONG).show();
-                            break;
-                        case API.OK:
-                            AccessResources accessResources = response.body();
-                            accessResourcesEntity = accessResources.getAccessResources();
-                            fillListViewAccessResource();
-                            break;
-                    }
-
-                }
-
-                @Override
-                public void onFailure(Call<AccessResources> call, Throwable t) {
-                    Toast.makeText(DetailsActivity.this, "Error de conexion Recursos", Toast.LENGTH_LONG).show();
-                }
-            });*/
     }
 }
 

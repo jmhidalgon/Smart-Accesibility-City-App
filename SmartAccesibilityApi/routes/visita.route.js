@@ -16,6 +16,8 @@ var api = express.Router();
 
 // GET
 api.get('/probando-visita', VisitaControlador.pruebas);
+api.get('/get-visita-usuario/:idUsuario', VisitaControlador.getVisitasPorUsuario);
+api.get('/get-visita-entidad/:idEntidad', VisitaControlador.getVisitasPorEntidad);
 // POST
 api.post('/registro-visita', VisitaControlador.guardarVisita);
 

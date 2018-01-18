@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 
-public class Entity implements Parcelable {
+public class Entity implements Parcelable{
     @SerializedName("_id")
     private String id;
     @SerializedName("nombreEntidad")
@@ -42,6 +42,7 @@ public class Entity implements Parcelable {
         this.latitud = latitud;
         this.website = website;
     }
+
 
     protected Entity(Parcel in) {
         id = in.readString();
@@ -157,6 +158,7 @@ public class Entity implements Parcelable {
         this.gethash = gethash;
     }
 
+
     @Override
     public int describeContents() {
         return 10;
@@ -174,6 +176,5 @@ public class Entity implements Parcelable {
         parcel.writeDouble(longitud);
         parcel.writeDouble(latitud);
         parcel.writeString(website);
-
     }
 }
