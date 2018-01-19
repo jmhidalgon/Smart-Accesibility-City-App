@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.fragment.HistoryFragment;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.fragment.MapFragment;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.fragment.UserConfigFragment;
 
 public class PageAdapter extends FragmentStatePagerAdapter {
 
@@ -23,6 +24,7 @@ public class PageAdapter extends FragmentStatePagerAdapter {
 
         switch (position) {
             case 2:
+                return new UserConfigFragment();
             case 0:
                 return new MapFragment();
             case 1:

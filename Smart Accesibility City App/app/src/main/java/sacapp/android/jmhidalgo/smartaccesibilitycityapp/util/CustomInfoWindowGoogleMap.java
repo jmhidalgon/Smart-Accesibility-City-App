@@ -45,9 +45,9 @@ public class CustomInfoWindowGoogleMap implements GoogleMap.InfoWindowAdapter {
 
         InfoWindowData infoWindowData = (InfoWindowData) marker.getTag();
 
-        website_tv.setText(infoWindowData.getWebsite() != "" || infoWindowData.getWebsite() != null ? infoWindowData.getWebsite() : "Entidad Publica");
+        website_tv.setText(infoWindowData.getWebsite());
 
-        email_tv.setText(infoWindowData.getEmail() != "" || infoWindowData.getEmail() != null ? infoWindowData.getEmail() : "" );
+        email_tv.setText(infoWindowData.getEmail());
 
         return view;
     }

@@ -85,7 +85,7 @@ function guardarUsuario(req, res){
 	var parametros = req.body;
 
 	usuario.nombre = parametros.nombre;
-	usuario.apellidos = parametros.nombre;
+	usuario.apellidos = parametros.apellidos;
 	usuario.email = parametros.email;
 	usuario.tipoMovilidadReducida = parametros.tipoMovilidadReducida;
 	usuario.rol = 'ROLE_USER';
@@ -224,14 +224,21 @@ function loginGetUsuario(req, res){
 function actualizarUsuario(req, res){
 	var usuarioId = req.params.id;
 	var update = req.body;
-	console.log('quepasaaqui');
+	var passNocryp = update.pass;
+	bcrypt.hash(parametros.pass, null, null, function(err, hash){
+		update.pass = hash;
+	});
+
 	Usuario.findByIdAndUpdate(usuarioId, update, (err, usuarioActualizado) => {
 		if(err){ // No existe el usuario
+
 			res.status(HttpStatus.INTERNAL_SERVER_ERROR).send({message : 'Error al actualizar el usuario'});
 		} else {
+
 			if(!usuarioActualizado){ // No se ha actualizado
 				res.status(HttpStatus.NOT_FOUND).send({message : 'No se ha podido actualizar el usuario'});
 			} else {
+				usuarioActualizado.pass = passNocryp;
 				res.status(HttpStatus.OK).send(usuarioActualizado);
 			}
 		}
@@ -284,6 +291,28 @@ function getArchivoImagen(req, res){
 	});
 }
 
+function getUsuarioPorId(req, res){
+	var idUsuario = req.params.idUsuario;
+	console.log(idUsuario);
+	if(!idUsuario){
+		console.log("Id usuario nulo");
+	} else {
+		Usuario.findById(idUsuario, (err, usuario) =>{
+		if(err){ // Error en la peticion
+			res.status(HttpStatus.INTERNAL_SERVER_ERROR).send({message : 'Error en la peticion'});
+		} else {
+			if(!usuario){ // No existe el usuario
+				res.status(HttpStatus.NOT_FOUND).send({message : 'La usuario no existe'});
+			} else { // Existe el usuario
+				console.log("Ningun error. Usuario: "+ usuario);
+				res.status(HttpStatus.OK).send({usuarios : [usuario]});
+			}
+		}
+	});
+	}
+
+}
+
 // Exportamos
 module.exports = {
 	pruebas,
@@ -291,5 +320,6 @@ module.exports = {
 	loginUsuario,
 	actualizarUsuario,
 	uploadImagen,
-	getArchivoImagen
+	getArchivoImagen,
+	getUsuarioPorId
 };

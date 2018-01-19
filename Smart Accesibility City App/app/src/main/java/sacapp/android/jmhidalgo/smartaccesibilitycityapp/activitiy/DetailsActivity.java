@@ -135,10 +135,7 @@ public class DetailsActivity extends AppCompatActivity {
         emailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String mailto = "mailto:" +entity.getEmail() +
-                        "&subject=" + Uri.encode("Contacto mediante SACAPP") +
-                        "?cc=" + "sacapp@sacapp.com" +
-                        "&body=" + Uri.encode("Contacto mediante SACAPP");
+                String mailto = "mailto:" +entity.getEmail() ;
 
                 Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
                 emailIntent.setData(Uri.parse(mailto));
@@ -184,7 +181,7 @@ public class DetailsActivity extends AppCompatActivity {
                 final Comment[] newComment = new Comment[1];
 
                 new AlertDialog.Builder(DetailsActivity.this)
-                        .setTitle("Añadir Accesibilidad")
+                        .setTitle("Añadir comentario")
                         .setMessage("Por favor, introduzca sus facilidades para evitar las barreras arquitectonicas")
                         .setView(v)
                         .setPositiveButton("Acceptar", new DialogInterface.OnClickListener() {
@@ -194,17 +191,9 @@ public class DetailsActivity extends AppCompatActivity {
 
                                 if (!content[0].equals(new String("")) || rating[0] > 0) {
 
-                                    newComment[0] = new Comment("", SACAPPControl.getUser().getId(), entity.getId(), rating[0], content[0]);
-                                    /*success[0] = Comment.registrerComment(newComment[0]);
+                                    newComment[0] = new Comment("", SACAPPControl.getUser().getName() + " " + SACAPPControl.getUser().getSurname(),
+                                            entity.getId(), rating[0], content[0]);
 
-                                    if(success[0]){
-                                        commentItems.add(new CommentItem(newComment[0].getUserName(), newComment[0].getEntityId(),
-                                                newComment[0].getContent(), newComment[0].getRating()));
-                                        adapterComment.notifyDataSetChanged();
-                                        Toast.makeText(DetailsActivity.this, "Comentario registrado", Toast.LENGTH_LONG).show();
-                                    } else {
-                                        Toast.makeText(DetailsActivity.this, "Error: " + Comment.getResponseMessage(), Toast.LENGTH_LONG).show();
-                                    }*/
                                     registerComment(newComment[0]);
                                 }
                             }
@@ -337,7 +326,7 @@ public class DetailsActivity extends AppCompatActivity {
             public void onResponse(Call<Comment> call, Response<Comment> response) {
                 if (API.OK == response.code()) {
                     newComment.setEntityId(entity.getId());
-                    commentItems.add(new CommentItem(SACAPPControl.getUser().getName(), newComment.getEntityId(),
+                    commentItems.add(new CommentItem(newComment.getUserName(), newComment.getEntityId(),
                             newComment.getContent(), newComment.getRating()));
                     adapterComment.notifyDataSetChanged();
                     Toast.makeText(DetailsActivity.this, "Comentario registrado", Toast.LENGTH_LONG).show();

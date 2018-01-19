@@ -19,6 +19,7 @@ var api = express.Router();
 // GET
 api.get('/probando-usuario', middlewareAuten.ensureAut, UsuarioControlador.pruebas);
 api.get('/get-imagen-usuario/:archivoImagen', UsuarioControlador.getArchivoImagen);
+api.get('/get-usuario-id/:idUsuario', UsuarioControlador.getUsuarioPorId);
 api.get('/loginUser', UsuarioControlador.loginUsuario);
 // POST
 api.post('/registro', UsuarioControlador.guardarUsuario);

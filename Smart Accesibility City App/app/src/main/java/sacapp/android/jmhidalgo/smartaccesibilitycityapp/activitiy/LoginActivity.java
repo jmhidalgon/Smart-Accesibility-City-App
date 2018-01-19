@@ -19,6 +19,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.R;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.EntityService;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Entity;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.util.SACAPPControl;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.util.Util;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.API;
@@ -45,6 +47,8 @@ public class LoginActivity extends AppCompatActivity {
     private CheckBox checkBoxRememberme;
 
     private User user;
+    private Entity entity;
+
     private String token;
 
     @Override
@@ -81,8 +85,8 @@ public class LoginActivity extends AppCompatActivity {
         buttonAccess.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                String userName = editTextName.getText().toString();
+                appAccess();
+                /*String userName = editTextName.getText().toString();
                 String pass = editTextPass.getText().toString();
 
                 UserService userService = API.getApi().create(UserService.class);
@@ -128,7 +132,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void onFailure(Call<User> call, Throwable t) {
                         Toast.makeText(LoginActivity.this, "Ha habido un fallo de conexión: " + t.getMessage(), Toast.LENGTH_LONG).show();
                     }
-                });
+                });*/
             }
         });
 
@@ -228,5 +232,104 @@ public class LoginActivity extends AppCompatActivity {
         intentMainActivity.putExtra("token", token);
         intentMainActivity.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intentMainActivity);
+    }
+
+    public void appAccess(){
+        String userName = editTextName.getText().toString();
+        String pass = editTextPass.getText().toString();
+
+        UserService userService = API.getApi().create(UserService.class);
+        Call<User> userCall = userService.login(userName, pass);
+
+        userCall.enqueue(new Callback<User>() {
+            @Override
+            public void onResponse(Call<User> call, Response<User> response) {
+
+                int httpCode = response.code();
+                switch(httpCode){
+                    case API.INTERNAL_SERVER_ERROR: {
+                        LoginActivity.this.user = null;
+                        Toast.makeText(LoginActivity.this, response.message() + ": Error interno del servidor", Toast.LENGTH_LONG).show();
+                        break;
+                    }
+                    case API.NOT_FOUND: {
+                        entityAccess();
+                        /*LoginActivity.this.user = null;
+                        Toast.makeText(LoginActivity.this, response.message() + ": No encontrado", Toast.LENGTH_LONG).show();*/
+                        break;
+                    }
+                    case API.OK: {
+                        User user = response.body();
+                        if(user != null) {
+                            LoginActivity.this.user = user;
+                            if(getUserToken(user)) {
+                                Toast.makeText(LoginActivity.this, "Bienvenido " + LoginActivity.this.user.getName(), Toast.LENGTH_LONG).show();
+                            }
+                        }
+                        break;
+                    }
+                    default: {
+                        LoginActivity.this.user = null;
+                        Toast.makeText(LoginActivity.this, response.message() + ": Error desconocido", Toast.LENGTH_LONG).show();
+                        break;
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<User> call, Throwable t) {
+                Toast.makeText(LoginActivity.this, "Ha habido un fallo de conexión: " + t.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    private void entityAccess(){
+        String email = editTextName.getText().toString();
+        String pass = editTextPass.getText().toString();
+
+
+        EntityService entityService = API.getApi().create(EntityService.class);
+        Call<Entity> entityCall = entityService.login(email, pass);
+
+        entityCall.enqueue(new Callback<Entity>() {
+            @Override
+            public void onResponse(Call<Entity> call, Response<Entity> response) {
+
+                int httpCode = response.code();
+                switch(httpCode){
+                    case API.INTERNAL_SERVER_ERROR: {
+                        LoginActivity.this.user = null;
+                        Toast.makeText(LoginActivity.this, response.message() + ": Error interno del servidor", Toast.LENGTH_LONG).show();
+                        break;
+                    }
+                    case API.NOT_FOUND: {
+                        LoginActivity.this.user = null;
+                        Toast.makeText(LoginActivity.this, response.message() + ": No encontrado", Toast.LENGTH_LONG).show();
+                        break;
+                    }
+                    case API.OK: {
+                        Entity entity = response.body();
+                        if(entity != null) {
+                            LoginActivity.this.entity = entity;
+                            Toast.makeText(LoginActivity.this, "Bienvenido " + LoginActivity.this.entity.getEntityname(), Toast.LENGTH_LONG).show();
+
+                        } else {
+                            Toast.makeText(LoginActivity.this, "Email y/o contraseña no coinciden", Toast.LENGTH_LONG).show();
+                        }
+                        break;
+                    }
+                    default: {
+                        LoginActivity.this.entity = null;
+                        Toast.makeText(LoginActivity.this, response.message() + ": Error desconocido", Toast.LENGTH_LONG).show();
+                        break;
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Entity> call, Throwable t) {
+
+            }
+        });
     }
 }

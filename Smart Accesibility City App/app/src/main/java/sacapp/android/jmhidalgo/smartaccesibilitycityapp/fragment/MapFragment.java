@@ -232,8 +232,13 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
                 }
 
                 InfoWindowData info = new InfoWindowData();
-                info.setEmail(selectedEntity.getEmail());
-                info.setWebsite(selectedEntity.getWebsite());
+                if(selectedEntity.getRol().equals("ROLE_PUBLIC")){
+                    info.setEmail("Entidad Publica");
+                    info.setWebsite("");
+                } else {
+                    info.setEmail(selectedEntity.getEmail());
+                    info.setWebsite(selectedEntity.getWebsite().equals("")? "" : selectedEntity.getWebsite());
+                }
                 info.setEntity(selectedEntity);
 
                 marker.setTag(info);

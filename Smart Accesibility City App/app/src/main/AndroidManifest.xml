@@ -55,6 +55,8 @@
         </activity>
         <activity android:name=".activitiy.DetailsActivity">
         </activity>
+        <activity android:name=".activitiy.MainEntityActivity">
+        </activity>
     </application>
 
 </manifest>
