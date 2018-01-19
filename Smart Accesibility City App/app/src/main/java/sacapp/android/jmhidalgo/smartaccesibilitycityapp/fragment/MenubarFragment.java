@@ -11,6 +11,9 @@ import android.widget.Button;
 
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.R;
 
+/**
+ *  @deprecated
+ */
 public class MenubarFragment extends Fragment {
 
     private Button buttonUserSlide;

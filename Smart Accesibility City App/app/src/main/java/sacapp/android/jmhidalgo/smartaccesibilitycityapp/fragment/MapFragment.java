@@ -55,6 +55,9 @@ import sacapp.android.jmhidalgo.smartaccesibilitycityapp.util.CustomInfoWindowGo
 
 import static android.content.Context.LOCATION_SERVICE;
 
+/** Map fragment for the main activity. Contains a google maps widget
+ *
+ */
 public class MapFragment extends Fragment implements OnMapReadyCallback, View.OnClickListener, LocationListener {
 
     private final int ACCESS_LOCATION = 1;
@@ -81,7 +84,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_map, container, false);
-
+        // Getting view components
         fab = (FloatingActionButton) rootView.findViewById(R.id.fab);
         fab.setOnClickListener(this);
 
@@ -91,7 +94,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        // Initialize the view
         mapView = (MapView) rootView.findViewById(R.id.map);
         if (mapView != null) {
             mapView.onCreate(null);
@@ -108,10 +111,11 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-
+        // initialize google maps
         gMap = googleMap;
         locationManager = (LocationManager) getContext().getSystemService(LOCATION_SERVICE);
 
+        // Check if we have GPS connection
         if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this.getActivity(),
                     new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
@@ -126,10 +130,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
         }
 
         gMap.setMyLocationEnabled(true);
-        // gMap.getUiSettings().setMyLocationButtonEnabled(false);
-
-        // locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 1000, 0, this);
-        // locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0, this);
 
         gMap.setMinZoomPreference(10);
         gMap.setMaxZoomPreference(20);
@@ -147,15 +147,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
             location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
         }
         zoomToLocation(location);
-
-        /* MAPS LISTENER */
-        // Click on the map
-        /*gMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
-            @Override
-            public void onMapClick(LatLng latLng) {
-
-            }
-        });*/
 
         // Long click on the map
         gMap.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
@@ -221,7 +212,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
                         .show();
             }
         });
-
+        // On click marker listener
         gMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
@@ -255,6 +246,10 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
         getEntities();
     }
 
+    /** Check if GPS is enabled
+     *
+     * @return true if GPS is enabled, false in other case
+     */
     private boolean isGPSEnabled() {
         try {
             int gpsSignal = Settings.Secure.getInt(getActivity().getContentResolver(), Settings.Secure.LOCATION_MODE);
@@ -270,6 +265,9 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
         }
     }
 
+    /** Method to ask about enabled GPS signal
+     *
+     */
     private void showInfoAlert() {
         new AlertDialog.Builder(getContext())
                 .setTitle("GPS Signal")
@@ -324,16 +322,14 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
         }
     }
 
+    /** Create marker with a given longitud and latitud
+     *
+     * @param lon logitud of the marker
+     * @param lat latitud of the marker
+     * @param entity entity that is represented by the created marker
+     */
     private void createOrUpdateMarkerByLocation(double lon, double lat, Entity entity) {
-        /*if (marker == null) {
-            marker = gMap.addMarker(new MarkerOptions().position(new LatLng(lat, lon)).draggable(true));
-        } else {
-            marker.setPosition(new LatLng(lat, lon));
-        }*/
-        /*Marker entityMarker = gMap.addMarker(new MarkerOptions()
-                .position(new LatLng(lat, lon))
-                .title(entity.getEntityname())
-                .snippet(entity.getAdress()));*/
+
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(new LatLng(lat, lon))
                 .title(entity.getEntityname())
@@ -360,6 +356,10 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
         entityMarker.setTag(entity);
     }
 
+    /** Method to zoom in google maps
+     *
+     * @param location Location to zoom
+     */
     private void zoomToLocation(Location location) {
         camera = new CameraPosition.Builder()
                 .target(new LatLng(location.getLatitude(), location.getLongitude()))
@@ -392,6 +392,9 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
 
     }
 
+    /** Method that request the near entities
+     *
+     */
     public void getEntities()
     {
         String token = ((MainActivity)getActivity()).getToken();

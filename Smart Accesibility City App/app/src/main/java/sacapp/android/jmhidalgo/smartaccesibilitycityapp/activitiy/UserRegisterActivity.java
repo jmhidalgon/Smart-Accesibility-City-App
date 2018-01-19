@@ -19,6 +19,10 @@ import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.API;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.UserService;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.User;
 
+/** User register activity
+ *
+ * @author Juan Manuel Hidalgo Navarro
+ */
 public class UserRegisterActivity extends AppCompatActivity {
 
     private EditText editTextName;
@@ -29,11 +33,15 @@ public class UserRegisterActivity extends AppCompatActivity {
     private Button buttonAccept;
     private Spinner spinnerReason;
 
+    /** OnCreate inhered method
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_register);
-
+        // Getting view components
         editTextName = (EditText) findViewById(R.id.editTextName);
         editTextSurname = (EditText) findViewById(R.id.editTextSurname);
         editTextPass = (EditText) findViewById(R.id.editTextPass);
@@ -49,6 +57,7 @@ public class UserRegisterActivity extends AppCompatActivity {
         // Apply the adapter to the spinner
         spinnerReason.setAdapter(adapter);
 
+        // Adding click listener to save the user
         buttonAccept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

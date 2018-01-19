@@ -1,10 +1,8 @@
 package sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,7 +14,6 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,35 +23,48 @@ import retrofit2.Response;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.R;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.API;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.AccessResourceService;
-import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.UserService;
-import sacapp.android.jmhidalgo.smartaccesibilitycityapp.adapter.AdapterAccessItem;
-import sacapp.android.jmhidalgo.smartaccesibilitycityapp.adapter.item.AccessItem;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.AccessResource;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Entity;
-import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.User;
 
+/** Activity to register the AccessResource of a Entity
+ *
+ * @author Juan Manuel Hidalgo Navarro
+ */
 public class AccessibilityActivity extends AppCompatActivity {
 
+    /** Entity to register AccessResources */
     private Entity entity;
 
+    /** Listview to represent the AccessResources */
     private ListView listViewAccess;
+    /** Button to add new AccessResource */
     private Button buttonAdd;
+    /** Button to accept */
     private Button buttonAcept;
 
-
+    /** Number of AccessResources */
     private int numberItems;
+    /** Selected AccessResource */
     private int selectedItem;
+    /** String AccessResource Item */
     private static String item;
+    /** List of String AccessResource Item */
     private List<String> items;
 
+    /** Adapter for AccessResource ListView */
     private ArrayAdapter<String> adapter;
 
+    /** Error control boolean */
     static boolean everyOk = true;
-    public static void registrerFailure(){
+    /** Method to register a failure in AccessResource registering process */
+    public static void registerFailure(){
         everyOk = false;
     }
 
-
+    /** OnCreate Activity method (Inherited method)
+     *
+     * @param savedInstanceState Bundle
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,9 +90,12 @@ public class AccessibilityActivity extends AppCompatActivity {
         addListViewListener();
     }
 
+    /** Method to add a listener to the buttons
+     *
+     */
+    private void addButtonListener(){
 
-    void addButtonListener(){
-
+        // Add new AccessResource method
         if(buttonAdd != null){
             buttonAdd.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -113,6 +126,7 @@ public class AccessibilityActivity extends AppCompatActivity {
             });
         }
 
+        // Accept Activity method
         if(buttonAcept != null) {
             buttonAcept.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -140,7 +154,7 @@ public class AccessibilityActivity extends AppCompatActivity {
                                     case API.OK: {
                                         AccessResource accessResource = response.body();
                                         if(accessResource == null) {
-                                            AccessibilityActivity.registrerFailure();
+                                            AccessibilityActivity.registerFailure();
                                         } else {
                                             if(entity.getRol().equals("ROLE_ENTITY")){
                                                 Intent intentBackLogin = new Intent(AccessibilityActivity.this, LoginActivity.class);
@@ -177,7 +191,10 @@ public class AccessibilityActivity extends AppCompatActivity {
         }
     }
 
-    void addListViewListener(){
+    /** Method to add a listener to the ListView
+     *
+     */
+    private void addListViewListener(){
 
         listViewAccess.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

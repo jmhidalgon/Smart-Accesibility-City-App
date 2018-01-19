@@ -14,12 +14,19 @@ import java.util.ArrayList;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.R;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.adapter.item.AccessItem;
 
-
+/** Adapter for AccessResources in ListView
+ *
+ */
 public class AdapterAccessItem extends BaseAdapter {
 
     protected Activity activity;
     protected ArrayList<AccessItem> items;
 
+    /** Constructor
+     *
+     * @param activity The current activity
+     * @param items List of access items
+     */
     public AdapterAccessItem (Activity activity, ArrayList<AccessItem> items) {
         this.activity = activity;
         this.items = items;
@@ -40,16 +47,34 @@ public class AdapterAccessItem extends BaseAdapter {
         }
     }
 
+    /** Getter Item
+     *
+     * @param arg0 index of the requested item
+     * @return AccesItem
+     */
     @Override
     public Object getItem(int arg0) {
         return items.get(arg0);
     }
 
+    /** Getter Item
+     *
+     * @deprecated
+     * @param position index of the requested item
+     * @return AccesItem
+     */
     @Override
     public long getItemId(int position) {
         return position;
     }
 
+    /** Getter AccesResource item format in a view
+     *
+     * @param position index of the requested item
+     * @param convertView convert view
+     * @param parent Parent view group
+     * @return item view ready for the ListView
+     */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 

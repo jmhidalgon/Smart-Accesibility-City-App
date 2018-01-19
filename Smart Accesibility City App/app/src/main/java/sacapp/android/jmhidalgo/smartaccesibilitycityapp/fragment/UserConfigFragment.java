@@ -24,8 +24,9 @@ import sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.MainActivity;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.User;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.util.SACAPPControl;
 
-/**
- * A simple {@link Fragment} subclass.
+
+/** Config fragment for the user data
+ *
  */
 public class UserConfigFragment extends Fragment {
 
@@ -71,6 +72,9 @@ public class UserConfigFragment extends Fragment {
         return rootView;
     }
 
+    /** Fill the view components with the user data
+     *
+     */
     private void fillUserData(){
         user = SACAPPControl.getUser();
 
@@ -89,6 +93,9 @@ public class UserConfigFragment extends Fragment {
         }
     }
 
+    /** Add all buttons listener
+     *
+     */
     private void addListener(){
 
         if(buttonUpdate == null){
@@ -121,6 +128,9 @@ public class UserConfigFragment extends Fragment {
         });
     }
 
+    /** Method to update the user
+     *
+     */
     private void updateUser(){
         UserService userService = API.getApi().create(UserService.class);
         Call<User> userCall = userService.setUpdateData(user, ((MainActivity)getActivity()).getToken(), user.getId()); // AQUI PETA TODO

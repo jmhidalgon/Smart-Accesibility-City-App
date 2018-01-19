@@ -37,6 +37,8 @@ import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Visit;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Visits;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.util.SACAPPControl;
 
+/** Fragment that has a visits history ListView
+ */
 public class HistoryFragment extends Fragment {
 
     private View rootView;
@@ -48,10 +50,20 @@ public class HistoryFragment extends Fragment {
     private ArrayList<VisitItem> visitItems;
     private AdapterVisit adapterVisit;
 
+    /** Empty Constructor
+     *
+     */
     public HistoryFragment() {
 
     }
 
+    /** onCreateView inherent method
+     *
+     * @param inflater inflater for the layout
+     * @param container container that will contain the frament
+     * @param savedInstanceState bundle
+     * @return
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_history, container, false);
@@ -87,6 +99,10 @@ public class HistoryFragment extends Fragment {
         return rootView;
     }
 
+    /** setMenuVisibility inherent method to control when the fragment is visible
+     *
+     * @param visible boolean, true for set it visible, false in other case
+     */
     @Override
     public void setMenuVisibility(final boolean visible) {
         if (visible) {
@@ -97,6 +113,12 @@ public class HistoryFragment extends Fragment {
 
         super.setMenuVisibility(visible);
     }
+
+    /** onViewCreated inherent method
+     *
+     * @param view
+     * @param savedInstanceState
+     */
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -108,6 +130,8 @@ public class HistoryFragment extends Fragment {
         super.onResume();
     }
 
+    /** Method to request the visits by the login user id
+     */
     public void getVisitByUser() {
 
         if (SACAPPControl.getUser() != null) {
@@ -150,6 +174,10 @@ public class HistoryFragment extends Fragment {
         }
     }
 
+    /** Method to fill the listView visits
+     *
+     * @param v Visit to include in the ListView
+     */
     public void fillListViewVisit(Visit v){
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.getDefault());
         Date today = new Date();
@@ -176,6 +204,10 @@ public class HistoryFragment extends Fragment {
         adapterVisit.notifyDataSetChanged();
     }
 
+    /** Method to request and fill the listView visits with the entity name
+     *
+     * @param v Visit to include in the ListView
+     */
     public void fillListViewWithEntityName(Visit v, final int i){
         final int position = i;
 

@@ -46,6 +46,10 @@ import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Entity;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Visit;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.util.SACAPPControl;
 
+/** Activity to show the Entity detaisl
+ *
+ * @author Juan Manuel Hidalgo Navarro
+ */
 public class DetailsActivity extends AppCompatActivity {
 
     private Entity entity;
@@ -75,6 +79,10 @@ public class DetailsActivity extends AppCompatActivity {
     private double globalRating = 0;
     private double acumulateRating = 0;
 
+    /** OnCreate Method (inherited method)
+     *
+     * @param savedInstanceState Bundle
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,6 +93,7 @@ public class DetailsActivity extends AppCompatActivity {
             entity = (Entity)intent.getParcelableExtra("Entity");
         }
 
+        // Getting view components
         listViewAccessResource = (ListView) findViewById(R.id.listViewResource);
         accesResourceItems = new ArrayList();
 
@@ -97,6 +106,7 @@ public class DetailsActivity extends AppCompatActivity {
         adapterComment = new AdapterComment (DetailsActivity.this, R.layout.comment_item, commentItems);
         listViewComment.setAdapter(adapterComment);
 
+        // Getting Entity Resources and Comments
         getAccessResources();
         getComments();
 
@@ -108,6 +118,7 @@ public class DetailsActivity extends AppCompatActivity {
 
         ratingBar = (RatingBar) findViewById(R.id.ratingBarGlobal);
 
+        // Adding click listener to the google maps button
         googlemapButton = (FloatingActionButton) findViewById(R.id.fabGoogleMaps);
         googlemapButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -131,6 +142,7 @@ public class DetailsActivity extends AppCompatActivity {
             }
         });
 
+        // Adding click listener to the email button
         emailButton = (FloatingActionButton) findViewById(R.id.fabEmail);
         emailButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -149,6 +161,7 @@ public class DetailsActivity extends AppCompatActivity {
             }
         });
 
+        // Adding click listener to the goto button
         gotoButton = (FloatingActionButton) findViewById(R.id.fabGoTo);
         gotoButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -164,6 +177,7 @@ public class DetailsActivity extends AppCompatActivity {
             }
         });
 
+        // Adding click listener to the comment button
         commentButton = (FloatingActionButton) findViewById(R.id.fabComment);
         commentButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -204,7 +218,7 @@ public class DetailsActivity extends AppCompatActivity {
             }
         });
 
-
+        // Show/Hide components if the entity isn't/is public
         if(entity.getRol().equals("ROLE_PUBLIC")){
             emailButton.setVisibility(Button.INVISIBLE);
             gotoButton.setVisibility(Button.INVISIBLE);
@@ -214,7 +228,10 @@ public class DetailsActivity extends AppCompatActivity {
         }
     }
 
-    public void getAccessResources()
+    /** Method to consult all the entity accessresources
+     *
+     */
+    private void getAccessResources()
     {
         if(entity != null){
             AccessResourceService accessResourceService = API.getApi().create(AccessResourceService.class);
@@ -249,6 +266,9 @@ public class DetailsActivity extends AppCompatActivity {
         }
     }
 
+    /** Method to fill ListView with all the entity accessresources
+     *
+     */
     private void fillListViewAccessResource(){
 
         if(accessResourcesEntity != null){
@@ -259,6 +279,9 @@ public class DetailsActivity extends AppCompatActivity {
         }
     }
 
+    /** Method to consult all the entity cooments
+     *
+     */
     public void getComments()
     {
         if(entity != null){
@@ -296,6 +319,9 @@ public class DetailsActivity extends AppCompatActivity {
         }
     }
 
+    /** Method to fill ListView with all the entity comments
+     *
+     */
     private void fillListViewComments(){
 
         if(commentsEntity != null){
@@ -311,6 +337,10 @@ public class DetailsActivity extends AppCompatActivity {
         }
     }
 
+    /** Method to register comment
+     *
+     * @param comment Comment to regist
+     */
     private void registerComment(final Comment comment){
 
         final Comment newComment = comment;
@@ -353,6 +383,10 @@ public class DetailsActivity extends AppCompatActivity {
         });
     }
 
+    /** Method to register a Visit
+     *
+     * @param visit Visit to regist
+     */
     private void visitRegister(Visit visit){
 
         VisitService visitService = API.getApi().create(VisitService.class);

@@ -42,6 +42,10 @@ import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.API;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.EntityService;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Entity;
 
+/** Activity to register a Entity
+ *
+ * @author Juan Manuel Hidalgo Navarro
+ */
 public class EntityRegisterActivity extends FragmentActivity implements OnMapReadyCallback, LocationListener {
 
     private GoogleMap mMap;
@@ -63,7 +67,10 @@ public class EntityRegisterActivity extends FragmentActivity implements OnMapRea
     private Geocoder geocoder;
     private Marker entityMarker;
 
-
+    /** OnCreate Method (inherited method)
+     *
+     * @param savedInstanceState Bundle
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,6 +79,7 @@ public class EntityRegisterActivity extends FragmentActivity implements OnMapRea
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+        // Getting view components
         buttonAccept = (Button) findViewById(R.id.buttonAccept);
 
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
@@ -81,6 +89,7 @@ public class EntityRegisterActivity extends FragmentActivity implements OnMapRea
         editTextPass = (EditText) findViewById(R.id.editTextPass);
         editTextPassWebsite = (EditText) findViewById(R.id.editTextWebsite);
 
+        // Adding click listener to regist the entity
         buttonAccept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -132,6 +141,10 @@ public class EntityRegisterActivity extends FragmentActivity implements OnMapRea
         });
     }
 
+    /** Checking GPS signal method
+     *
+     * @return True if it has GPS signal, false in other case
+     */
     private boolean checkGPSSignal() {
         // Check GPS
         int gpsSignal = 0;
@@ -147,6 +160,8 @@ public class EntityRegisterActivity extends FragmentActivity implements OnMapRea
         return gpsSignal != 0;
     }
 
+    /** Show GPS signal alert method
+     */
     private void showGPSAlert() {
         new AlertDialog.Builder(EntityRegisterActivity.this)
                 .setTitle("GPS")
@@ -162,6 +177,9 @@ public class EntityRegisterActivity extends FragmentActivity implements OnMapRea
                 .show();
     }
 
+    /** Get our actual location
+     *
+     */
     private void getLocationEntity() {
         if (checkGPSSignal()) {
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -195,7 +213,10 @@ public class EntityRegisterActivity extends FragmentActivity implements OnMapRea
 
     }
 
-    // OnMapReadyCallback Implementation
+    /** onMapReady inherent method
+     *
+     * @param googleMap GoogleMaps component
+     */
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
@@ -278,7 +299,7 @@ public class EntityRegisterActivity extends FragmentActivity implements OnMapRea
             }
         });
 
-        // Long click on the map
+        // Long click on the map to register a public entity
         mMap.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
             @Override
             public void onMapLongClick(LatLng latLng) {
@@ -314,6 +335,10 @@ public class EntityRegisterActivity extends FragmentActivity implements OnMapRea
         });
     }
 
+    /** Method to move camera to the position indicated
+     *
+     * @param currentLocation Position where camera moves
+     */
     private void moveToCurrentLocation(LatLng currentLocation)
     {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLocation,15));

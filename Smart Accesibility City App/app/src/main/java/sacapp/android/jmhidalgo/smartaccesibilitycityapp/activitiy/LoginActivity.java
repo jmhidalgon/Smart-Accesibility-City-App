@@ -29,6 +29,10 @@ import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.UserSe
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Token;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.User;
 
+/** Activity to Login in the app
+ *
+ * @author Juan Manuel Hidalgo Navarro
+ */
 public class LoginActivity extends AppCompatActivity {
 
     private SharedPreferences prefs;
@@ -51,6 +55,10 @@ public class LoginActivity extends AppCompatActivity {
 
     private String token;
 
+    /** OnCreate Inhered Method
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,74 +93,29 @@ public class LoginActivity extends AppCompatActivity {
         buttonAccess.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                appAccess();
-                /*String userName = editTextName.getText().toString();
-                String pass = editTextPass.getText().toString();
-
-                UserService userService = API.getApi().create(UserService.class);
-                Call<User> userCall = userService.login(userName, pass);
-
-                userCall.enqueue(new Callback<User>() {
-                    @Override
-                    public void onResponse(Call<User> call, Response<User> response) {
-
-                        int httpCode = response.code();
-                        switch(httpCode){
-                            case API.INTERNAL_SERVER_ERROR: {
-                                LoginActivity.this.user = null;
-                                Toast.makeText(LoginActivity.this, response.message() + ": Error interno del servidor", Toast.LENGTH_LONG).show();
-                                break;
-                            }
-                            case API.NOT_FOUND: {
-                                LoginActivity.this.user = null;
-                                Toast.makeText(LoginActivity.this, response.message() + ": No encontrado", Toast.LENGTH_LONG).show();
-                                break;
-                            }
-                            case API.OK: {
-                                User user = response.body();
-                                if(user != null) {
-                                    LoginActivity.this.user = user;
-                                    if(getUserToken(user)) {
-                                        Toast.makeText(LoginActivity.this, "Bienvenido " + LoginActivity.this.user.getName(), Toast.LENGTH_LONG).show();
-                                    }
-                                } else {
-                                    Toast.makeText(LoginActivity.this, "Email y/o contraseña no coinciden", Toast.LENGTH_LONG).show();
-                                }
-                                break;
-                            }
-                            default: {
-                                LoginActivity.this.user = null;
-                                Toast.makeText(LoginActivity.this, response.message() + ": Error desconocido", Toast.LENGTH_LONG).show();
-                                break;
-                            }
-                        }
-                    }
-
-                    @Override
-                    public void onFailure(Call<User> call, Throwable t) {
-                        Toast.makeText(LoginActivity.this, "Ha habido un fallo de conexión: " + t.getMessage(), Toast.LENGTH_LONG).show();
-                    }
-                });*/
+            appAccess();
             }
         });
 
         buttonNewUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentNewUser = new Intent(LoginActivity.this, UserRegisterActivity.class);
-                startActivity(intentNewUser);
+            Intent intentNewUser = new Intent(LoginActivity.this, UserRegisterActivity.class);
+            startActivity(intentNewUser);
             }
         });
 
         buttonNewEntity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentNewEntity = new Intent(LoginActivity.this, EntityRegisterActivity.class);
-                startActivity(intentNewEntity);
+            Intent intentNewEntity = new Intent(LoginActivity.this, EntityRegisterActivity.class);
+            startActivity(intentNewEntity);
             }
         });
     }
 
+    /** Set email and password if they exist
+     */
     private void setCredentialsIfExist(){
         String email = Util.getUserMailPrefs(prefs);
         String password = Util.getUserPassPrefs(prefs);
@@ -163,6 +126,11 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+    /** Remember checkbox functionality
+     *
+     * @param email Login email
+     * @param password Login pass
+     */
     private void saveOnPreferences(String email, String password) {
         if (checkBoxRememberme.isChecked()) {
             SharedPreferences.Editor editor = prefs.edit();
@@ -172,7 +140,12 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    public Boolean getUserToken(User user){
+    /** Method to get the user authorization token
+     *
+     * @param user user to get the token
+     * @return
+     */
+    private Boolean getUserToken(User user){
 
         TokenService tokenService = API.getApi().create(TokenService.class);
         Call<Token> tokenSCall = tokenService.login(user.getEmail(), user.getPass(), _GETHASH);
@@ -220,6 +193,8 @@ public class LoginActivity extends AppCompatActivity {
         return LoginActivity.this.token != null;
     }
 
+    /** Method to start the main activity
+     */
     public void startMainActivity(){
         if(user == null){
             Toast.makeText(LoginActivity.this, "Ha habido un fallo de autenticación", Toast.LENGTH_LONG).show();
@@ -234,6 +209,8 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intentMainActivity);
     }
 
+    /** Method to app access
+     */
     public void appAccess(){
         String userName = editTextName.getText().toString();
         String pass = editTextPass.getText().toString();
@@ -283,6 +260,8 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    /** Method for entities to app access
+     */
     private void entityAccess(){
         String email = editTextName.getText().toString();
         String pass = editTextPass.getText().toString();

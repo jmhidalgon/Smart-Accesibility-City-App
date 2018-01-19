@@ -8,17 +8,28 @@ import sacapp.android.jmhidalgo.smartaccesibilitycityapp.fragment.HistoryFragmen
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.fragment.MapFragment;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.fragment.UserConfigFragment;
 
+/** Page adapter for main activity
+ *
+ */
 public class PageAdapter extends FragmentStatePagerAdapter {
 
     private int numberOfTabs;
 
-
+    /** Constructor
+     *
+     * @param fm fragment manager
+     * @param numberOfTabs number of tabs to show
+     */
     public PageAdapter(FragmentManager fm, int numberOfTabs) {
         super(fm);
         this.numberOfTabs = numberOfTabs;
     }
 
-
+    /** Getter fragment
+     *
+     * @param position index of the requested fragment
+     * @return Fragment selected
+     */
     @Override
     public Fragment getItem(int position) {
 
@@ -34,6 +45,10 @@ public class PageAdapter extends FragmentStatePagerAdapter {
         }
     }
 
+    /** Getter number of fragment
+     *
+     * @return number of fragments
+     */
     @Override
     public int getCount() {
         return numberOfTabs;

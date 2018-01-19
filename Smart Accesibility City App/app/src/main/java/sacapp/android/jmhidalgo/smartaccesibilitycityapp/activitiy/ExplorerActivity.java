@@ -23,6 +23,9 @@ import com.google.android.gms.maps.model.LatLng;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.R;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.fragment.MenubarFragment;
 
+/**
+ *
+ */
 public class ExplorerActivity extends FragmentActivity implements OnMapReadyCallback, MenubarFragment.MenuListener, LocationListener {
 
     private GoogleMap mMap;

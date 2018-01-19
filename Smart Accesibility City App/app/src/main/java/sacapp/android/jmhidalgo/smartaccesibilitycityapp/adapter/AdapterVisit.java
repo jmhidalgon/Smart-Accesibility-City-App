@@ -17,33 +17,57 @@ import sacapp.android.jmhidalgo.smartaccesibilitycityapp.adapter.item.CommentIte
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.adapter.item.VisitItem;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Visit;
 
+/** Adapter for Visit in ListView
+ *
+ */
 public class AdapterVisit extends BaseAdapter {
 
     protected Activity activity;
     protected ArrayList<VisitItem> items;
     private int layout;
 
+    /** Constructor
+     *
+     * @param activity The current activity
+     * @param layout Layout to represent the item
+     * @param items List of visits items
+     */
     public AdapterVisit(Activity activity, int layout, ArrayList<VisitItem> items) {
         this.activity = activity;
         this.items = items;
         this.layout = layout;
     }
 
+    /**
+     * @deprecated
+     */
     public void clear() {
         items.clear();
     }
 
+    /**
+     * @deprecated
+     */
     public void addAll(ArrayList<VisitItem> visitItems) {
         for (int i = 0; i < visitItems.size(); i++) {
             items.add(visitItems.get(i));
         }
     }
 
+    /** Getter size
+     *
+     * @return number of items
+     */
     @Override
     public int getCount() {
         return items.size();
     }
 
+    /** Getter Item
+     *
+     * @param i index of the requested item
+     * @return AccesItem
+     */
     @Override
     public Object getItem(int i) {
         return items.get(i);
@@ -54,6 +78,13 @@ public class AdapterVisit extends BaseAdapter {
         return i;
     }
 
+    /** Getter Visit item format in a view
+     *
+     * @param i index of the requested item
+     * @param v convert view
+     * @param viewGroup Parent view group
+     * @return item view ready for the ListView
+     */
     @Override
     public View getView(int i, View v, ViewGroup viewGroup) {
 

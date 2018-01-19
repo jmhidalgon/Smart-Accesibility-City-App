@@ -3,14 +3,26 @@ package sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+/** Class to manage the web api connection
+ *
+ * @author Juan Manuel Hidalgo Navarro
+ */
 public class API {
 
+    /** Connection URL
+     */
     public static String URL_BASE = "http://192.168.1.137:3977/api/";
     //public static String URL_BASE = "http://192.168.0.26:3977/api/";
     //public static String URL_BASE = "http://192.168.43.221:3977/api/";
 
+    /** Retrofit class to build the services
+     */
     private static Retrofit retrofit = null;
 
+    /** Getter of the api method builder
+     *
+     * @return retrofit instance
+     */
     public static Retrofit getApi(){
 
         if(retrofit == null){
@@ -20,10 +32,13 @@ public class API {
         return retrofit;
     }
 
-
+    public static final int INTERNAL_SERVER_ERROR = 500	;
+    public static final int METHOD_NOT_ALLOWED = 405	;
+    public static final int NOT_FOUND = 404 ;
+    public static final int OK = 200	;
+    public static final int BAD_REQUEST = 400	;
     public static final int ACCEPTED = 202	;
     public static final int BAD_GATEWAY = 502	;
-    public static final int BAD_REQUEST = 400	;
     public static final int CONFLICT = 409	;
     public static final int CONTINUE = 100	;
     public static final int CREATED = 201	;
@@ -36,11 +51,9 @@ public class API {
     public static final int IM_A_TEAPOT = 418	;
     public static final int INSUFFICIENT_SPACE_ON_RESOURCE = 419	;
     public static final int INSUFFICIENT_STORAGE = 507	;
-    public static final int INTERNAL_SERVER_ERROR = 500	;
     public static final int LENGTH_REQUIRED = 411	;
     public static final int LOCKED = 423	;
     public static final int METHOD_FAILURE = 420	;
-    public static final int METHOD_NOT_ALLOWED = 405	;
     public static final int MOVED_PERMANENTLY = 301	;
     public static final int MOVED_TEMPORARILY = 302	;
     public static final int MULTI_STATUS = 207	;
@@ -48,10 +61,8 @@ public class API {
     public static final int NO_CONTENT = 204 ;
     public static final int NON_AUTHORITATIVE_INFORMATION = 203	;
     public static final int NOT_ACCEPTABLE = 406 ;
-    public static final int NOT_FOUND = 404 ;
     public static final int NOT_IMPLEMENTED = 501	;
     public static final int NOT_MODIFIED = 304	;
-    public static final int OK = 200	;
     public static final int PARTIAL_CONTENT = 206	;
     public static final int PAYMENT_REQUIRED = 402	;
     public static final int PERMANENT_REDIRECT = 308	;
