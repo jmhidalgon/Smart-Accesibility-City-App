@@ -209,6 +209,22 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intentMainActivity);
     }
 
+    /** Method to start the main activity
+     */
+    public void startMainEntityActivity(){
+        if(entity == null){
+            Toast.makeText(LoginActivity.this, "Ha habido un fallo de autenticación", Toast.LENGTH_LONG).show();
+            return ;
+        }
+        SACAPPControl.setEntity(entity);
+
+        saveOnPreferences(editTextName.getText().toString(), editTextPass.getText().toString());
+        Intent intentMainEntityActivity = new Intent(LoginActivity.this, MainEntityActivity.class);
+        intentMainEntityActivity.putExtra("token", token);
+        intentMainEntityActivity.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intentMainEntityActivity);
+    }
+
     /** Method to app access
      */
     public void appAccess(){
@@ -291,6 +307,7 @@ public class LoginActivity extends AppCompatActivity {
                         if(entity != null) {
                             LoginActivity.this.entity = entity;
                             Toast.makeText(LoginActivity.this, "Bienvenido " + LoginActivity.this.entity.getEntityname(), Toast.LENGTH_LONG).show();
+                            startMainEntityActivity();
 
                         } else {
                             Toast.makeText(LoginActivity.this, "Email y/o contraseña no coinciden", Toast.LENGTH_LONG).show();

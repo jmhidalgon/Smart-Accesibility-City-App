@@ -46,7 +46,7 @@ import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Entity;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Visit;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.util.SACAPPControl;
 
-/** Activity to show the Entity detaisl
+/** Activity to show the Entity details
  *
  * @author Juan Manuel Hidalgo Navarro
  */
