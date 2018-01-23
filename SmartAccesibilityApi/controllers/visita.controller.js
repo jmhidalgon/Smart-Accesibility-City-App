@@ -27,6 +27,7 @@ function guardarVisita(req, res){
 	visita.idEntidad = parametros.idEntidad;
 	visita.fecha = parametros.fecha;
 	visita.idUsuario = parametros.idUsuario;
+	visita.tokenEntidad = "";
 
 	console.log("Registrar visita");
 	Visita.findOne({idEntidad: visita.idEntidad, nombreUsuario: visita.nombreUsuario, fecha: visita.fecha}, (err, u) =>{
@@ -105,13 +106,49 @@ function getVisitasPorUsuario(req, res){
 			res.status(200).send({visitas : visitas});
 		}
 	});
+}
+
+function actualizarToken(req, res){
+	var idVisita = req.params.idVisita;
+	var tokenEntidad = req.body.tokenEntidad;
+	var update = req.body;
+
+	console.log(idVisita);
+	console.log(update);
+
+	if(!idVisita){
+		res.status(500).send({message : 'Error en la peticion. No hay id entidad'});
+	}
+	if(!update){
+		res.status(500).send({message : 'Error en la peticion. No hay token'});
+	}
+
+	update.tokenEntidad = tokenEntidad;
+
+	Visita.findByIdAndUpdate(idVisita, update, (err, visitaActualizada) => {
+		if(err){ // No existe el entidad
+			res.status(HttpStatus.INTERNAL_SERVER_ERROR).send({message : 'Error al actualizar token de visita'});
+		} else {
+			console.log("amo a ve 2");
+
+			if(!visitaActualizada){ // No se ha actualizado
+				res.status(HttpStatus.NOT_FOUND).send({message : 'No se ha podido actualizar la visita'});
+			} else {
+				res.status(HttpStatus.OK).send(visitaActualizada);
+			}
+		}
+
+	});
+
 
 }
+
 
 // Exportamos
 module.exports = {
 	pruebas,
 	guardarVisita,
 	getVisitasPorUsuario,
-	getVisitasPorEntidad
+	getVisitasPorEntidad,
+	actualizarToken
 };

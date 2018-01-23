@@ -1,8 +1,10 @@
 package sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy;
 
+import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -16,12 +18,16 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.R;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.API;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.firebaseservice.SACAPPFirebaseInstanceIdService;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.CommentService;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.VisitService;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.adapter.AdapterAccessItem;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.adapter.AdapterComment;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.adapter.item.CommentItem;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Comment;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Comments;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Visit;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Visits;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.util.SACAPPControl;
 
 /** Main Entity activity
@@ -39,6 +45,8 @@ public class MainEntityActivity extends AppCompatActivity {
     private ArrayList<CommentItem> commentItems;
     private AdapterComment adapterComment;
     private List<Comment> commentsEntity;
+
+    private List<Visit> listVisits;
 
     private double acumulateRating;
     private double globalRating;
@@ -67,6 +75,13 @@ public class MainEntityActivity extends AppCompatActivity {
 
         fillEntityData();
         getCommentsByEntityAndFillListView();
+        addSettingButtonListener();
+
+        if(!getEntityToken()){
+            Toast.makeText(MainEntityActivity.this, "No se ha podido establecer conexión con el servicio de notificaciones", Toast.LENGTH_LONG).show();
+        } else {
+            getVisitAndUpdateEntityToken();
+        }
     }
 
     /** Request the comments by entity ID and fill the list view
@@ -143,5 +158,107 @@ public class MainEntityActivity extends AppCompatActivity {
         }*/
 
         super.onResume();
+    }
+
+    private void addSettingButtonListener(){
+
+        if(fabSettings == null){
+            return;
+        }
+
+        fabSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoSettings();
+            }
+        });
+
+    }
+
+
+    private void gotoSettings(){
+        Intent intentSettingsActivity = new Intent(MainEntityActivity.this, EntityRegisterActivity.class);
+        intentSettingsActivity.putExtra("update", "true");
+        startActivity(intentSettingsActivity);
+
+    }
+
+    private boolean getEntityToken(){
+        try {
+            String refreshedToken = SACAPPFirebaseInstanceIdService.getInstance();
+            return refreshedToken != null;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    private void getVisitAndUpdateEntityToken(){
+        final VisitService visitService = API.getApi().create(VisitService.class);
+        final Call<Visits> visitsCall = visitService.getVisitsByEntity(SACAPPControl.getEntity().getId());
+
+        visitsCall.enqueue(new Callback<Visits>() {
+            @Override
+            public void onResponse(Call<Visits> call, Response<Visits> response) {
+                int httpCode = response.code();
+
+                switch (httpCode) {
+                    case API.INTERNAL_SERVER_ERROR:
+                        Toast.makeText(MainEntityActivity.this, response.message() + ": Error en el servidor de datos", Toast.LENGTH_LONG).show();
+                        break;
+                    case API.NOT_FOUND:
+                        Toast.makeText(MainEntityActivity.this, response.message() + ": No encontrado", Toast.LENGTH_LONG).show();
+                        break;
+                    case API.OK:
+                        Visits visitsResponse = response.body();
+                        listVisits = visitsResponse.getVisits();
+                        if (listVisits != null) {
+                            // fillListViewVisit();
+                            for (int i = 0; i < listVisits.size(); ++i) {
+                                updateFCMToken(listVisits.get(i));
+                            }
+                        }
+                        break;
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Visits> call, Throwable t) {
+                Toast.makeText(MainEntityActivity.this, "Error de conexion Visitas", Toast.LENGTH_LONG).show();
+            }
+        });
+
+    }
+
+    private void updateFCMToken(Visit visit2update){
+        visit2update.setEntityToken(SACAPPControl.firebaseToken);
+
+        VisitService visitService = API.getApi().create(VisitService.class);
+        Call<Visit> visitCall = visitService.updateVisit(visit2update, visit2update.getId());
+
+        visitCall.enqueue(new Callback<Visit>() {
+            @Override
+            public void onResponse(Call<Visit> call, Response<Visit> response) {
+                int httpCode = response.code();
+
+                switch (httpCode) {
+                    case API.INTERNAL_SERVER_ERROR:
+                        Toast.makeText(MainEntityActivity.this, response.message() + ": Error en el servidor de datos", Toast.LENGTH_LONG).show();
+                        break;
+                    case API.NOT_FOUND:
+                        Toast.makeText(MainEntityActivity.this, response.message() + ": No encontrado", Toast.LENGTH_LONG).show();
+                        break;
+                    case API.OK:
+
+                        break;
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Visit> call, Throwable t) {
+                Toast.makeText(MainEntityActivity.this, "Error desconocido", Toast.LENGTH_LONG).show();
+            }
+        });
+
     }
 }

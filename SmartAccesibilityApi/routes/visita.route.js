@@ -20,5 +20,6 @@ api.get('/get-visita-usuario/:idUsuario', VisitaControlador.getVisitasPorUsuario
 api.get('/get-visita-entidad/:idEntidad', VisitaControlador.getVisitasPorEntidad);
 // POST
 api.post('/registro-visita', VisitaControlador.guardarVisita);
+api.post('/actualizar-token-visita/:idVisita', VisitaControlador.actualizarToken);
 
 module.exports = api;

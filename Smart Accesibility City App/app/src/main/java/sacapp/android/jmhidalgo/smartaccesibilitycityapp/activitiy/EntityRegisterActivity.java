@@ -41,6 +41,7 @@ import sacapp.android.jmhidalgo.smartaccesibilitycityapp.R;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.API;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.EntityService;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Entity;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.util.SACAPPControl;
 
 /** Activity to register a Entity
  *
@@ -67,6 +68,8 @@ public class EntityRegisterActivity extends FragmentActivity implements OnMapRea
     private Geocoder geocoder;
     private Marker entityMarker;
 
+    boolean update = false;
+
     /** OnCreate Method (inherited method)
      *
      * @param savedInstanceState Bundle
@@ -79,6 +82,12 @@ public class EntityRegisterActivity extends FragmentActivity implements OnMapRea
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+        if(getIntent().getStringExtra("update") != null) {
+            if (getIntent().getStringExtra("update").equals("true")) {
+                update = true;
+            }
+        }
+
         // Getting view components
         buttonAccept = (Button) findViewById(R.id.buttonAccept);
 
@@ -88,6 +97,12 @@ public class EntityRegisterActivity extends FragmentActivity implements OnMapRea
         editTextPassConfirmed = (EditText) findViewById(R.id.editTextPassConfirmed);
         editTextPass = (EditText) findViewById(R.id.editTextPass);
         editTextPassWebsite = (EditText) findViewById(R.id.editTextWebsite);
+
+        if(update && SACAPPControl.getEntity() != null){
+            editTextName.setText(SACAPPControl.getEntity().getEntityname());
+            editTextEmail.setText(SACAPPControl.getEntity().getEmail());
+            editTextPassWebsite.setText(SACAPPControl.getEntity().getWebsite());
+        }
 
         // Adding click listener to regist the entity
         buttonAccept.setOnClickListener(new View.OnClickListener() {
@@ -107,6 +122,14 @@ public class EntityRegisterActivity extends FragmentActivity implements OnMapRea
                     return;
                 }
                 Entity entity = new Entity("", name, email, pass1, "ROLE_ENTITY", "", address, entityLocation.getLongitude(), entityLocation.getLatitude(), website);
+
+                if(update){
+                    updateEntity(entity);
+                    Intent intentBackLogin = new Intent(EntityRegisterActivity.this, AccessibilityActivity.class);
+                    intentBackLogin.putExtra("Entity", (Parcelable) entity);
+                    startActivity(intentBackLogin);
+                    return;
+                }
 
                 EntityService entityService = API.getApi().create(EntityService.class);
                 Call<Entity> entityCall = entityService.register(entity);
@@ -240,8 +263,11 @@ public class EntityRegisterActivity extends FragmentActivity implements OnMapRea
         entityMarker = null;
 
         getLocationEntity();
-        entityMarker = mMap.addMarker(new MarkerOptions().position(new LatLng(entityLocation.getLatitude(), entityLocation.getLongitude())).title("Dirección de su entidad"));
-
+        if(update) {
+            entityMarker = mMap.addMarker(new MarkerOptions().position(new LatLng(SACAPPControl.getEntity().getLatitud(), SACAPPControl.getEntity().getLongitud())).title("Dirección de su entidad"));
+        } else {
+            entityMarker = mMap.addMarker(new MarkerOptions().position(new LatLng(entityLocation.getLatitude(), entityLocation.getLongitude())).title("Dirección de su entidad"));
+        }
         List<Address> addresses = null;
         try {
             addresses = geocoder.getFromLocation(entityLocation.getLatitude(), entityLocation.getLongitude(), 1);
@@ -348,5 +374,37 @@ public class EntityRegisterActivity extends FragmentActivity implements OnMapRea
         mMap.animateCamera(CameraUpdateFactory.zoomTo(15), 2000, null);
 
     }
+
+    private void updateEntity(Entity entity){
+
+        EntityService entityService = API.getApi().create(EntityService.class);
+        Call<Entity> entityCall = entityService.setUpdateData(entity, SACAPPControl.getEntity().getId());
+
+        entityCall.enqueue(new Callback<Entity>() {
+            @Override
+            public void onResponse(Call<Entity> call, Response<Entity> response) {
+
+                if (API.METHOD_NOT_ALLOWED == response.code()) {
+                    Toast.makeText(EntityRegisterActivity.this, response.message() + ": Email ya registrado en la aplicación", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(EntityRegisterActivity.this, "Entidad registrada", Toast.LENGTH_LONG).show();
+                    Intent intentBackLogin = new Intent(EntityRegisterActivity.this, AccessibilityActivity.class);
+
+                    if(response.body() == null){
+                        return ;
+                    }
+
+                    intentBackLogin.putExtra("Entity", (Parcelable) response.body());
+                    startActivity(intentBackLogin);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Entity> call, Throwable t) {
+                Toast.makeText(EntityRegisterActivity.this, "Error al registrar la entidad.", Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
 
 }

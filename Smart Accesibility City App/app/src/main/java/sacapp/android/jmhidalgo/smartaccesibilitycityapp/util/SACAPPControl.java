@@ -10,6 +10,8 @@ public class SACAPPControl
         ENTITY_MODE
     }
 
+    public static String firebaseToken = "";
+
     private static User user;
     private static Entity entity;
 

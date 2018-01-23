@@ -11,8 +11,8 @@ public class API {
 
     /** Connection URL
      */
-    //public static String URL_BASE = "http://192.168.1.137:3977/api/";
-    public static String URL_BASE = "http://192.168.0.26:3977/api/";
+    public static String URL_BASE = "http://192.168.1.137:3977/api/";
+    //public static String URL_BASE = "http://192.168.0.26:3977/api/";
     //public static String URL_BASE = "http://192.168.43.221:3977/api/";
 
     /** Retrofit class to build the services

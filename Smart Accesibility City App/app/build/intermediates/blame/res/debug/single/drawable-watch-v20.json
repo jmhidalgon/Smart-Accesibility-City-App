@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml",
+        "source": "/home/juanma/.android/build-cache/8818ccaa2cee5adeceecccd367de88e5e85953ad/output/res/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml"
+    },
+    {
+        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/drawable-watch-v20/common_google_signin_btn_text_disabled.xml",
+        "source": "/home/juanma/.android/build-cache/8818ccaa2cee5adeceecccd367de88e5e85953ad/output/res/drawable-watch-v20/common_google_signin_btn_text_disabled.xml"
+    },
+    {
+        "merged": "/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/res/merged/debug/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml",
+        "source": "/home/juanma/.android/build-cache/8818ccaa2cee5adeceecccd367de88e5e85953ad/output/res/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml"
+    }
+]

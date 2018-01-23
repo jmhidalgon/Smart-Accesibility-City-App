@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="SACAPP" company="JMHN" webLink="" view-date="2017-10-02" view-index="0" gantt-divider-location="498" resource-divider-location="300" version="2.8.5" locale="es">
+    <description><![CDATA[Gestión del proyecto Smart Accessibility City APP]]></description>
+    <view zooming-state="default:7" id="gantt-chart">
+        <field id="tpd3" name="Nombre" width="403" order="0"/>
+        <field id="tpd6" name="Duración" width="91" order="1"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nombre" width="210" order="0"/>
+        <field id="1" name="Función" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="0" mon="0" tue="0" wed="0" thu="0" fri="0" sat="0"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" name="Análisis previo y planificación" color="#8cb6ce" meeting="false" start="2017-10-02" duration="21" complete="0" expand="true">
+            <depend id="20" type="2" difference="0" hardness="Strong"/>
+            <task id="4" name="Conceptualización de la aplicacion" color="#8cb6ce" meeting="false" start="2017-10-02" duration="4" complete="0" expand="true">
+                <depend id="7" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="7" name="Selección e investigación sobre las tecnologías a usa" color="#8cb6ce" meeting="false" start="2017-10-06" duration="6" complete="0" expand="true">
+                <depend id="9" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="9" name="Análisis de riesgo" color="#8cb6ce" meeting="false" start="2017-10-12" duration="1" complete="0" expand="true">
+                <depend id="14" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="14" name="Planificación del proyecto" color="#8cb6ce" meeting="false" start="2017-10-13" duration="4" complete="0" expand="true">
+                <depend id="16" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="16" name="Redacción de documentos" color="#8cb6ce" meeting="false" start="2017-10-17" duration="6" complete="0" expand="true"/>
+        </task>
+        <task id="20" name="Análisis de requisitos" meeting="false" start="2017-10-23" duration="13" complete="0" expand="true">
+            <depend id="34" type="2" difference="0" hardness="Strong"/>
+            <task id="21" name="Requisitos funcionales" color="#8cb6ce" meeting="false" start="2017-10-23" duration="4" complete="0" expand="true">
+                <depend id="26" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="26" name="Diseño y estructura de la aplicación" color="#8cb6ce" meeting="false" start="2017-10-27" duration="3" complete="0" expand="true">
+                <depend id="94" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="94" name="Diseño de la base de datos" meeting="false" start="2017-10-30" duration="2" complete="0" expand="true">
+                <depend id="31" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="31" name="Diseño de servicio web" color="#8cb6ce" meeting="false" start="2017-11-01" duration="4" complete="0" expand="true"/>
+        </task>
+        <task id="34" name="Diseño" meeting="false" start="2017-11-06" duration="14" complete="0" expand="true">
+            <depend id="62" type="2" difference="0" hardness="Strong"/>
+            <task id="36" name="Definición de roles" meeting="false" start="2017-11-06" duration="2" complete="0" expand="true">
+                <depend id="38" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="38" name="Diseño conceptual" meeting="false" start="2017-11-08" duration="4" complete="0" expand="true">
+                <depend id="40" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="40" name="Diseño de interfaz y navegación" meeting="false" start="2017-11-12" duration="4" complete="0" expand="true">
+                <depend id="45" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="45" name="Redacción de documentos" meeting="false" start="2017-11-16" duration="4" complete="0" expand="true"/>
+        </task>
+        <task id="62" name="Implementación y pruebas" meeting="false" start="2017-11-20" duration="53" complete="0" expand="true">
+            <depend id="77" type="2" difference="0" hardness="Strong"/>
+            <task id="63" name="Implementación de interfaces" meeting="false" start="2017-11-20" duration="8" complete="0" expand="true">
+                <depend id="65" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="65" name="Lógica interna" meeting="false" start="2017-11-28" duration="18" complete="0" expand="true">
+                <depend id="71" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="71" name="Implementacion del servicio web" meeting="false" start="2017-12-16" duration="14" complete="0" expand="true">
+                <depend id="74" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="74" name="Pruebas de incrementos con cada Sprint" meeting="false" start="2017-12-30" duration="13" complete="0" expand="true"/>
+        </task>
+        <task id="77" name="Finalización" meeting="false" start="2018-01-12" duration="17" complete="0" expand="true">
+            <task id="78" name="Documentación final" color="#8cb6ce" meeting="false" start="2018-01-12" duration="7" complete="0" expand="true">
+                <depend id="80" type="2" difference="0" hardness="Strong"/>
+                <depend id="93" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="80" name="Presentación" meeting="false" start="2018-01-19" duration="10" complete="0" expand="true"/>
+            <task id="93" name="Demostración" meeting="false" start="2018-01-19" duration="10" complete="0" expand="true"/>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="0" name="Juan Manuel Hidalgo Navarro" function="SoftwareDevelopment:2" contacts="" phone=""/>
+    </resources>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>

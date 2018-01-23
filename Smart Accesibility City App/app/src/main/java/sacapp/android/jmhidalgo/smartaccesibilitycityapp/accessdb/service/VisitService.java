@@ -37,4 +37,14 @@ public interface VisitService
      */
     @POST("registro-visita")
     Call<Visit> register(@Body Visit visit);
+
+    /** Method to update a Visit object
+     *
+     * @param visit The visit object to update
+     * @param idVisita the id of the visit to update
+     * @return Registered visit
+     */
+    @POST("actualizar-token-visita/{idVisita}")
+    Call<Visit> updateVisit(@Body Visit visit, @Path("idVisita") String idVisita);
+
 }

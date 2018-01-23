@@ -10,7 +10,8 @@ var bcrypt = require('bcrypt-nodejs');
 var VisitaSchema = Schema({
 	idUsuario: String,
 	idEntidad: String,
-	fecha: String
+	fecha: String,
+	tokenEntidad: String
 });
 
 // Exportamos el esquema para poder crear objetos que trabajen bajo este modelo de datos

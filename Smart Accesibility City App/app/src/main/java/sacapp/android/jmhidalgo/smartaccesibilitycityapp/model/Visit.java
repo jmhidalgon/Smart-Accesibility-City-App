@@ -11,12 +11,15 @@ public class Visit {
     private String entityId;
     @SerializedName("fecha")
     private String stringDate;
+    @SerializedName("tokenEntidad")
+    private String entityToken;
 
     public Visit(String id, String userId, String entityId, String stringDate) {
         this.id = id;
         this.userId = userId;
         this.entityId = entityId;
         this.stringDate = stringDate;
+        this.entityToken = "";
     }
 
     public String getId() {
@@ -49,5 +52,13 @@ public class Visit {
 
     public void setStringDate(String stringDate) {
         this.stringDate = stringDate;
+    }
+
+    public String getEntityToken() {
+        return entityToken;
+    }
+
+    public void setEntityToken(String entityToken) {
+        this.entityToken = entityToken;
     }
 }

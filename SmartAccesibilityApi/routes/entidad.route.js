@@ -27,7 +27,8 @@ api.post('/registro-entidad', EntidadControlador.guardarEntidad);
 api.post('/registro-entidad-publica', EntidadControlador.guardarEntidadPublica);
 api.post('/upload-imagen-entidad/:id', [middlewareAuten.ensureAut, middlewareUpload], EntidadControlador.uploadImagen);
 // PUT
-api.put('/actualizar-entidad/:id', middlewareAuten.ensureAut, EntidadControlador.actualizarEntidad);
+//api.put('/actualizar-entidad/:id', middlewareAuten.ensureAut, EntidadControlador.actualizarEntidad);
+api.put('/actualizar-entidad/:id', EntidadControlador.actualizarEntidad);
 
 // Exportamos api para poder usarlo fuera de este fichero
 module.exports = api;

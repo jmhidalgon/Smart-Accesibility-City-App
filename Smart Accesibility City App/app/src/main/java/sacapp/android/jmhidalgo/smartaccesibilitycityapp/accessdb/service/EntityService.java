@@ -5,9 +5,11 @@ import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Path;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Entities;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Entity;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.User;
 
 /** Interface to access to our Entity web service methods
  *
@@ -56,4 +58,7 @@ public interface EntityService {
      */
     @GET("get-entidad-id/{idEntidad}")
     Call<Entities> getEntityById(@Path("idEntidad") String idEntidad);
+
+    @PUT("actualizar-entidad/{idEntidad}")
+    Call<Entity> setUpdateData(@Body Entity entity, @Path("idEntidad") String idEntidad);
 }

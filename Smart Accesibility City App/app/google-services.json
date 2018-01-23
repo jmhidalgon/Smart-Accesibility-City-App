@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "707635122493",
+    "firebase_url": "https://sacapp-jmhn.firebaseio.com",
+    "project_id": "sacapp-jmhn",
+    "storage_bucket": "sacapp-jmhn.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:707635122493:android:269170f7ae5675c9",
+        "android_client_info": {
+          "package_name": "sacapp.android.jmhidalgo.smartaccesibilitycityapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "707635122493-tkvc9b5p9h9bkm44c0r2vbnj7oe0i8au.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdL5wqxj8AGWvKomvJ3EnK0KG5qi1i4mo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

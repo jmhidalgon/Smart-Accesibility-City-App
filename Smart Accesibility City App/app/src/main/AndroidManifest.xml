@@ -24,6 +24,22 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <service android:name=".accessdb.firebaseservice.SACAPPFirebaseMessagingService"
+                 android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <service android:name=".accessdb.firebaseservice.SACAPPFirebaseInstanceIdService"
+                 android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+
         <activity android:name=".activitiy.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -57,6 +73,7 @@
         </activity>
         <activity android:name=".activitiy.MainEntityActivity">
         </activity>
+
     </application>
 
 </manifest>
