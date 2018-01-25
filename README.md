@@ -1,2 +1,2 @@
-# SmartAccessibilityCityApp
-Desarrollo para la aplicación Smart Accesibility City App (sacapp) para la plataforma Android
+# SACAPP
+Desarrollo para la aplicación SACAPP is a Accesible City App (sacapp) para la plataforma Android
