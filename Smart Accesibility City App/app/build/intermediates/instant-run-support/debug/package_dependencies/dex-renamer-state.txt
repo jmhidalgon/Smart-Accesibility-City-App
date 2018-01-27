@@ -1,4 +1,4 @@
-#Mon Jan 22 23:04:07 CET 2018
+#Wed Jan 24 23:22:20 CET 2018
 file.9=/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-26.0.0-alpha1_55def19cec0f96bf07c3ecc0d8587df480110bac/classes.dex
 base.10=/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_bc720cf30b23b0f09e17b000e4136a224da5c082
 file.8=/home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.13.0_a6b1f8a8d741e7310ca12abe0a167d83b671b071/classes.dex

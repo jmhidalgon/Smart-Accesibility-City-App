@@ -76,12 +76,14 @@ public class MainEntityActivity extends AppCompatActivity {
         fillEntityData();
         getCommentsByEntityAndFillListView();
         addSettingButtonListener();
+        addNotifyButtonListener();
 
         if(!getEntityToken()){
             Toast.makeText(MainEntityActivity.this, "No se ha podido establecer conexión con el servicio de notificaciones", Toast.LENGTH_LONG).show();
         } else {
             getVisitAndUpdateEntityToken();
         }
+
     }
 
     /** Request the comments by entity ID and fill the list view
@@ -230,7 +232,7 @@ public class MainEntityActivity extends AppCompatActivity {
 
     }
 
-    private void updateFCMToken(Visit visit2update){
+    private void updateFCMToken(final Visit visit2update){
         visit2update.setEntityToken(SACAPPControl.firebaseToken);
 
         VisitService visitService = API.getApi().create(VisitService.class);
@@ -249,7 +251,7 @@ public class MainEntityActivity extends AppCompatActivity {
                         Toast.makeText(MainEntityActivity.this, response.message() + ": No encontrado", Toast.LENGTH_LONG).show();
                         break;
                     case API.OK:
-
+                        SACAPPControl.addAVisitToEntity(visit2update);
                         break;
                 }
             }
@@ -261,4 +263,51 @@ public class MainEntityActivity extends AppCompatActivity {
         });
 
     }
+
+    private void addNotifyButtonListener(){
+
+        if(fabNotifications != null){
+            fabNotifications.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    Intent intentNotifyActivity = new Intent(MainEntityActivity.this, NotificationActivity.class);
+                    startActivity(intentNotifyActivity);
+                }
+            });
+
+        }
+
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -32,6 +32,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -52,6 +53,7 @@ import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Entities;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Entity;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Token;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.util.CustomInfoWindowGoogleMap;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.util.SACAPPControl;
 
 import static android.content.Context.LOCATION_SERVICE;
 
@@ -61,6 +63,7 @@ import static android.content.Context.LOCATION_SERVICE;
 public class MapFragment extends Fragment implements OnMapReadyCallback, View.OnClickListener, LocationListener {
 
     private final int ACCESS_LOCATION = 1;
+    private final int NEAR_DISTANCE = 1000;
 
     private View rootView;
     private MapView mapView;
@@ -373,8 +376,26 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
 
     @Override
     public void onLocationChanged(Location location) {
-        /*Toast.makeText(getContext(), "Changed! -> " + location.getProvider(), Toast.LENGTH_LONG).show();
-        createOrUpdateMarkerByLocation(location);*/
+
+        // TODO Conseguir las entidades a visitar
+        ArrayList<Entity> entities = SACAPPControl.getEntityToVisit();
+
+        for(int i=0; i<entities.size(); ++i){
+
+            Entity entity = entities.get(i);
+
+            Location entityLocation = new Location(location);
+            entityLocation.setLatitude(entity.getLatitud());
+            entityLocation.setLongitude(entity.getLongitud());
+
+            if(location.distanceTo(entityLocation) <= NEAR_DISTANCE) {
+                Toast.makeText(getActivity(), "Mensaje de aviso", Toast.LENGTH_LONG).show();
+                return;
+            }
+        }
+
+
+
     }
 
     @Override

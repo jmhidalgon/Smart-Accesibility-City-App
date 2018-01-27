@@ -213,6 +213,7 @@ public class HistoryFragment extends Fragment {
 
         EntityService entityService = API.getApi().create(EntityService.class);
         Call<Entities> entityCall = entityService.getEntityById(v.getEntityId());
+        SACAPPControl.addAVisitToEntity(v);
 
         entityCall.enqueue(new Callback<Entities>() {
             @Override
@@ -231,6 +232,8 @@ public class HistoryFragment extends Fragment {
                         //((VisitItem)listViewVisit.getItemAtPosition(position)).setEntityName(entity.getEntityname());
                         visitItems.get(i).setEntityName(entity.getEntityname());
                         adapterVisit.notifyDataSetChanged();
+
+                        SACAPPControl.addEntityToVisit(entity);
                         break;
                 }
             }

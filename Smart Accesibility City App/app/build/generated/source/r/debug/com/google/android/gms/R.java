@@ -80,7 +80,7 @@ public final class R {
         public static final int auto = 0x7f0e002e;
         public static final int center = 0x7f0e0030;
         public static final int dark = 0x7f0e004f;
-        public static final int email = 0x7f0e00d8;
+        public static final int email = 0x7f0e00da;
         public static final int hybrid = 0x7f0e0044;
         public static final int icon_only = 0x7f0e004c;
         public static final int light = 0x7f0e0050;
@@ -90,8 +90,8 @@ public final class R {
         public static final int satellite = 0x7f0e0045;
         public static final int standard = 0x7f0e004d;
         public static final int terrain = 0x7f0e0046;
-        public static final int text = 0x7f0e00ee;
-        public static final int text2 = 0x7f0e00ec;
+        public static final int text = 0x7f0e00f0;
+        public static final int text2 = 0x7f0e00ee;
         public static final int toolbar = 0x7f0e008b;
         public static final int wide = 0x7f0e004e;
         public static final int wrap_content = 0x7f0e002d;

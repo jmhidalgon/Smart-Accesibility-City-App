@@ -39,7 +39,7 @@ function guardarEntidad(req, res){
 	var passNoEncryp = parametros.pass; 
 
 	console.log("Registrar entidad");
-	Entidad.findOne({email: entidad.email.toLowerCase()}, (err, u) =>{
+	Entidad.findOne({email: entidad.email/*.toLowerCase()*/}, (err, u) =>{
 		if(u != null){ 
 			res.status(HttpStatus.METHOD_NOT_ALLOWED).send({message : 'El entidad ya esta registado con ese email'});
 		} else {
@@ -88,7 +88,7 @@ function loginEntidad(req, res){
 	var email = parametros.email;
 	var pass = parametros.pass;
 
-	console.log("User: " +email);
+	console.log("Entity: " +email);
 	console.log("pass: " +pass);
 
 
@@ -100,6 +100,7 @@ function loginEntidad(req, res){
 				res.status(HttpStatus.NOT_FOUND).send({message : 'El entidad no existe'});
 			} else { // Existe el entidad
 				// Comprobar la contraseña
+							console.log(entidad);
 				bcrypt.compare(pass, entidad.pass, function(err, check){
 					if(check){ // Contraseña correcta
 						// devolvemos datos del entidad logeado
