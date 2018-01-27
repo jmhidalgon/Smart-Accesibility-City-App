@@ -1,7 +1,6 @@
 package sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,23 +16,19 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.R;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.API;
-import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.EntityService;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.UserService;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.adapter.AdapterVisit;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.adapter.item.VisitItem;
-import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Entities;
-import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Entity;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.User;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Users;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Visit;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.util.SACAPPControl;
 
-public class NotificationActivity extends AppCompatActivity {
+public class NextVisitActivity extends AppCompatActivity {
 
     private ListView listViewVisit;
     private ArrayList<VisitItem> visitItems;
     private AdapterVisit adapterVisit;
-    private HashMap<String, User> nameuserMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,10 +37,9 @@ public class NotificationActivity extends AppCompatActivity {
 
         listViewVisit = (ListView) findViewById(R.id.listViewVisits);
         visitItems = new ArrayList<VisitItem>();
-        adapterVisit = new AdapterVisit (NotificationActivity.this, R.layout.item_visit, visitItems);
+        adapterVisit = new AdapterVisit (NextVisitActivity.this, R.layout.item_visit, visitItems);
         listViewVisit.setAdapter(adapterVisit);
-
-        nameuserMap = new HashMap<>();
+        addListenerToListView();
 
         for(int i=0; i<SACAPPControl.getEntityVisits().size(); ++i) {
             getUserByID (SACAPPControl.getEntityVisits().get(i));
@@ -59,7 +53,13 @@ public class NotificationActivity extends AppCompatActivity {
                 if(i < 0 || i >= visitItems.size()){
                     return ;
                 } else {
+                    VisitItem clickedItem = visitItems.get(i);
+                    User u = SACAPPControl.nameuserMap.get(clickedItem.getEntityName());
 
+                    Intent intentToDetailUser = new Intent(NextVisitActivity.this, UserDetailActivity.class);
+                    intentToDetailUser.putExtra("userId", u.getId());
+                    intentToDetailUser.putExtra("stringDate", clickedItem.getDateString());
+                    startActivity(intentToDetailUser);
                 }
             }
         });
@@ -88,22 +88,22 @@ public class NotificationActivity extends AppCompatActivity {
         usersCall.enqueue(new Callback<Users>() {
             @Override
             public void onResponse(Call<Users> call, Response<Users> response) {
-                nameuserMap.clear();
+                SACAPPControl.nameuserMap.clear();
 
                 int httpCode = response.code();
 
                 switch(httpCode) {
                     case API.INTERNAL_SERVER_ERROR:
-                        Toast.makeText(NotificationActivity.this, response.message() + ": Error en el servidor de datos", Toast.LENGTH_LONG).show();
+                        Toast.makeText(NextVisitActivity.this, response.message() + ": Error en el servidor de datos", Toast.LENGTH_LONG).show();
                         break;
                     case API.NOT_FOUND:
-                        Toast.makeText(NotificationActivity.this, response.message() + ": No encontrado", Toast.LENGTH_LONG).show();
+                        Toast.makeText(NextVisitActivity.this, response.message() + ": No encontrado", Toast.LENGTH_LONG).show();
                         break;
                     case API.OK:
                         User user = response.body().getUsers().get(0);
                         userName[0] = user.getName() + " " + user.getSurname();
 
-                        nameuserMap.put(userName[0], user);
+                        SACAPPControl.nameuserMap.put(userName[0], user);
 
                         fillVisitWithName(v, userName[0]);
 

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.UserDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:text="Nombre"
+            android:textColor="@color/colorAccent"
+            android:textSize="26sp"/>
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:paddingBottom="10dp"
+            tools:context="sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.MainActivity">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fabEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="24dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:foregroundGravity="center_vertical"
+                app:fabSize="mini"
+                app:srcCompat="@android:drawable/ic_dialog_email"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fecha de la visita:"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        android:textSize="24sp"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/textViewMovility"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp"
+        android:text="El usuario a indicado que usa:"
+        android:textSize="16sp"/>
+
+    <EditText
+        android:id="@+id/editTextAdvise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:inputType="textMultiLine"/>
+
+</LinearLayout>

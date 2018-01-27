@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/AndroidManifest.xml:2:1-79:12
+ADDED from /home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/AndroidManifest.xml:2:1-81:12
 	package
 		ADDED from /home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/AndroidManifest.xml:3:11-70
 		INJECTED from /home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/AndroidManifest.xml
@@ -50,7 +50,7 @@ ADDED from /home/juanma/Documentos/Programacion/TFG - Smart Accesibility City Ap
 	android:name
 		ADDED from /home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/AndroidManifest.xml:18:22-78
 application
-ADDED from /home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/AndroidManifest.xml:20:5-77:19
+ADDED from /home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/AndroidManifest.xml:20:5-79:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/juanma/.android/build-cache/643742f4fb09932e48b86149f39ef6eabf7c0169/output/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:26.0.0-alpha1] /home/juanma/.android/build-cache/32a8ae0e0c30a1a76d5ddaac850fea640255f450/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/juanma/.android/build-cache/c2454a20d936ca7bc7571274cc69befdd0d388f8/output/AndroidManifest.xml:29:5-20
@@ -159,10 +159,14 @@ activity#sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.MainEntityA
 ADDED from /home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/AndroidManifest.xml:73:9-74:20
 	android:name
 		ADDED from /home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/AndroidManifest.xml:73:19-63
-activity#sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.NotificationActivity
+activity#sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.NextVisitActivity
 ADDED from /home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/AndroidManifest.xml:75:9-76:20
 	android:name
-		ADDED from /home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/AndroidManifest.xml:75:19-65
+		ADDED from /home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/AndroidManifest.xml:75:19-62
+activity#sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.UserDetailActivity
+ADDED from /home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/AndroidManifest.xml:77:9-78:20
+	android:name
+		ADDED from /home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/AndroidManifest.xml:77:19-63
 uses-sdk
 INJECTED from /home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/juanma/.android/build-cache/643742f4fb09932e48b86149f39ef6eabf7c0169/output/AndroidManifest.xml:5:5-7:41

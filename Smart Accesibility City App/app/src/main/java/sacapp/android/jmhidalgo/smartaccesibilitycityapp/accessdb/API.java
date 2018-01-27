@@ -11,9 +11,9 @@ public class API {
 
     /** Connection URL
      */
-    //public static String URL_BASE = "http://192.168.1.137:3977/api/";
+    public static String URL_BASE = "http://192.168.1.133:3977/api/";
     //public static String URL_BASE = "http://192.168.0.26:3977/api/";
-    public static String URL_BASE = "http://192.168.43.221:3977/api/";
+    //public static String URL_BASE = "http://192.168.43.221:3977/api/";
 
     public static String URL_FIREBASE = "https://fcm.googleapis.com/v1/projects/project-707635122493/messages:send HTTP/1.1";
     public static String FIREBASE_KEY = "AIzaSyB4HOcCnja7KulxA4AxcjjXIVIULwryUiI";

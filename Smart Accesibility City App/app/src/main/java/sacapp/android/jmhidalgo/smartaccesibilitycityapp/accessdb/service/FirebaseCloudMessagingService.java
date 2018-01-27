@@ -7,7 +7,7 @@ import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.FirebaseCloudMess
 
 public interface FirebaseCloudMessagingService {
 
-    @POST("https://gcm-http.googleapis.com/gcm/send")
+    @POST("notify")
     Call<FirebaseCloudMessagingModel> getResources(/*@Path("Authorization") String Authorization, @Path("Content-Type") String contentType = "application/json"*/);
 
 }

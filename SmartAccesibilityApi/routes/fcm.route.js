@@ -10,7 +10,7 @@ var multipart = require('connect-multiparty');
 var api = express.Router();
 
 // POST
-api.get('/notify', FCMControlador.notify);
+api.post('/notify', FCMControlador.notify);
 
 // Exportamos api para poder usarlo fuera de este fichero
 module.exports = api;

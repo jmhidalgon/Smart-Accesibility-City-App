@@ -3,6 +3,7 @@ package sacapp.android.jmhidalgo.smartaccesibilitycityapp.util;
 import android.content.Context;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Entity;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.User;
@@ -25,6 +26,7 @@ public class SACAPPControl
     private static User user;
     private static Entity entity;
 
+    public static HashMap<String, User> nameuserMap = new HashMap<>();
 
     public static User getUser()
     {

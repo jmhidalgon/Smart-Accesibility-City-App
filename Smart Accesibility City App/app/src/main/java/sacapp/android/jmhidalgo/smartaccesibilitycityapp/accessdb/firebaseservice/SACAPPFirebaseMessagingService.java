@@ -13,30 +13,41 @@ import android.util.Log;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
+import java.util.Map;
+
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.R;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.DetailsActivity;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.MainEntityActivity;
 
 public class SACAPPFirebaseMessagingService extends FirebaseMessagingService {
 
     public static final String TAG = "NOTICIAS";
+    private String notificationTitle;
+    private String notificationContent;
+    private String userId;
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
 
         String from = remoteMessage.getFrom();
-        Log.d(TAG, "Mensaje recibido de: " + from);
+        /*Log.d(TAG, "Mensaje recibido de: " + from);
+        */
+        Map<String, String> messageData;
 
         if(remoteMessage.getNotification() != null){
-            Log.d(TAG, "Notificación: " + remoteMessage.getNotification().getBody());
-            Log.d(TAG, "Notificación: " + remoteMessage.getData().toString());
+            messageData = remoteMessage.getData();
+            notificationTitle = messageData.get("title");
+            userId = messageData.get("userId");
+            notificationContent = messageData.get("notificationContent");
         }
 
         showNotification();
     }
 
     private void showNotification(){
-        Intent intent = new Intent(this, MainEntityActivity.class);
+        Intent intent = new Intent(this, DetailsActivity.class);
+        intent.putExtra("userId", userId);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT);
 
@@ -44,8 +55,8 @@ public class SACAPPFirebaseMessagingService extends FirebaseMessagingService {
 
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
                 .setSmallIcon(R.drawable.saapp_menu)
-                .setContentTitle("Titulo")
-                .setContentText("Texto")
+                .setContentTitle(notificationTitle)
+                .setContentText(notificationContent)
                 .setAutoCancel(true)
                 .setSound(soundUri)
                 .setContentIntent(pendingIntent);

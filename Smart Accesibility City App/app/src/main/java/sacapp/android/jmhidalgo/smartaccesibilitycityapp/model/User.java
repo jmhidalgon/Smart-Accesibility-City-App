@@ -5,7 +5,7 @@ import android.os.Parcelable;
 
 import com.google.gson.annotations.SerializedName;
 
-public class User {
+public class User implements Parcelable {
     @SerializedName("_id")
     private String id;
     @SerializedName("nombre")
@@ -35,6 +35,30 @@ public class User {
         this.image = image;
         this.gethash = false;
     }
+
+    protected User(Parcel in) {
+        id = in.readString();
+        name = in.readString();
+        surname = in.readString();
+        reduceMovility = in.readString();
+        email = in.readString();
+        pass = in.readString();
+        rol = in.readString();
+        image = in.readString();
+        gethash = in.readByte() != 0;
+    }
+
+    public static final Creator<User> CREATOR = new Creator<User>() {
+        @Override
+        public User createFromParcel(Parcel in) {
+            return new User(in);
+        }
+
+        @Override
+        public User[] newArray(int size) {
+            return new User[size];
+        }
+    };
 
     public String getName() {
         return name;
@@ -108,5 +132,22 @@ public class User {
         this.image = image;
     }
 
+    @Override
+    public int describeContents() {
+        return 9;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(id);
+        parcel.writeString(name);
+        parcel.writeString(surname);
+        parcel.writeString(reduceMovility);
+        parcel.writeString(email);
+        parcel.writeString(pass);
+        parcel.writeString(rol);
+        parcel.writeString(image);
+        parcel.writeByte((byte) (gethash ? 1 : 0));
+    }
 };
 

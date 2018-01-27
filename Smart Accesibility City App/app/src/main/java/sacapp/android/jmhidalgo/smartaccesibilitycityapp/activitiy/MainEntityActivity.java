@@ -21,7 +21,6 @@ import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.API;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.firebaseservice.SACAPPFirebaseInstanceIdService;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.CommentService;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.VisitService;
-import sacapp.android.jmhidalgo.smartaccesibilitycityapp.adapter.AdapterAccessItem;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.adapter.AdapterComment;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.adapter.item.CommentItem;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Comment;
@@ -271,7 +270,7 @@ public class MainEntityActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
 
-                    Intent intentNotifyActivity = new Intent(MainEntityActivity.this, NotificationActivity.class);
+                    Intent intentNotifyActivity = new Intent(MainEntityActivity.this, NextVisitActivity.class);
                     startActivity(intentNotifyActivity);
                 }
             });

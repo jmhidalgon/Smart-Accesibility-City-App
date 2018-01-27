@@ -72,7 +72,9 @@
         </activity>
         <activity android:name=".activitiy.MainEntityActivity">
         </activity>
-        <activity android:name=".activitiy.NotificationActivity">
+        <activity android:name=".activitiy.NextVisitActivity">
+        </activity>
+        <activity android:name=".activitiy.UserDetailActivity">
         </activity>
     </application>
 
