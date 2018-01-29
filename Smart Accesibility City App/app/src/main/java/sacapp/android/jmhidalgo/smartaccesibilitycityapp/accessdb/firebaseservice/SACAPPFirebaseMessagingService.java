@@ -18,6 +18,7 @@ import java.util.Map;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.R;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.DetailsActivity;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.MainEntityActivity;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.UserDetailActivity;
 
 public class SACAPPFirebaseMessagingService extends FirebaseMessagingService {
 
@@ -46,7 +47,12 @@ public class SACAPPFirebaseMessagingService extends FirebaseMessagingService {
     }
 
     private void showNotification(){
-        Intent intent = new Intent(this, DetailsActivity.class);
+
+        if(userId == null){
+            return;
+        }
+
+        Intent intent = new Intent(this, UserDetailActivity.class);
         intent.putExtra("userId", userId);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT);

@@ -155,11 +155,14 @@ public class HistoryFragment extends Fragment {
                             visitsUser = visitsResponse.getVisits();
                             if (visitsUser != null) {
                                 // fillListViewVisit();
+                                SACAPPControl.setVisitOfAUser((ArrayList<Visit>) visitsUser);
+
                                 for (int i = 0; i < visitsUser.size(); ++i) {
                                     fillListViewVisit(visitsUser.get(i));
                                     fillListViewWithEntityName(visitsUser.get(i), i);
                                 }
                             }
+
                             // fillListViewAccessResource();
                             break;
                     }

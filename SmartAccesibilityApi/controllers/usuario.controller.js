@@ -117,7 +117,7 @@ function guardarUsuario(req, res){
 								res.status(HttpStatus.BAD_REQUEST).send({message : 'No se ha resgistrado el usuario'});
 							} else {
 								console.log("2");
-
+								usuarioStored.pass = parametros.pass;
 								res.status(HttpStatus.OK).send(usuarioStored);
 							}
 						}
@@ -225,7 +225,7 @@ function actualizarUsuario(req, res){
 	var usuarioId = req.params.id;
 	var update = req.body;
 	var passNocryp = update.pass;
-	bcrypt.hash(parametros.pass, null, null, function(err, hash){
+	bcrypt.hash(req.params.pass, null, null, function(err, hash){
 		update.pass = hash;
 	});
 

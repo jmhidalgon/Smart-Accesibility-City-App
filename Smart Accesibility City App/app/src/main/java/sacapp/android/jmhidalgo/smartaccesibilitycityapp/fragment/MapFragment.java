@@ -41,6 +41,7 @@ import retrofit2.Response;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.R;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.API;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.EntityService;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.FirebaseCloudMessagingService;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.accessdb.service.TokenService;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.AccessibilityActivity;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.DetailsActivity;
@@ -51,7 +52,9 @@ import sacapp.android.jmhidalgo.smartaccesibilitycityapp.activitiy.MainActivity;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.adapter.InfoWindowData;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Entities;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Entity;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.FirebaseCloudMessagingModel;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Token;
+import sacapp.android.jmhidalgo.smartaccesibilitycityapp.model.Visit;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.util.CustomInfoWindowGoogleMap;
 import sacapp.android.jmhidalgo.smartaccesibilitycityapp.util.SACAPPControl;
 
@@ -377,7 +380,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
     @Override
     public void onLocationChanged(Location location) {
 
-        // TODO Conseguir las entidades a visitar
         ArrayList<Entity> entities = SACAPPControl.getEntityToVisit();
 
         for(int i=0; i<entities.size(); ++i){
@@ -387,10 +389,48 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
             Location entityLocation = new Location(location);
             entityLocation.setLatitude(entity.getLatitud());
             entityLocation.setLongitude(entity.getLongitud());
+            Visit v = null;
+
+            for(int k=0; k<SACAPPControl.getVisitOfAUser().size(); ++k){
+                if(SACAPPControl.getVisitOfAUser().get(k).getEntityId().equals(entity.getId())){
+                    v = SACAPPControl.getVisitOfAUser().get(k);
+                }
+            }
+
+            if(v == null){
+                return;
+            }
+/*Longitude: -5.9777
+Latitude: 37.4124*/
 
             if(location.distanceTo(entityLocation) <= NEAR_DISTANCE) {
-                Toast.makeText(getActivity(), "Mensaje de aviso", Toast.LENGTH_LONG).show();
-                return;
+                FirebaseCloudMessagingService fcmService = API.getApi().create(FirebaseCloudMessagingService.class);
+                Call<FirebaseCloudMessagingModel> fcmCall = fcmService.sendNotification(v.getEntityToken(), SACAPPControl.getUser().getId());
+
+                fcmCall.enqueue(new Callback<FirebaseCloudMessagingModel>() {
+                    @Override
+                    public void onResponse(Call<FirebaseCloudMessagingModel> call, Response<FirebaseCloudMessagingModel> response) {
+                        int httpCode = response.code();
+
+                        switch(httpCode) {
+                            case API.INTERNAL_SERVER_ERROR:
+                                Toast.makeText(getActivity(), response.message() + ": Error en el servidor de datos", Toast.LENGTH_LONG).show();
+                                break;
+                            case API.NOT_FOUND:
+                                Toast.makeText(getActivity(), response.message() + ": No encontrado", Toast.LENGTH_LONG).show();
+                                break;
+                            case API.OK:
+                                Toast.makeText(getActivity(), "Se le ha notificado a la entidad su cercanía", Toast.LENGTH_LONG).show();
+                                break;
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<FirebaseCloudMessagingModel> call, Throwable t) {
+
+                    }
+                });
+
             }
         }
 

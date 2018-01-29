@@ -10,7 +10,7 @@ var HttpStatus = require('http-status-codes');
 var AUTHORIZATION = 'AAAApMJXET0:APA91bEdEvlRf5r4XwrKPUlQSX022kBcSf0mUVxhEzAQF-al9rnp6ByovyNq7yTz3rDGmV7vhKctmNSbn1eigb1HzNjD8t88uocqGRfP10revVsp8Ya44wQongcLil9JmQ_qdnqbXw7C';
 
 function notify(req, res) {
-    var params = req.body;
+    var params = req.params;
     console.log(params.userId);
     console.log(params.entityTokenKey);
 
@@ -26,7 +26,7 @@ function notify(req, res) {
     }
 
     var entityTokenKey = params.entityTokenKey;
-    var userId = params.idUsuario;
+    var userId = params.userId;
 
     var notify_message = new gcm.Message({
         collapseKey: 'Usuario cercano',
@@ -47,15 +47,18 @@ function notify(req, res) {
         }
     });
 
+    var correcto = -1;
     var registrationTokens = [entityTokenKey];
     //console.log('Sending notification', sender);
     sender.send(notify_message, { registrationTokens: registrationTokens }, 10, function (err, response) {
       if(err) {
             //console.error('notification error: ', err);
-            res.status(HttpStatus.METHOD_NOT_ALLOWED).send("Error al enviar el mensaje");
+            //res.status(HttpStatus.METHOD_NOT_ALLOWED).send("Error al enviar el mensaje");
+        res.status(HttpStatus.METHOD_NOT_ALLOWED).send("Error al enviar el mensaje");
         }else {   
             //console.log('notification response: ', response);
-            res.status(HttpStatus.OK).send("OK");
+            //res.status(HttpStatus.OK).send("OK");
+        res.status(HttpStatus.OK).send("OK");
         }
     });
 }

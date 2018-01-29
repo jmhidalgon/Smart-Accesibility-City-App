@@ -61,23 +61,23 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/textViewDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Fecha de la visita:"
         android:layout_gravity="center_vertical"
         android:layout_margin="10dp"
+        android:text="Fecha de la visita:"
         android:textSize="18sp"/>
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editTextDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp"
         android:ems="10"
         android:inputType="date"
-        android:textSize="24sp"
-        android:layout_gravity="center_vertical"
-        android:layout_margin="10dp"/>
+        android:textSize="24sp"/>
 
     <TextView
         android:id="@+id/textViewMovility"

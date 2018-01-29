@@ -14,21 +14,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b3235f5-5536-46c1-a373-d807ed7e7ff1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_user_detail.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/NotificationActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/NotificationActivity$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/NotificationActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/NotificationActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/NotificationActivity$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/NotificationActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/NotificationActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/NotificationActivity$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/NotificationActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/NotificationActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/NotificationActivity$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/NotificationActivity.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/NotificationActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/NextVisitActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
@@ -37,9 +22,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/R$integer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/R$integer.class" />
@@ -52,32 +35,25 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/API.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/API.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/firebaseservice/SACAPPFirebaseMessagingService.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/firebaseservice/SACAPPFirebaseMessagingService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/service/FirebaseCloudMessagingService.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/service/FirebaseCloudMessagingService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/DetailsActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/DetailsActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/DetailsActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/DetailsActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserRegisterActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserRegisterActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/adapter/AdapterAccessItem.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/adapter/AdapterAccessItem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/adapter/AdapterComment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/adapter/AdapterComment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/adapter/AdapterVisit.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/adapter/AdapterVisit.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/LogoFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/LogoFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$1$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$5.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MenubarFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MenubarFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/UserConfigFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/UserConfigFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/model/User.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/model/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/model/FirebaseCloudMessagingModel.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/model/FirebaseCloudMessagingModel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/CustomInfoWindowGoogleMap.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/CustomInfoWindowGoogleMap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/SACAPPControl$AppMode.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/SACAPPControl$AppMode.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/SACAPPControl.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/SACAPPControl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/android/support/design/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/android/support/design/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/android/support/design/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/android/support/design/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/android/support/v7/appcompat/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/android/support/v7/appcompat/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/android/support/v7/appcompat/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/google/android/gms/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/com/google/android/gms/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/R$integer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/R$integer.class" />
@@ -90,26 +66,22 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/API.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/API.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/firebaseservice/SACAPPFirebaseMessagingService.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/firebaseservice/SACAPPFirebaseMessagingService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/service/FirebaseCloudMessagingService.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/service/FirebaseCloudMessagingService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/DetailsActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/DetailsActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/DetailsActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/DetailsActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserRegisterActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserRegisterActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/adapter/AdapterAccessItem.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/adapter/AdapterAccessItem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/adapter/AdapterComment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/adapter/AdapterComment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/adapter/AdapterVisit.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/adapter/AdapterVisit.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/LogoFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/LogoFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$1$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$5.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MenubarFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MenubarFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/UserConfigFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/UserConfigFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/model/User.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/model/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/model/FirebaseCloudMessagingModel.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/model/FirebaseCloudMessagingModel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/CustomInfoWindowGoogleMap.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/CustomInfoWindowGoogleMap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/SACAPPControl$AppMode.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/SACAPPControl$AppMode.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/SACAPPControl.class" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-verifier/debug/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/SACAPPControl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/zip-cache/wz4lm2wS+1_eSTIn76APr4ybArE=" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/zip-cache/wz4lm2wS+1_eSTIn76APr4ybArE=" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageInstantRunResourcesDebug/zip-cache/wz4lm2wS+1_eSTIn76APr4ybArE=" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageInstantRunResourcesDebug/zip-cache/wz4lm2wS+1_eSTIn76APr4ybArE=" />
@@ -132,9 +104,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/design/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/design/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/design/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/design/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/appcompat/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/appcompat/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/appcompat/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/google/android/gms/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/google/android/gms/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/R$integer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/R$integer.class" />
@@ -145,57 +115,69 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/API.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/API.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/firebaseservice/SACAPPFirebaseInstanceIdService.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/firebaseservice/SACAPPFirebaseInstanceIdService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/firebaseservice/SACAPPFirebaseMessagingService.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/firebaseservice/SACAPPFirebaseMessagingService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/locationservice/NotifyNearlyService.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/locationservice/NotifyNearlyService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/service/FirebaseCloudMessagingService.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/service/FirebaseCloudMessagingService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/DetailsActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/DetailsActivity$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/AccessibilityActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/AccessibilityActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/DetailsActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/DetailsActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/EntityRegisterActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/EntityRegisterActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/ExplorerActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/ExplorerActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/LoginActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/LoginActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/NextVisitActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/NextVisitActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserRegisterActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserRegisterActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/adapter/AdapterAccessItem.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/adapter/AdapterAccessItem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/adapter/AdapterComment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/adapter/AdapterComment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/adapter/AdapterVisit.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/adapter/AdapterVisit.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/LogoFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/LogoFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$1$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$5.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MenubarFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MenubarFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/UserConfigFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/UserConfigFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/model/User.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/model/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/model/FirebaseCloudMessagingModel.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/model/FirebaseCloudMessagingModel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/CustomInfoWindowGoogleMap.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/CustomInfoWindowGoogleMap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/SACAPPControl$AppMode.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/SACAPPControl$AppMode.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/SACAPPControl.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/SACAPPControl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/sacapp/android/jmhidalgo/smartaccesibilitycityapp/adapter/AdapterAccessItem.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/sacapp/android/jmhidalgo/smartaccesibilitycityapp/adapter/AdapterAccessItem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/sacapp/android/jmhidalgo/smartaccesibilitycityapp/adapter/AdapterComment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/sacapp/android/jmhidalgo/smartaccesibilitycityapp/adapter/AdapterComment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/locationservice/NotifyNearlyService.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/locationservice/NotifyNearlyService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/sacapp/android/jmhidalgo/smartaccesibilitycityapp/adapter/AdapterVisit.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/sacapp/android/jmhidalgo/smartaccesibilitycityapp/adapter/AdapterVisit.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/DetailsActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/DetailsActivity$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/AccessibilityActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/AccessibilityActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/DetailsActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/DetailsActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/EntityRegisterActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/EntityRegisterActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/ExplorerActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/ExplorerActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/LoginActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/LoginActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/NextVisitActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/NextVisitActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserRegisterActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserRegisterActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/CustomInfoWindowGoogleMap.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/CustomInfoWindowGoogleMap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/SACAPPControl$AppMode.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/SACAPPControl$AppMode.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/SACAPPControl.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/SACAPPControl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/sacapp/android/jmhidalgo/smartaccesibilitycityapp/model/User.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/sacapp/android/jmhidalgo/smartaccesibilitycityapp/model/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/sacapp/android/jmhidalgo/smartaccesibilitycityapp/model/FirebaseCloudMessagingModel.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/sacapp/android/jmhidalgo/smartaccesibilitycityapp/model/FirebaseCloudMessagingModel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/API.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/API.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/android/support/v7/appcompat/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/android/support/v7/appcompat/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/android/support/v7/appcompat/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/com/google/android/gms/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/com/google/android/gms/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/firebaseservice/SACAPPFirebaseInstanceIdService.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/firebaseservice/SACAPPFirebaseInstanceIdService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/firebaseservice/SACAPPFirebaseMessagingService.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/firebaseservice/SACAPPFirebaseMessagingService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/android/support/design/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/android/support/design/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/android/support/design/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/android/support/design/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/LogoFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/LogoFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$1$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$1$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment$5.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MenubarFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MenubarFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/UserConfigFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/UserConfigFragment.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/sacapp/android/jmhidalgo/smartaccesibilitycityapp/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/sacapp/android/jmhidalgo/smartaccesibilitycityapp/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/sacapp/android/jmhidalgo/smartaccesibilitycityapp/R$integer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/sacapp/android/jmhidalgo/smartaccesibilitycityapp/R$integer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/sacapp/android/jmhidalgo/smartaccesibilitycityapp/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/sacapp/android/jmhidalgo/smartaccesibilitycityapp/R$layout.class" />
@@ -207,7 +189,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_9/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/service/FirebaseCloudMessagingService.class" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_9/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/service/FirebaseCloudMessagingService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/R.java" />
@@ -215,13 +196,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/file-input-save-data.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageInstantRunResourcesDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageInstantRunResourcesDebug/dex-renamer-state.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageInstantRunResourcesDebug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageInstantRunResourcesDebug/file-input-save-data.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/instant-run-support/debug/manifest.crc" afterPath="$PROJECT_DIR$/app/build/intermediates/instant-run-support/debug/manifest.crc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/instant-run-support/debug/manifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/instant-run-support/debug/manifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/instant-run-support/debug/package_slice_0/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/instant-run-support/debug/package_slice_0/dex-renamer-state.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/instant-run-support/debug/package_slice_1/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/instant-run-support/debug/package_slice_1/dex-renamer-state.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/instant-run-support/debug/package_slice_2/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/instant-run-support/debug/package_slice_2/dex-renamer-state.txt" />
@@ -230,9 +208,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/instant-run-support/debug/package_slice_7/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/instant-run-support/debug/package_slice_7/dex-renamer-state.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/instant-run-support/debug/package_slice_8/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/instant-run-support/debug/package_slice_8/dex-renamer-state.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/instant-run-support/debug/package_slice_9/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/instant-run-support/debug/package_slice_9/dex-renamer-state.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/instant-run/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/instant-run/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_notification.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_notification.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_user_detail.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_user_detail.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/restart-dex/debug/build-info.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/restart-dex/debug/build-info.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/buildId.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/buildId.txt" />
@@ -243,17 +219,16 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/buildId.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/buildId.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/buildId.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/buildId.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_9/buildId.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_9/buildId.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/API.java" afterPath="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/API.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/firebaseservice/SACAPPFirebaseMessagingService.java" afterPath="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/firebaseservice/SACAPPFirebaseMessagingService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/service/FirebaseCloudMessagingService.java" afterPath="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/service/FirebaseCloudMessagingService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainEntityActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/model/User.java" afterPath="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/model/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/model/FirebaseCloudMessagingModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/model/FirebaseCloudMessagingModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/SACAPPControl.java" afterPath="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/SACAPPControl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_notification.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_notification.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_user_detail.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_user_detail.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SmartAccesibilityApi/controllers/fcm.controller.js" afterPath="$PROJECT_DIR$/../SmartAccesibilityApi/controllers/fcm.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SmartAccesibilityApi/routes/fcm.route.js" afterPath="$PROJECT_DIR$/../SmartAccesibilityApi/routes/fcm.route.js" />
     </list>
     <ignored path="Smart Accesibility City App.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -285,53 +260,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NextVisitActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/NextVisitActivity.java">
+      <file leaf-file-name="MapFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+            <state relative-caret-position="4473">
+              <caret line="397" column="13" selection-start-line="397" selection-start-column="13" selection-end-line="397" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FirebaseCloudMessagingService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/service/FirebaseCloudMessagingService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="11" column="54" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FirebaseCloudMessagingModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/model/FirebaseCloudMessagingModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="291">
+              <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="124" />
               <folding>
-                <element signature="method#getVisitItem#0;class#NextVisitActivity#0" expanded="false" />
+                <element signature="e#1421#1422#0" expanded="true" />
+                <element signature="e#1455#1456#0" expanded="true" />
+                <element signature="e#1509#1510#0" expanded="true" />
+                <element signature="e#1555#1556#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SACAPPFirebaseInstanceIdService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/firebaseservice/SACAPPFirebaseInstanceIdService.java">
+      <file leaf-file-name="SACAPPControl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/SACAPPControl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="729">
+              <caret line="89" column="37" selection-start-line="89" selection-start-column="23" selection-end-line="89" selection-end-column="37" />
+              <folding>
+                <element signature="e#726#733#0" expanded="true" />
+                <element signature="method#setEntityVisits#0;class#SACAPPControl#0" expanded="false" />
+                <element signature="e#2126#2127#0" expanded="true" />
+                <element signature="e#2161#2162#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HistoryFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="482">
+              <caret line="158" column="0" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="API.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/API.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReducedMobility.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/ReducedMobility.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="45" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SACAPPFirebaseMessagingService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/firebaseservice/SACAPPFirebaseMessagingService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDetailActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -2388,18 +2381,18 @@
         <option value="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/IGPSActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/MyGPS.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/model/FirebaseCloudMessagingModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/service/FirebaseCloudMessagingService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/API.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_notification.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/model/User.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/SACAPPControl.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/NextVisitActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/firebaseservice/SACAPPFirebaseMessagingService.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_user_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/firebaseservice/SACAPPFirebaseMessagingService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/model/FirebaseCloudMessagingModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/service/FirebaseCloudMessagingService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/SACAPPControl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/API.java" />
       </list>
     </option>
   </component>
@@ -2487,27 +2480,9 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Smart Accesibility City App" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="smartaccesibilitycityapp" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2544,32 +2519,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="smartaccesibilitycityapp" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fragment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Smart Accesibility City App" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smartaccesibilitycityapp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activitiy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2591,58 +2540,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="accessdb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Smart Accesibility City App" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smartaccesibilitycityapp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accessdb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Smart Accesibility City App" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smartaccesibilitycityapp" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accessdb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="firebaseservice" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2672,7 +2569,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="device.picker.selection" value="ZX1D22SZ7M" />
+    <property name="device.picker.selection" value="Nexus_5X_API_24" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
@@ -3109,12 +3006,12 @@
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16030957" sideWeight="0.49569893" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2305141" sideWeight="0.49569893" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2956989" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2956989" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -3256,25 +3153,25 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment.java</url>
-          <line>194</line>
+          <line>197</line>
           <properties />
           <option name="timeStamp" value="302" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment.java</url>
-          <line>178</line>
+          <line>181</line>
           <properties />
           <option name="timeStamp" value="308" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment.java</url>
-          <line>167</line>
+          <line>170</line>
           <properties />
           <option name="timeStamp" value="309" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment.java</url>
-          <line>206</line>
+          <line>209</line>
           <properties />
           <option name="timeStamp" value="310" />
         </line-breakpoint>
@@ -3406,7 +3303,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment.java</url>
-          <line>391</line>
+          <line>408</line>
           <properties />
           <option name="timeStamp" value="406" />
         </line-breakpoint>
@@ -3421,18 +3318,6 @@
           <line>17</line>
           <properties />
           <option name="timeStamp" value="410" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/firebaseservice/SACAPPFirebaseMessagingService.java</url>
-          <line>44</line>
-          <properties />
-          <option name="timeStamp" value="411" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/firebaseservice/SACAPPFirebaseMessagingService.java</url>
-          <line>32</line>
-          <properties />
-          <option name="timeStamp" value="412" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/NextVisitActivity.java</url>
@@ -3454,59 +3339,82 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity.java</url>
-          <line>43</line>
+          <line>62</line>
           <properties />
           <option name="timeStamp" value="423" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity.java</url>
-          <line>47</line>
+          <line>66</line>
           <properties />
           <option name="timeStamp" value="424" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity.java</url>
-          <line>55</line>
+          <line>74</line>
           <properties />
           <option name="timeStamp" value="425" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/firebaseservice/SACAPPFirebaseMessagingService.java</url>
-          <line>39</line>
+          <url>file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity.java</url>
+          <line>48</line>
           <properties />
-          <option name="timeStamp" value="427" />
+          <option name="timeStamp" value="433" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/firebaseservice/SACAPPFirebaseMessagingService.java</url>
-          <line>49</line>
-          <properties />
-          <option name="timeStamp" value="429" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/firebaseservice/SACAPPFirebaseMessagingService.java</url>
-          <line>55</line>
-          <properties />
-          <option name="timeStamp" value="430" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/firebaseservice/SACAPPFirebaseMessagingService.java</url>
+          <url>file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity.java</url>
           <line>41</line>
           <properties />
-          <option name="timeStamp" value="431" />
+          <option name="timeStamp" value="434" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity.java</url>
+          <line>82</line>
+          <properties />
+          <option name="timeStamp" value="435" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity.java</url>
+          <line>80</line>
+          <properties />
+          <option name="timeStamp" value="437" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity.java</url>
+          <line>79</line>
+          <properties />
+          <option name="timeStamp" value="438" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity.java</url>
+          <line>133</line>
+          <properties />
+          <option name="timeStamp" value="440" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity.java</url>
+          <line>143</line>
+          <properties />
+          <option name="timeStamp" value="441" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity.java</url>
+          <line>93</line>
+          <properties />
+          <option name="timeStamp" value="442" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment.java</url>
+          <line>382</line>
+          <properties />
+          <option name="timeStamp" value="443" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="432" />
+      <option name="time" value="444" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/google-services.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/model/Visit.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="531">
@@ -3702,66 +3610,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/model/FirebaseCloudMessagingModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1097">
-          <caret line="229" column="27" selection-start-line="229" selection-start-column="27" selection-end-line="229" selection-end-column="27" />
-          <folding>
-            <element signature="e#2822#3841#0" expanded="false" />
-            <element signature="e#3840#3841#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/service/AccessResourceService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="25" column="76" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/service/FirebaseCloudMessagingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5526">
-          <caret line="364" column="7" selection-start-line="364" selection-start-column="7" selection-end-line="364" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#4223#4224#0" expanded="false" />
-            <element signature="e#4255#4256#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/service/EntityService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="61" column="40" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/API.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="13" column="57" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
           <folding />
         </state>
       </provider>
@@ -3845,15 +3697,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/SACAPPControl.java">
+    <entry file="jar://$USER_HOME$/.android/build-cache/489d5e48aaf49ac8a4fc68b5510267766a0ab8d1/output/jars/classes.jar!/com/google/firebase/messaging/RemoteMessage.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="28" column="43" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="51" />
-          <folding>
-            <element signature="method#setEntityVisits#0;class#SACAPPControl#0" expanded="false" />
-            <element signature="e#1954#1955#0" expanded="true" />
-            <element signature="e#1995#1996#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="154">
+          <caret line="20" column="66" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3876,32 +3724,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.android/build-cache/489d5e48aaf49ac8a4fc68b5510267766a0ab8d1/output/jars/classes.jar!/com/google/firebase/messaging/RemoteMessage.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="20" column="66" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/NextVisitActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-          <folding>
-            <element signature="method#getVisitItem#0;class#NextVisitActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/firebaseservice/SACAPPFirebaseInstanceIdService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -3910,10 +3732,102 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/NextVisitActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="109" column="30" selection-start-line="109" selection-start-column="30" selection-end-line="109" selection-end-column="30" />
+          <folding>
+            <element signature="method#getVisitItem#0;class#NextVisitActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/firebaseservice/SACAPPFirebaseMessagingService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+        <state relative-caret-position="666">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/activitiy/UserDetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="101" column="49" selection-start-line="101" selection-start-column="49" selection-end-line="101" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/service/EntityService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="51" column="68" selection-start-line="51" selection-start-column="68" selection-end-line="51" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/service/FirebaseCloudMessagingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="11" column="54" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/model/FirebaseCloudMessagingModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="124" />
+          <folding>
+            <element signature="e#1421#1422#0" expanded="true" />
+            <element signature="e#1455#1456#0" expanded="true" />
+            <element signature="e#1509#1510#0" expanded="true" />
+            <element signature="e#1555#1556#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/util/SACAPPControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="89" column="37" selection-start-line="89" selection-start-column="23" selection-end-line="89" selection-end-column="37" />
+          <folding>
+            <element signature="e#726#733#0" expanded="true" />
+            <element signature="method#setEntityVisits#0;class#SACAPPControl#0" expanded="false" />
+            <element signature="e#2126#2127#0" expanded="true" />
+            <element signature="e#2161#2162#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/HistoryFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="158" column="0" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/fragment/MapFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4473">
+          <caret line="397" column="13" selection-start-line="397" selection-start-column="13" selection-end-line="397" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/sacapp/android/jmhidalgo/smartaccesibilitycityapp/accessdb/API.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
           <folding />
         </state>
       </provider>

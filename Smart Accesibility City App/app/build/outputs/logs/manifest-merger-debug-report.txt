@@ -74,7 +74,7 @@ MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /home/juanma/.an
 MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /home/juanma/.android/build-cache/972a24c0369286daa8668ad1415c1977ea45c44c/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] /home/juanma/.android/build-cache/8676c1c61ec106c4c360d0f6a3337f60e1e55cb2/output/AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from /home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/AndroidManifest.xml:23:9-41
+		ADDED from /home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/AndroidManifest.xml:23:9-56
 	android:supportsRtl
 		ADDED from /home/juanma/Documentos/Programacion/TFG - Smart Accesibility City App/Smart Accesibility City App/app/src/main/AndroidManifest.xml:25:9-35
 	android:roundIcon

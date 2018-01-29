@@ -20,6 +20,7 @@ public class SACAPPControl
 
     private static ArrayList<Visit> entityVisits = new ArrayList<Visit>();
     private static ArrayList<Entity> entityToVisit = new ArrayList<Entity>();
+    private static ArrayList<Visit> visitOfAUser = new ArrayList<Visit>();
 
     public static String firebaseToken = "";
 
@@ -76,5 +77,17 @@ public class SACAPPControl
 
     public static void addEntityToVisit(Entity entity){
         entityToVisit.add(entity);
+    }
+
+    public static ArrayList<Visit> getVisitOfAUser() {
+        return visitOfAUser;
+    }
+
+    public static void setVisitOfAUser(ArrayList<Visit> visitOfAUser) {
+        SACAPPControl.visitOfAUser = visitOfAUser;
+    }
+
+    public static void addVisitOfUser(Visit visit){
+        visitOfAUser.add(visit);
     }
 }
